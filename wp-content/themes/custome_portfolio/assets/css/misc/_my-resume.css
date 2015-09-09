@@ -1,0 +1,155 @@
+section.my-resume {
+  position: relative;
+  background-color: #F0F2F7;
+}
+
+section.my-resume:before {
+  top: 0;
+  left: 50%;
+  width: 0.5%;
+  height: 100%;
+  content: '';
+  position: absolute;
+  background: #d7e4ed;
+}
+
+section.my-resume .clearfix {
+  clear: both;
+}
+
+section.my-resume .timeline-header {
+  width: 50%;
+  margin: auto;
+  height: 30px;
+  position: relative;
+  background-color: #D7E4ED;
+}
+
+section.my-resume .timeline-header p {
+  text-align: center;
+  color: #2c3e50;
+  font-size: 22px;
+  font-weight: bold;
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  padding-bottom: 5px;
+  line-height: 1em;
+}
+
+section.my-resume .time-block-container .time-block, section.my-resume .time-block-container .time-block-left {
+  z-index: 10;
+  padding: 3% 0;
+  position: relative;
+  background-color: #f0f2f7;
+}
+
+section.my-resume .time-block-container .time-block .block-icon, section.my-resume .time-block-container .time-block-left .block-icon {
+  border: 5px solid #797979;
+  z-index: 10;
+  padding: 10px;
+  position: relative;
+  font-size: 2em;
+  border-radius: 100%;
+  background-color: #D7E4ED;
+}
+
+section.my-resume .time-block-container .time-block .block-period, section.my-resume .time-block-container .time-block-left .block-period {
+  position: relative;
+  font-size: 1.5em;
+  top: 0.5em;
+}
+
+section.my-resume .time-block-container .time-block .meta-container, section.my-resume .time-block-container .time-block-left .meta-container {
+  width: 80%;
+  position: relative;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+section.my-resume .time-block-container .time-block .meta-container:before, section.my-resume .time-block-container .time-block-left .meta-container:before {
+  top: 1em;
+  border: 1em solid transparent;
+  content: '';
+  position: absolute;
+}
+
+section.my-resume .time-block-container .time-block .meta-container .meta, section.my-resume .time-block-container .time-block-left .meta-container .meta {
+  padding: 12px;
+}
+
+section.my-resume .time-block-container .time-block .meta-container .meta h1, section.my-resume .time-block-container .time-block-left .meta-container .meta h1 {
+  color: #2c3e50;
+  font-size: 22px;
+  font-weight: bold;
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  padding-bottom: 5px;
+  line-height: 1em;
+}
+
+section.my-resume .time-block-container .time-block .meta-container .meta h2, section.my-resume .time-block-container .time-block-left .meta-container .meta h2 {
+  color: #2c3e50;
+  font-size: 18px;
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  line-height: 28px;
+  font-weight: 400;
+}
+
+section.my-resume .time-block-container .time-block .meta-container .meta p, section.my-resume .time-block-container .time-block-left .meta-container .meta p {
+  color: #7d878f;
+  font-size: 16px;
+  font-weight: 300;
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+}
+
+section.my-resume .time-block-container .time-block {
+  float: right;
+  width: 49.5%;
+}
+
+section.my-resume .time-block-container .time-block .block-icon {
+  left: -1em;
+}
+
+section.my-resume .time-block-container .time-block .block-period {
+  top: 0;
+  left: -110%;
+  float: right;
+}
+
+section.my-resume .time-block-container .time-block .meta-container {
+  top: -3em;
+  margin-left: 10%;
+}
+
+section.my-resume .time-block-container .time-block .meta-container:before {
+  margin-left: -2em;
+  border-right-color: #fff;
+}
+
+section.my-resume .time-block-container .time-block-left {
+  float: left;
+  width: 50%;
+  text-align: right;
+}
+
+section.my-resume .time-block-container .time-block-left .block-icon {
+  right: -1.1em;
+  float: right;
+}
+
+section.my-resume .time-block-container .time-block-left .block-period {
+  top: 0.5em;
+  right: -110%;
+  float: left;
+}
+
+section.my-resume .time-block-container .time-block-left .meta-container {
+  top: -1em;
+  float: right;
+}
+
+section.my-resume .time-block-container .time-block-left .meta-container:before {
+  float: right;
+  position: relative;
+  margin-right: -2em;
+  border-left-color: #fff;
+}

@@ -1,0 +1,35 @@
+section.my-education {
+  position: relative;
+
+  .home-overlay {
+    height: 100%;
+    position: relative;
+    background: repeat scroll 0 0 rgba(53, 60, 79, .8);
+
+    .video-container {
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      z-index: -1;
+      position: absolute;
+      overflow: hidden;
+      background-image: url(http://fernando.is/video/background.jpg);
+      background-size: cover;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+
+      video {
+        top: 50%;
+        left: 50%;
+        width: 1368px;
+        height: auto;
+        margin: auto;
+        z-index: -1;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        visibility: visible;
+      }
+    }
+  }
+}

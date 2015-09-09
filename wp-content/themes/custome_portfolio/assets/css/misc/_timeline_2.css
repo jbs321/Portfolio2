@@ -1,0 +1,12 @@
+section.timeline {
+  background-color: lightgrey;
+}
+
+section.timeline .time-block-container {
+  background-color: green;
+}
+
+section.timeline .time-block-container .time-block {
+  padding: 10% 0;
+  background-color: blue;
+}

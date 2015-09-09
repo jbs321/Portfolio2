@@ -1,0 +1,31 @@
+@import "../sections/main";
+@import "../sections/about-me";
+@import "../sections/my-resume";
+@import "../sections/map";
+@import "../sections/contact-me";
+@import "../sections/my-education";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 16px;
+  text-align: justify;
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+}
+
+//section{
+//  top: 40px;
+//  position: relative;
+//}
+
+.border {
+  width: 60px;
+  height: 2px;
+  margin: 40px auto;
+  display: block;
+  background-color: #F54F36;
+}
+

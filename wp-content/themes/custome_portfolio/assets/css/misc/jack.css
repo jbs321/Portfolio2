@@ -1,0 +1,24 @@
+.time-block-left {
+  float: left;
+  width: 50%;
+}
+
+.time-block-left .block-icon {
+  right: -1em;
+  float: right;
+}
+
+.time-block-left .block-period {
+  top: 1em;
+  right: -110%;
+  float: left;
+}
+
+.time-block-left .meta-container {
+  float: right;
+}
+
+.time-block-left .meta-container:before {
+  margin-right: -2em;
+  border-left-color: #fff;
+}

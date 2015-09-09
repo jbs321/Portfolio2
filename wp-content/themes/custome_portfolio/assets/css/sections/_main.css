@@ -1,0 +1,65 @@
+section.main {
+  background: url("../images/bg1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed !important;
+}
+
+section.main h1 {
+  margin-top: 5%;
+  font-size: 90px;
+  text-align: center;
+  font-family: 'raleway';
+  line-height: 1em;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+section.main h2 {
+  font-size: 70px;
+  text-align: center;
+  font-family: 'raleway';
+  line-height: 1em;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+section.main .home-overlay {
+  height: 100%;
+  position: relative;
+  background: repeat scroll 0 0 rgba(53, 60, 79, 0.8);
+}
+
+section.main .info {
+  color: #FFFFFF;
+  font-weight: 800;
+}
+
+section.main .info .social {
+  font-size: 20px;
+  text-align: center;
+}
+
+section.main .info .social i {
+  border: 1px solid #fff;
+  margin: auto;
+  padding: 15px;
+  display: inline-block;
+  border-radius: 100%;
+}
+
+section.main .avatar-section {
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+}
+
+section.main .avatar-section img {
+  width: 180px;
+  height: 180px;
+  border: 10px solid #eff0f4;
+  margin: 20px auto;
+  border-radius: 250px;
+}

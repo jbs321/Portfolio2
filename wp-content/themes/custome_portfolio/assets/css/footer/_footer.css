@@ -1,0 +1,9 @@
+.scroller {
+  width: 25px;
+  right: 10px;
+  bottom: 10px;
+  height: 25px;
+  position: fixed;
+  font-size: 20px;
+  background-color: #7f7f7f;
+}

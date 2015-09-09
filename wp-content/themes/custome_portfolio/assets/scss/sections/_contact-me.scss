@@ -1,0 +1,124 @@
+section.contact-me {
+  .clearfix{
+    clear: both;
+  }
+
+  & > h1 {
+    padding-top: 40px;
+    color: #2c3d4f;
+    font-size: 60px;
+    text-align: center;
+    font-weight: 800;
+    line-height: 60px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+  }
+
+  h2{
+    color: #373432;
+    font-family: 'Raleway', Helvetica, Arial, sans-serif;
+    line-height: 1em;
+    font-weight: bold;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+  }
+
+  .my-details{
+    float: left;
+    padding-left: 10%;
+
+    ul{
+      list-style: none;
+
+      li{
+
+        margin: 30px;
+        i{
+          width: 42px;
+          color: #FFFFFF;
+          height: 42px;
+          padding: 10px;
+          background: none repeat scroll 0 0 #F54F36;
+          text-align: center;
+          line-height: 20px;
+          margin-bottom: 10px;
+          border-radius: 25px;
+        }
+
+        p{
+          display: inline-block;
+          line-height: 25px;
+          padding-left: 10px;
+          padding-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  .ninja-message {
+    width: 50%;
+    float: right;
+
+    .ninja-forms-required-items, .hp-wrap, .ninja-forms-req-symbol {
+      display: none;
+    }
+
+    #ninja_forms_form_1_all_fields_wrap {
+      width: 70%;
+      float: left;
+      margin: auto;
+
+      input[type="text"] {
+        color: #999999;
+        width: 100%;
+        border: 0;
+        height: 32px;
+        padding: 26px 3%;
+        font-size: 14px;
+        transition: all 0.2s linear;
+        background: none repeat scroll 0 0 #f2f2f2;
+        margin-bottom: 20px;
+        border-radius: 3px;
+        -o-transition: all 0.2s linear;
+        text-transform: uppercase;
+        -moz-transition: all 0.2s linear;
+        -webkit-transition: all 0.2s linear;
+      }
+
+      textarea {
+        color: #999999;
+        width: 100%;
+        border: 0;
+        height: 100px;
+        padding: 26px 3%;
+        font-size: 14px;
+        transition: all 0.2s linear;
+        background: none repeat scroll 0 0 #f2f2f2;
+        margin-bottom: 20px;
+        border-radius: 3px;
+        -o-transition: all 0.2s linear;
+        text-transform: uppercase;
+        -moz-transition: all 0.2s linear;
+        -webkit-transition: all 0.2s linear;
+      }
+
+      input[type="submit"] {
+        color: #FFFFFF;
+        width: 106%;
+        cursor: pointer;
+        border: 1px solid transparent;
+        padding: 15px;
+        outline: none;
+        display: inline-block;
+        font-size: 14px;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 140px;
+        font-weight: normal;
+        border-radius: 4px;
+        vertical-align: middle;
+        background-color: #F54F36;
+      }
+    }
+  }
+}
