@@ -3,7 +3,7 @@
 <?php get_template_part('menu', 'menu.php'); ?>
 
 <div class="container">
-    <div class="wrapper"><!-- wrapper needed for scroll -->
+    <div class="wrapper">
         <div class="main clearfix">
             <?php get_template_part('main', 'main.php'); ?>
             <?php get_template_part('about-me', 'about-me.php'); ?>
