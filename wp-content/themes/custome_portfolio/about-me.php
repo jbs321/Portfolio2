@@ -1,14 +1,13 @@
 <section class="about-me">
     <h1>about me</h1>
-
-    <p>Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam
-        nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. Class
-        aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+    <p> Hey,
+        Thanks for stopping by my portfolio, I'm going to assume that since you are at the about me section of my page
+        you might want to know a little about me. I know I suppose to let you know that im a team player who has great
+        enthusiasm for web developing or designing or something. well, I like to think that in life and work that is
+        given... I like to think of myself as a fun person who has the ability to find insperation in the everyday.
+        I hope you like my portfolio and hope to hear from you soon.
     </p>
-    <p>Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non
-        neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat,
-        velit mauris egestas quam, ut aliquam massa nisl quis neque.
-    </p>
+    <p>P.S. Here are some of my hobbies and interests I do in my spear time the best one's are swimming and Coffee....</p>
 
     <div class="hobbies">
         <h2>hobbies & interests</h2>
@@ -20,30 +19,5 @@
         <i class="icon-coin-dollar"></i>
     </div>
 
-<!--    <div class="about-info">-->
-<!--        <div class="info-title">-->
-<!--            <p>Birthdate</p>-->
-<!--            <p>Phone</p>-->
-<!--            <p>Email</p>-->
-<!--            <p>website</p>-->
-<!--            <p>Address</p>-->
-<!--        </div>-->
-<!--        <div class="info-details">-->
-<!--            <p>: 08.06.1991</p>-->
-<!--            <p>: +972523651994</p>-->
-<!--            <p>: jbs321.work@gmail.com</p>-->
-<!--            <p>: www.Jacob-Balabanov.com</p>-->
-<!--            <p>: Israel, Holon</p>-->
-<!--        </div>-->
-<!--    </div>-->
-
-
     <a href="#" class="mt-button large btn"><i class="fa-download"></i><span>Download Resume</span></a>
-
-
-
-    <!--    <video id="my-video" class="video" autoplay muted loop>-->
-    <!--        <source src="-->
-    <?php //echo get_template_directory_uri() ?><!--/assets/videos/printing.mov" type="video/mp4">-->
-    <!--    </video>-->
 </section>

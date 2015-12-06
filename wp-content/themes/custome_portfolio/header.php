@@ -24,6 +24,8 @@
     <script src="<?php echo get_template_directory_uri() ?>/assets/js/modernizr.js"></script>
 
     <link href="<?php echo get_template_directory_uri() ?>/assets/css/main.css" rel="stylesheet">
+<!--    <link href="--><?php //echo get_template_directory_uri() ?><!--/assets/css/timeline/default.css" rel="stylesheet">-->
+<!--    <link href="--><?php //echo get_template_directory_uri() ?><!--/assets/css/timeline/component.css" rel="stylesheet">-->
     <link href="<?php echo get_template_directory_uri() ?>/assets/fonts/icons/style.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Raleway:600,800,700,900,300,400,500' rel='stylesheet' type='text/css'>
 </head>
