@@ -14,7 +14,6 @@ section.my-education {
       z-index: -1;
       position: absolute;
       overflow: hidden;
-      background-image: url(http://fernando.is/video/background.jpg);
       background-size: cover;
       background-position: 50% 50%;
       background-repeat: no-repeat;
@@ -22,7 +21,7 @@ section.my-education {
       video {
         top: 50%;
         left: 50%;
-        width: 1368px;
+        width: 100%;
         height: auto;
         margin: auto;
         z-index: -1;

@@ -1,5 +1,4 @@
-<section class="my-education">
-    <div></div>
+<section  class="my-education">
     <div class="home-overlay">
         <div class="video-container">
             <video id="my-video" class="video" autoplay muted loop>

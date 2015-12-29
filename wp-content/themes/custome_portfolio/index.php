@@ -5,13 +5,13 @@
 <div class="container">
     <div class="wrapper">
         <div class="main clearfix">
-            <?php get_template_part('main', 'main.php'); ?>
-            <?php get_template_part('about-me', 'about-me.php'); ?>
-<!--            --><?php //get_template_part('my-resume', 'my-resume.php'); ?>
-<!--            --><?php //get_template_part('map', 'map.php'); ?>
-            <?php get_template_part('timeline', 'timeline.php'); ?>
-            <?php get_template_part('contact-me', 'contact-me.php'); ?>
-            <?php get_template_part('my-education', 'my-education.php'); ?>
+            <?php get_template_part('main', 'main.php');
+                  get_template_part('about-me', 'about-me.php');
+                  //get_template_part('my-resume', 'my-resume.php');
+                  //get_template_part('map', 'map.php');
+                  get_template_part('timeline', 'timeline.php');
+                  get_template_part('contact-me', 'contact-me.php');
+                  get_template_part('my-education', 'my-education.php'); ?>
         </div>
     </div>
 </div>

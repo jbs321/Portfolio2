@@ -1,4 +1,4 @@
-<section class="timeline">
+<section class="timeline" data-navto="#2">
     <header class="clearfix">
         <h1>Vertical Timeline</h1>
     </header>
@@ -16,7 +16,8 @@
 
                 <li>
                     <time class="cl_time" datetime="<?=$sDate?>"><span><?=$sDate?></span></time>
-                    <div class="cl_icon cbp_tmicon-phone"></div>
+<!--                    <div class="cl_icon cbp_tmicon-phone"></div>-->
+                    <i class="start_icon fa fa-flag"></i>
                     <div class="cl_label">
                         <h1><?=$title?></h1>
                         <h2><?=$sub_title?></h2>

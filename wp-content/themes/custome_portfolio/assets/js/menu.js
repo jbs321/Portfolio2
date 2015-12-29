@@ -54,7 +54,10 @@
 			// add modalview class
 			classie.add( perspectiveWrapper, 'modalview' );
 			// animate..
-			setTimeout( function() { classie.add( perspectiveWrapper, 'animate' ); }, 25 );
+			setTimeout( function() {
+                classie.add( perspectiveWrapper, 'animate' );
+                classie.add( showMenu, 'hidden');
+            }, 25 );
 		});
 
 		container.addEventListener( clickevent, function( ev ) {
@@ -75,6 +78,7 @@
 					onEndTransFn.call();
 				}
 				classie.remove( perspectiveWrapper, 'animate' );
+				classie.remove( showMenu, 'hidden' );
 			}
 		});
 
@@ -82,5 +86,4 @@
 	}
 
 	init();
-
 })();

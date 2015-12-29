@@ -10,6 +10,7 @@ section.contact-me {
     text-align: center;
     font-weight: 800;
     line-height: 60px;
+    margin-bottom: 50px;
     letter-spacing: 5px;
     text-transform: uppercase;
   }
@@ -24,8 +25,12 @@ section.contact-me {
   }
 
   .my-details{
-    float: left;
-    padding-left: 10%;
+    float: right;
+    width: 315px;
+    padding: 76px;
+    margin-right: 10%;
+    border-radius: 100%;
+    background-color: rgba(245, 79, 54, 0.52);
 
     ul{
       list-style: none;
@@ -57,7 +62,8 @@ section.contact-me {
 
   .ninja-message {
     width: 50%;
-    float: right;
+    float: left;
+    margin-left: 10%;
 
     .ninja-forms-required-items, .hp-wrap, .ninja-forms-req-symbol {
       display: none;

@@ -1,0 +1,27 @@
+@mixin transform($cmd) {
+  -webkit-transform: $cmd;
+  -moz-transform: $cmd;
+  -ms-transform: $cmd;
+  -o-transform: $cmd;
+  transform: $cmd;
+}
+
+@mixin transition($cmd) {
+  -webkit-transition: $cmd;
+  -moz-transition: $cmd;
+  -ms-transition: $cmd;
+  -o-transition: $cmd;
+  transition: $cmd;
+}
+
+@mixin box-shadow($cmd) {
+  -webkit-box-shadow: $cmd;
+  -moz-box-shadow: $cmd;
+  box-shadow: $cmd;
+}
+
+@mixin animation($cmd) {
+  -webkit-animation: $cmd;
+  -moz-animation: $cmd;
+  -o-animation: $cmd;
+}

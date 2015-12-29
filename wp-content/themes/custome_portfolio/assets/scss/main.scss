@@ -1,13 +1,20 @@
-@import "misc/media-queries";
-
-@import "desktop/desktop";
-@import "mobile/mobile";
-
+//base
+@import "partials/base";
+@import "partials/about-me/bubble";
+//includes
+@import "includes/mixins";
+//menu
 @import "menu/menu";
+//sections
+@import "sections/main";
+@import "sections/about-me";
+@import "sections/my-resume";
+@import "sections/contact-me";
+@import "sections/my-education";
+//partials
+@import "partials/timeline/default";
+@import "partials/timeline/components";
+//footer
 @import "footer/footer";
 
-
-@import "timeline/default";
-@import "timeline/components";
-//@import "misc/timeline_mobile";
 
