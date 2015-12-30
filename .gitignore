@@ -1,1 +1,4 @@
-# Created by .ignore support plugin (hsz.mobi)
+.prepros.cfg.swp
+.env
+wp-config.php
+.idea

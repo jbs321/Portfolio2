@@ -4,4 +4,5 @@
         <a data-navto="<?=$item->url; ?>" href=" <?=$item->url; ?>"> <?=$item->title; ?></a>
     <?php endforeach; ?>
 </nav>
-<i id="showMenu" class="icon-menu"></i>
+<i id="showMenu"  class="fa fa-bars"></i>
+<!--<i id="showMenu" class="icon-menu"></i>-->
