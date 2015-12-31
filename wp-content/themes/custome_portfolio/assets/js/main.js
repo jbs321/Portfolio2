@@ -17,12 +17,12 @@ $(function () {
 
     //Event Listeners
     $(window).on('scroll load', function (){
-        ($('.icon-chevron-up').offset().top < $(window).height()) ?
-            /* 1 */$('.icon-chevron-up').css('visibility', 'hidden') :
-            /* 0 */$('.icon-chevron-up').css('visibility', 'visible');
+        ($('#go-up').offset().top < $(window).height()) ?
+            /* 1 */$('#go-up').css('visibility', 'hidden') :
+            /* 0 */$('#go-up').css('visibility', 'visible');
     });
 
-    $('.icon-chevron-up').on('click', function () {
+    $('#go-up').on('click', function () {
         $(window).scrollTo('0px', 200);
     });
 

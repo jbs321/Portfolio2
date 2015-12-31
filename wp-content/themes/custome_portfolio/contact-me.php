@@ -1,28 +1,36 @@
 <section class="contact-me">
-    <h1>Contact Me</h1>
-    <span class="border"></span>
-<!--    <div class="my-details">-->
-<!--        <h2>Let's get in touch</h2>-->
-<!--        <ul>-->
-<!--            <li><i class="icon-email-support"></i><p> jbs321.work@gmail.com</p></li>-->
-<!--            <li><i class="icon-phone-support"></i><p> +972 052 365 1994</p></li>-->
-<!--            <li><i class="icon-box-add"></i><p> Download Resume</p></li>-->
-<!--        </ul>-->
-<!--    </div>-->
-
-    <div class="stage"><figure class="ball bubble">
-            <h2>Let's get in touch</h2>
-            <ul>
-                <li><i class="icon-email-support"></i><p> jbs321.work@gmail.com</p></li>
-                <li><i class="icon-phone-support"></i><p> +972 052 365 1994</p></li>
-                <li><i class="icon-box-add"></i><p> Download Resume</p></li>
-            </ul>
-
-        </figure></div>
-
-    <div class="ninja-message">
-        <h2>drop me a line</h2>
-        <?php if( function_exists( 'ninja_forms_display_form' ) ){ ninja_forms_display_form( 1 ); } ?>
+    <div class="form-wrapper">
+        <h1>Contact Me</h1>
+        <span class="border"></span>
+        <form id="contact-me" class="contact-me" method="post" action="/portfolio/wp-admin/admin-post.php">
+            <input type="hidden" name="action" value="add_foobar">
+            <input type="hidden" name="data" value="foobarid">
+            <input id="name" name="name" class="name" type="text" placeholder="NAME">
+            <input id="email" name="email" type="email" placeholder="EMAIL">
+            <textarea id="msg" name="msg" placeholder="MESSAGE"></textarea>
+            <input type="submit" value="SEND">
+        </form>
     </div>
-    <div class="clearfix"></div>
+    <div class="space">
+        <div class="ship">
+            <div class="ship-rotate">
+                <div class="pod"></div>
+                <div class="fuselage"></div>
+            </div>
+        </div>
+        <div class="ship-shadow"></div>
+        <div class="mars">
+            <div class="tentacle"></div>
+            <div class="flag">
+                <div class="small-tentacle"></div>
+            </div>
+            <div class="planet">
+                <div class="surface"></div>
+                <div class="crater1"></div>
+                <div class="crater2"></div>
+                <div class="crater3"></div>
+            </div>
+        </div>
+        <div class="test"></div>
+    </div>
 </section>

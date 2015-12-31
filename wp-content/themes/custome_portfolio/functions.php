@@ -56,3 +56,20 @@ function custom_post_type()
     register_post_type('timeline', $args);
 }
 add_action('init', 'custom_post_type', 0);
+
+
+add_action( 'admin_post_add_foobar', 'prefix_admin_add_foobar' );
+
+function prefix_admin_add_foobar() {
+// Create post object
+    $my_post = array(
+        'post_title'    => "{$_REQUEST['name']} - {$_REQUEST['email']}",
+        'post_content'  => $_REQUEST['msg'],
+        'post_status'   => 'publish',
+        'post_author'   => 1,
+        'post_category' => array(8,39)
+    );
+
+// Insert the post into the database
+    wp_insert_post( $my_post );
+}

@@ -1,8 +1,11 @@
+//mixins
+@import "includes/mixins";
+
 //base
 @import "partials/base";
+@import "partials/keyframes/keyframes";
 @import "partials/about-me/bubble";
-//includes
-@import "includes/mixins";
+
 //menu
 @import "menu/menu";
 //sections

@@ -3,7 +3,7 @@
 section.main {
   $box-wrapper-size: 350px;
   $boxsize: $box-wrapper-size / 10;
-
+  z-index: 15;
   position: relative;
   background: #ffffff url('../images/bg1.jpg') no-repeat center center;
 
@@ -65,16 +65,6 @@ section.main {
 
       .orbitContainer {
         position: absolute;
-
-        @keyframes rotate {
-          0% {
-            @include transform(rotateZ(0deg) translateX(300px) rotateZ(-0deg) rotateY(-60deg));
-          }
-
-          100% {
-            @include transform(rotateZ(360deg) translateX(300px) rotateZ(-360deg) rotateY(-60deg));
-          }
-        }
 
         .orbitWrapper {
           width: $box-wrapper-size;
