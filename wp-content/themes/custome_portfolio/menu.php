@@ -5,4 +5,3 @@
     <?php endforeach; ?>
 </nav>
 <i id="showMenu"  class="fa fa-bars"></i>
-<!--<i id="showMenu" class="icon-menu"></i>-->

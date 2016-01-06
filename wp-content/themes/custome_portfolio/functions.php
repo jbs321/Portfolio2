@@ -3,7 +3,8 @@
 if (!function_exists('custom_navigation_menus')) {
 
 // Register Navigation Menus
-    function custom_navigation_menus() {
+    function custom_navigation_menus()
+    {
         $locations = array(
             'Header Menu' => __('Header Menu', 'text_domain'),
             'Footer Menu' => __('Footer Menu', 'text_domain'),
@@ -55,21 +56,29 @@ function custom_post_type()
     );
     register_post_type('timeline', $args);
 }
+
 add_action('init', 'custom_post_type', 0);
 
 
-add_action( 'admin_post_add_foobar', 'prefix_admin_add_foobar' );
+add_action('admin_post_add_foobar', 'prefix_admin_add_foobar');
 
-function prefix_admin_add_foobar() {
+function prefix_admin_add_foobar()
+{
 // Create post object
     $my_post = array(
-        'post_title'    => "{$_REQUEST['name']} - {$_REQUEST['email']}",
-        'post_content'  => $_REQUEST['msg'],
-        'post_status'   => 'publish',
-        'post_author'   => 1,
-        'post_category' => array(8,39)
+        'post_title' => "{$_REQUEST['name']} - {$_REQUEST['email']}",
+        'post_content' => $_REQUEST['msg'],
+        'post_status' => 'publish',
+        'post_author' => 1,
+        'post_category' => array(8, 39)
     );
 
+    if (mail("jbs321@gmail.com", "{$_REQUEST['name']} - New Contact - Portfolio",$_REQUEST['email'] .' /n '. $_REQUEST['msg']))
+        print "Email successfully sent";
+    else
+        print "An error occured";
+
+
 // Insert the post into the database
-    wp_insert_post( $my_post );
+    wp_insert_post($my_post);
 }
