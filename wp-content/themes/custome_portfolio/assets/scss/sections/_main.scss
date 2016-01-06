@@ -84,8 +84,9 @@ section.main {
             position: absolute;
             border-radius: 50%;
 
-            @for $i from 1 through 40{
-              &:nth-child(#{$i}){
+
+            @for $i from 1 through 40 {
+              &:nth-child(#{$i}) {
                 animation-delay: -#{$i}s;
               }
             }
@@ -100,17 +101,18 @@ section.main {
           a.social-icon {
             .fa {
               color: #FFF;
-              color: rgba(255,255,255,0.8);
+              color: rgba(255, 255, 255, 0.8);
               width: 90px;
               height: 90px;
               font-size: 3em;
               text-align: center;
+              box-shadow: inset 16px 0 40px 6px rgb(0, 0, 0), inset -3px 0 6px 2px rgba(255, 255, 255, 0.2);
               line-height: 92px;
               border-radius: 50%;
               @include transition(all 0.3s ease-in-out);
 
-              @for $i from 1 through 40{
-                &:nth-child(#{$i}){
+              @for $i from 1 through 40 {
+                &:nth-child(#{$i}) {
                   animation-delay: -#{$i+3}s;
                 }
               }
