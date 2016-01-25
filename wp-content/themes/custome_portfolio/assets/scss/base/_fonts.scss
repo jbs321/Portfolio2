@@ -1,0 +1,157 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+@font-face {
+  font-family: 'ecoico';
+  src: url('../../fonts/timeline/timelineicons/ecoico.eot');
+  src: url('../../fonts/timeline/timelineicons/ecoico.eot?#iefix') format('embedded-opentype'),
+  url('../../fonts/timeline/timelineicons/ecoico.woff') format('woff'),
+  url('../../fonts/timeline/timelineicons/ecoico.ttf') format('truetype'),
+  url('../../fonts/timeline/timelineicons/ecoico.svg#ecoico') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'fontawesome';
+  src: url('../../fonts/timeline/fontawesome.eot');
+  src: url('../../fonts/timeline/fontawesome.eot?#iefix') format('embedded-opentype'),
+  url('../../fonts/timeline/fontawesome.svg#fontawesome') format('svg'),
+  url('../../fonts/timeline/fontawesome.woff') format('woff'),
+  url('../../fonts/timeline/fontawesome.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.fa-github, .fa-github-alt, .fa-github-square {
+  background-color: #070709;
+}
+
+.fa-facebook, .fa-facebook-square {
+  background-color: #3C599F;
+}
+
+.fa-google-plus, .fa-google-plus-square {
+  background-color: #CF3D2E;
+}
+
+.fa-html5 {
+  background-color: #E54D26;
+}
+
+.fa-linkedin, .fa-linkedin-square {
+  background-color: #0085AE;
+}
+
+.fa-linux {
+  background-color: #FBC002;
+  color: #333;
+}
+
+.fa-maxcdn {
+  background-color: #F6AE1C;
+}
+
+.fa-stack-overflow {
+  background-color: #FF7300;
+}
+
+.fa-trello {
+  background-color: #265A7F;
+}
+
+.fa-windows {
+  background-color: #12B6F3;
+}
+
+.cl_icon-phone:before {content: "\e000";}
+.cl_icon-screen:before {content: "\e001";}
+
+.cl_icon-mail:before {content: "\e002";}
+
+.cl_icon-earth:before {content: "\e003";}
+
+.icon-drop:before {content: "\e000";}
+
+.icon-arrow-left:before {content: "\f060";}
+
+.icon-drop:before, .icon-arrow-left:before {
+  top: 0;
+  color: #47a3da;
+  speak: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  font-style: normal;
+  text-align: center;
+  font-weight: normal;
+  font-family: 'fontawesome';
+  line-height: 2;
+  text-indent: 8000px;
+  padding-left: 8px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.start_icon {
+  top: 0;
+  left: 20%;
+  speak: none;
+  color: #fff;
+  width: 40px;
+  margin: 0 0 0 -25px;
+  height: 40px;
+  position: absolute;
+  font-size: 1.4em;
+  background: #46a4da;
+  box-shadow: 0 0 0 8px #afdcf8;
+  text-align: center;
+  font-style: normal;
+  line-height: 40px;
+  font-weight: normal;
+  font-variant: normal;
+  border-radius: 50%;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  display: none!important;
+
+  @include breakpoint(md){
+    left: 23%;
+    display: block!important;
+  }
+
+  &:before{
+    top: 13px;
+    position: relative;
+  }
+}
+
+.cl_icon {
+  top: 0;
+  left: 23%;
+  speak: none;
+  width: 40px;
+  color: #fff;
+  height: 40px;
+  margin: 0 0 0 -25px;
+  position: absolute;
+  font-size: 1.4em;
+  text-align: center;
+  background: #46a4da;
+  box-shadow: 0 0 0 8px #afdcf8;
+  font-style: normal;
+  line-height: 40px;
+  font-family: 'ecoico';
+  font-weight: normal;
+  font-variant: normal;
+  border-radius: 50%;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+.icon-news::before { content: "\e600" }
+.icon-home::before { content: "\e601" }
+.icon-image::before { content: "\e602" }
+.icon-upload::before { content: "\e603" }
+.icon-star::before { content: "\e604" }
+.icon-mail::before { content: "\e605" }
+.icon-lock::before { content: "\e606" }
+.icon-chart-pie::before { content: "\e607" }

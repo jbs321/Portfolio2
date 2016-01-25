@@ -1,21 +1,20 @@
-//mixins
-@import "includes/mixins";
-//base
-@import "partials/base";
-@import "partials/keyframes/keyframes";
-@import "partials/about-me/bubble";
-//menu
-@import "menu/menu";
-//sections
-@import "sections/main";
-@import "sections/about-me";
-@import "sections/my-resume";
-@import "sections/contact-me";
-@import "sections/my-education";
-//partials
-@import "partials/timeline/default";
-@import "partials/timeline/components";
-//footer
-@import "footer/footer";
 
+@import "base/media-querys";
+@import "base/misc";
+@import "base/typography";
+@import "base/fonts";
+@import "base/effects";
 
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/keyframes";
+
+@import "components/menu";
+@import "components/go-up";
+
+@import "pages/top";
+@import "pages/map";
+@import "pages/about-me";
+@import "pages/timeline";
+@import "pages/contact-me";
+@import "pages/skills";
