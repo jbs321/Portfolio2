@@ -1,121 +1,122 @@
 .skills {
   height: 100%;
   width: 100%;
-  display: table;
-  min-height: 100%;
+  z-index: 15;
   position: relative;
-  background-color: #e1e3e4;
+  max-height: 100%;
+  background-color: #f5f5f5;
 
-  @import "../components/skill_graph";
+  #content {
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin:-340px 0 0 -450px;
+    width:900px;
+    height:600px;
+    display: none;
 
-  .skill-sets {
-    position: relative;
-    display: table-cell;
-    margin-bottom: 100px;
+    @include breakpoint(md){
+      display: block;
+    }
 
-    .skill-set {
-      height: 580px;
-      padding: 5px 20px;
+    .legend {
+      float:left;
+      width:250px;
+      margin-top:140px;
 
-      .sets-wrapper {
-        height: 100%;
-        background-color: #EFEFEF;
+      .skills {
+        float:left;
+        clear:both;
+        width:100%;
 
-        h1 {
-          color: #000;
-          margin: 0;
-          padding: 20px 0;
-          font-size: 2vw;
-          text-align: center;
-          text-transform: uppercase;
-          background-color: #F54F36;
+        & ul,
+        & li {
+          display:block;
+          list-style:none;
+          margin:0;
+          padding:0;
+        }
+
+        li {
+          float:right;
+          clear:both;
+          padding:0 15px;
+          height:35px;
+          line-height:35px;
+          color:#fff;
+          margin-bottom:1px;
+          font-size:18px;
+        }
+
+        .jq {
+          background:#97BE0D;
+        }
+        .css {
+          background:#D84F5F;
+        }
+        .php {
+          background:#BEDBE9;
+        }
+        .html {
+          background:#88B8E6;
+        }
+        .sql {
+          background:#EDEBEE;
+        }
+        .java {
+          background:#E4842C;
         }
       }
     }
-  }
 
-  #myChart{
-    margin: auto;
-    display: block;
-    margin-top: 85px;
-  }
-
-  .chart {
-    color: #999;
-    margin: 20px auto;
-    position: relative;
-    font-size: 14px;
-    text-align: center;
-
-    canvas {
-      top: 0;
-      left: 0;
+    h1 {
+      font-family:'Cabin Sketch', arial, serif;
+      text-shadow:3px 3px 0 #ddd;
+      color:#193340;
+      font-size:40px;
+      margin-bottom:40px;
+      text-align:right;
     }
   }
 
-  .skill-list {
-    margin: 0;
-    padding: 1em;
-    list-style: none;
+  .footer {
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    background:#2D2D2D;
+    color:#EAEAEA;
+    padding:20px 0;
 
-    .skill {
-      margin-bottom: 1em;
-      position: relative;
+    a {
+      color:#EAEAEA;
 
-      progress, progress[role] {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        border: none;
-        background-size: auto;
-        height: 100px;
-        width: 100%;
-      }
-
-      h3 {
-        top: 1em;
-        left: 1em;
-        color: #fff;
-        position: absolute;
-        line-height: 1;
-      }
-      ::-webkit-progress-value {
-        width: 0px;
-        -webkit-animation: bar-fill 2s;
-      }
-
-      // Style the bar colors
-      .skill-1::-webkit-progress-value {
-        background: #ff9e2c;
-      }
-
-      .skill-1::-moz-progress-bar {
-        background: #ff9e2c;
-      }
-
-      .skill-2::-webkit-progress-value {
-        background: #4ecdc4;
-      }
-
-      .skill-2::-moz-progress-bar {
-        background: #4ecdc4;
-      }
-
-      .skill-3::-webkit-progress-value {
-        background: #ff6b6b;
-      }
-
-      .skill-3::-moz-progress-bar {
-        background: #ff6b6b;
-      }
-
-      .skill-4::-moz-progress-bar {
-        background: #ece738;
-      }
-
-      .skill-4::-webkit-progress-value {
-        background: #ece738;
+      &:hover {
+        color:#E4842C;
       }
     }
+
+    .inside {
+      font-family: 'Cabin Sketch', arial, serif;
+      font-size:22px;
+      text-align:center;
+    }
   }
+
+
+  #diagram {
+    float:right;
+    width:600px;
+    height:600px;
+  }
+
+  .get {
+    display:none;
+  }
+
+  a {
+    text-decoration:none;
+    color:#333;
+  }
+
 }

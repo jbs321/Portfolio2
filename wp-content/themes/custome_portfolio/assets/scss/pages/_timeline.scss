@@ -47,12 +47,12 @@
 
       .cl_time {
         width: 30%;
-        display: none;
+        display: block;
         position: absolute;
         padding-right: 100px;
 
         @include breakpoint(md){
-          display: block;
+          display: none;
         }
 
         span {
@@ -74,7 +74,7 @@
         border-radius: 5px;
 
         @include breakpoint(md){
-          margin: 0 0 15px 25%;
+          margin: 0 10% 15px 25%;
         }
 
         h1{

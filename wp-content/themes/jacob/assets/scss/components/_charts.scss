@@ -1,0 +1,8 @@
+#serverChart, #clientChart {
+  margin: auto;
+  width: 90%;
+  height: 80%;
+  background-color: #FFF;
+
+  @include breakpoint(md){}
+}

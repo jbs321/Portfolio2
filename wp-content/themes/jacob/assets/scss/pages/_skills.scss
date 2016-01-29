@@ -1,0 +1,136 @@
+.skills {
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  z-index: 15;
+  position: relative;
+  max-height: 100%;
+  background: #1A3742;
+
+  h1{
+    margin-top: 7% !important;
+    margin-bottom: 40px !important;
+  }
+
+  .skills-meta{
+    margin: 0;
+    font-size: 13px;
+    margin-bottom: 10%;
+
+    @include breakpoint(md){
+      margin: 0 25%;
+      margin-bottom: 8%;
+      font-size: 16px;
+    }
+  }
+  
+  @import "../components/charts";
+
+  .slide {
+    position: relative;
+
+    .get {
+      display: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    #content {
+      display: none;
+
+      h1 {
+        font-family: 'Cabin Sketch', arial, serif;
+        text-shadow: 3px 3px 0 #ddd;
+        color: #193340;
+        font-size: 40px;
+        margin-bottom: 40px;
+        text-align: right;
+      }
+
+      @include breakpoint(md) {
+        display: block;
+      }
+
+      .legend {
+        float: left;
+        width: 250px;
+        margin-top: 140px;
+
+        .skills {
+          float: left;
+          clear: both;
+          width: 100%;
+
+          & ul,
+          & li {
+            display: block;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+          }
+
+          li {
+            float: right;
+            clear: both;
+            padding: 0 15px;
+            height: 35px;
+            line-height: 35px;
+            color: #fff;
+            margin-bottom: 1px;
+            font-size: 18px;
+          }
+
+          .jq {
+            background: #97BE0D;
+          }
+          .css {
+            background: #D84F5F;
+          }
+          .php {
+            background: #BEDBE9;
+          }
+          .html {
+            background: #88B8E6;
+          }
+          .sql {
+            background: #EDEBEE;
+          }
+          .java {
+            background: #E4842C;
+          }
+        }
+      }
+
+      #diagram {
+          height: 80%;
+      }
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #2D2D2D;
+      color: #EAEAEA;
+      padding: 20px 0;
+
+      a {
+        color: #EAEAEA;
+
+        &:hover {
+          color: #E4842C;
+        }
+      }
+
+      .inside {
+        font-family: 'Cabin Sketch', arial, serif;
+        font-size: 22px;
+        text-align: center;
+      }
+    }
+  }
+}

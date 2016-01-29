@@ -1,50 +1,57 @@
 <div class="section container-fluid skills">
-    <h1>Skills</h1>
-
-    <div class="col-xs-12 skill-sets">
-        <div class="col-xs-12 col-md-4 skill-set">
-            <div class="sets-wrapper">
-                <h1>Server vs. Client</h1>
-                <canvas id="myChart" width="300px" height="300px"></canvas>
-            </div>
-        </div>
-        <div class="col-xs-12 col-md-4 skill-set">
-            <div class="sets-wrapper">
-                <h1>Languages</h1>
-                <div class="chart" data-percent="95">php</div>
-                <div class="chart" data-percent="80">java</div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-md-4 skill-set">
-            <div class="sets-wrapper">
-                <h1>Client Skills</h1>
-                <ul class="skill-list">
-                    <li class="skill">
-                        <h3>SCSS/LESS/CSS</h3>
-                        <progress class="skill-1" max="100" value="90">
-                            <strong>Skill Level: 50%</strong>
-                        </progress>
-                    </li>
-                    <li class="skill">
-                        <h3>JavaScript/Jquery</h3>
-                        <progress class="skill-2" max="100" value="95">
-                            <strong>Skill Level: 75%</strong>
-                        </progress>
-                    </li>
-                    <li class="skill">
-                        <h3>AngularJS</h3>
-                        <progress class="skill-3" max="100" value="60">
-                            <strong>Skill Level: 25%</strong>
-                        </progress>
-                    </li>
-                    <li class="skill">
-                        <h3>HTML</h3>
-                        <progress class="skill-4" max="100" value="95">
-                            <strong>Skill Level: 45%</strong>
-                        </progress>
-                    </li>
+    <div id="content">
+        <div class="legend">
+            <h1>Legend:</h1>
+            <div class="skills">
+                <ul>
+                    <li class="jq">PHP</li>
+                    <li class="css">SCSS</li>
+                    <li class="html">JavaScript</li>
+                    <li class="php">OOP</li>
+                    <li class="sql">SQL</li>
+                    <li class="java">Java</li>
                 </ul>
             </div>
+        </div>
+        <div id="diagram"></div>
+    </div>
+
+    <div class="get">
+        <div class="arc">
+            <span class="text">PHP</span>
+            <input type="hidden" class="percent" value="100" />
+            <input type="hidden" class="color" value="#97BE0D" />
+        </div>
+        <div class="arc">
+            <span class="text">SCSS</span>
+            <input type="hidden" class="percent" value="90" />
+            <input type="hidden" class="color" value="#D84F5F" />
+        </div>
+        <div class="arc">
+            <span class="text">JavaScript</span>
+            <input type="hidden" class="percent" value="80" />
+            <input type="hidden" class="color" value="#88B8E6" />
+        </div>
+        <div class="arc">
+            <span class="text">OOP</span>
+            <input type="hidden" class="percent" value="95" />
+            <input type="hidden" class="color" value="#BEDBE9" />
+        </div>
+        <div class="arc">
+            <span class="text">SQL</span>
+            <input type="hidden" class="percent" value="90" />
+            <input type="hidden" class="color" value="#EDEBEE" />
+        </div>
+        <div class="arc">
+            <span class="text">Java</span>
+            <input type="hidden" class="percent" value="90" />
+            <input type="hidden" class="color" value="#E4842C" />
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="inside">
+            <a href="#">I'm expirienced both with Server and Client side technologys</a>
         </div>
     </div>
 </div>

@@ -17,7 +17,10 @@ body {
   background-image: url('../images/background.png');
 
   .view_container{
+    top: 0px;
     height: 100%;
+    position: relative;
+
     .wrapper{
       height: 100%;
 
@@ -26,45 +29,83 @@ body {
       }
     }
   }
-}
 
-.hidden{
-  display: none!important;
-}
+  .home-overlay {
+    height: 100%;
+    position: absolute;
+    background: repeat scroll 0 0 rgba(53, 60, 79, .8);
 
-.noPad{
-  padding: 0!important;
-}
+    .video-container {
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      z-index: -1;
+      display: none;
+      position: absolute;
+      overflow: hidden;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
 
-.pad-5{
-  padding: 5px;
-}
+      @include breakpoint(lg){
+        display: block;
+      }
 
-.pad-10{
-  padding: 5px;
-}
-
-.pad-15{
-  padding: 5px;
-}
-
-.pad-40{
-  padding: 0 40px;
-
-  @include breakpoint(xs){
-    padding: 0 10px;
+      video {
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: auto;
+        margin: auto;
+        z-index: -1;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        visibility: visible;
+      }
+    }
   }
+
+  .hidden{
+    display: none!important;
+  }
+
+  .noPad{
+    padding: 0!important;
+  }
+
+  .pad-5{
+    padding: 5px;
+  }
+
+  .pad-10{
+    padding: 5px;
+  }
+
+  .pad-15{
+    padding: 5px;
+  }
+
+  .pad-40{
+    padding: 0 40px;
+
+    @include breakpoint(xs){
+      padding: 0 10px;
+    }
+  }
+
+  .marg-5{
+    margin: 5px;
+  }
+
+  .marg-10{
+    margin: 10px;
+  }
+
+  .marg-15{
+    margin: 15px;
+  }
+
 }
 
-.marg-5{
-  margin: 5px;
-}
-
-.marg-10{
-  margin: 10px;
-}
-
-.marg-15{
-  margin: 15px;
-}
 

@@ -1,0 +1,174 @@
+.my-resume {
+  position: relative;
+  background-color: #313B54;
+
+  & > h1{
+    color: #fff;
+    font-size: 60px;
+    font-weight: 800;
+    text-align: center;
+    line-height: 60px;
+    padding: 40px 0 0 0;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+  }
+
+  .clearfix {
+    clear: both;
+  }
+
+  .timeline-container {
+    position: relative;
+
+    &:before {
+      top: 0;
+      left: 50%;
+      width: 0.5%;
+      height: 100%;
+      content: '';
+      position: absolute;
+      background: #d7e4ed;
+    }
+
+    .timeline-header {
+      width: 100px;
+      margin: auto;
+      height: 30px;
+      position: relative;
+      border-radius: 5px;
+      background-color: #D7E4ED;
+      margin-bottom: 40px;
+
+      p {
+        color: #2c3e50;
+        padding: 2px;
+        text-align: center;
+        font-size: 22px;
+        font-weight: bold;
+        font-family: 'Raleway', Helvetica, Arial, sans-serif;
+        line-height: 1em;
+      }
+    }
+
+    .time-block-container {
+      .time-block, .time-block-left {
+        z-index: 10;
+        padding: 40px 0 0 0;
+        position: relative;
+        background-color: #313B54;
+
+        .block-icon {
+          border: 5px solid #797979;
+          z-index: 10;
+          padding: 10px;
+          position: relative;
+          font-size: 2em;
+          border-radius: 100%;
+          background-color: #D7E4ED;
+        }
+
+        .block-period {
+          position: relative;
+          font-size: 1.5em;
+          top: 0.5em;
+        }
+
+        .meta-container {
+          width: 80%;
+          position: relative;
+          border-radius: 5px;
+          background-color: #fff;
+
+          &:before {
+            top: 1em;
+            border: 1em solid transparent;
+            content: '';
+            position: absolute;
+          }
+
+          .meta {
+            padding: 12px;
+
+            h1 {
+              //color: #373432;
+              color: #2c3e50;
+              font-size: 22px;
+              font-weight: bold;
+              font-family: 'Raleway', Helvetica, Arial, sans-serif;
+              padding-bottom: 5px;
+              line-height: 1em;
+            }
+
+            h2 {
+              color: #2c3e50;
+              font-size: 18px;
+              font-family: 'Raleway', Helvetica, Arial, sans-serif;
+              line-height: 28px;
+              font-weight: 400;
+            }
+
+            p {
+              color: #7d878f;
+              font-size: 16px;
+              font-weight: 300;
+              font-family: 'Raleway', Helvetica, Arial, sans-serif;
+            }
+          }
+        }
+      }
+
+      .time-block {
+        float: right;
+        width: 49.5%;
+
+        .block-icon {
+          left: -1em;
+        }
+
+        .block-period {
+          top: 0;
+          left: -110%;
+          float: right;
+        }
+
+        .meta-container {
+          top: -3em;
+          margin-left: 10%;
+
+          &:before {
+            margin-left: -2em;
+            border-right-color: #fff;
+          }
+        }
+      }
+      .time-block-left {
+        float: left;
+        width: 50%;
+        text-align: right;
+
+        .block-icon {
+          right: -1.1em;
+          float: right;
+        }
+
+        .block-period {
+          top: 0.5em;
+          right: -110%;
+          float: left;
+        }
+
+        .meta-container {
+          top: -1em;
+          float: right;
+
+          &:before {
+            float: right;
+            position: relative;
+            margin-right: -2em;
+            border-left-color: #fff;
+          }
+        }
+      }
+    }
+  }
+}

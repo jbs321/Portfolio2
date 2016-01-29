@@ -1,0 +1,29 @@
+span, h1, h2 {
+  font-family: 'Raleway', sans-serif;
+}
+
+.section {
+  h1.section-header {
+    margin: 70px auto;
+    font-size: 12vw;
+    text-align: center;
+    font-weight: bold;
+    text-transform: capitalize;
+
+    @include breakpoint(sm) {
+      font-size: 8vw;
+    }
+    @include breakpoint(md) {
+      font-size: 5vw;
+    }
+  }
+
+  h2.section-sub-header {
+    margin: 20px;
+    text-align: center;
+    font-weight: 800;
+    text-transform: capitalize;
+  }
+}
+
+
