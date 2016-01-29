@@ -1,0 +1,8 @@
+.shake:hover,
+.shake:focus {
+  -webkit-animation-name: spaceboots;
+  -webkit-animation-duration: 0.4s;
+  -webkit-transform-origin: 50% 50%;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+}

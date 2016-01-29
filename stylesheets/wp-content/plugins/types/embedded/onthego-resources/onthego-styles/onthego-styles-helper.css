@@ -1,0 +1,468 @@
+/**
+** Do not edit onthego-styles-helper.css directly always
+** use this file otherwise changes will be lost at first compile.
+**  ONT CSS Helper
+**  a collection of rules to be used any where
+**/
+/* SET A NUMBER OF CLASSES TO FORCE THE SIZE OF THE ICON */
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-12 {
+  font-size: 12px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-13 {
+  font-size: 13px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-14 {
+  font-size: 14px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-15 {
+  font-size: 15px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-16 {
+  font-size: 16px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-17 {
+  font-size: 17px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-18 {
+  font-size: 18px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-19 {
+  font-size: 19px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-20 {
+  font-size: 20px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-21 {
+  font-size: 21px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-22 {
+  font-size: 22px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-23 {
+  font-size: 23px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-24 {
+  font-size: 24px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-25 {
+  font-size: 25px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-26 {
+  font-size: 26px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-27 {
+  font-size: 27px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-28 {
+  font-size: 28px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-29 {
+  font-size: 29px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-30 {
+  font-size: 30px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-31 {
+  font-size: 31px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-32 {
+  font-size: 32px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-33 {
+  font-size: 33px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-34 {
+  font-size: 34px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-35 {
+  font-size: 35px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-36 {
+  font-size: 36px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-37 {
+  font-size: 37px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-38 {
+  font-size: 38px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-39 {
+  font-size: 39px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-40 {
+  font-size: 40px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-41 {
+  font-size: 41px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-42 {
+  font-size: 42px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-43 {
+  font-size: 43px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-44 {
+  font-size: 44px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-45 {
+  font-size: 45px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-46 {
+  font-size: 46px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-47 {
+  font-size: 47px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-48 {
+  font-size: 48px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-49 {
+  font-size: 49px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-50 {
+  font-size: 50px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-51 {
+  font-size: 51px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-52 {
+  font-size: 52px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-53 {
+  font-size: 53px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-54 {
+  font-size: 54px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-55 {
+  font-size: 55px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-56 {
+  font-size: 56px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-57 {
+  font-size: 57px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-58 {
+  font-size: 58px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-59 {
+  font-size: 59px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-60 {
+  font-size: 60px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-61 {
+  font-size: 61px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-62 {
+  font-size: 62px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-63 {
+  font-size: 63px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-64 {
+  font-size: 64px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-65 {
+  font-size: 65px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-66 {
+  font-size: 66px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-67 {
+  font-size: 67px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-68 {
+  font-size: 68px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-69 {
+  font-size: 69px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-70 {
+  font-size: 70px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-71 {
+  font-size: 71px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-72 {
+  font-size: 72px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-73 {
+  font-size: 73px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-74 {
+  font-size: 74px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-75 {
+  font-size: 75px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-76 {
+  font-size: 76px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-77 {
+  font-size: 77px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-78 {
+  font-size: 78px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-79 {
+  font-size: 79px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-80 {
+  font-size: 80px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-81 {
+  font-size: 81px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-82 {
+  font-size: 82px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-83 {
+  font-size: 83px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-84 {
+  font-size: 84px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-85 {
+  font-size: 85px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-86 {
+  font-size: 86px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-87 {
+  font-size: 87px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-88 {
+  font-size: 88px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-89 {
+  font-size: 89px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-90 {
+  font-size: 90px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-91 {
+  font-size: 91px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-92 {
+  font-size: 92px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-93 {
+  font-size: 93px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-94 {
+  font-size: 94px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-95 {
+  font-size: 95px !important;
+}
+
+/* line 10, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+.ont-icon-96 {
+  font-size: 96px !important;
+}
+
+/* RESET MARGIN AND PADDING FOR ALL OUR ICONS ONLY */
+/* line 16, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+[class^="icon-access"] {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 16, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+[class^="icon-cred"] {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 16, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+[class^="icon-layouts"] {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 16, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+[class^="icon-module"] {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 16, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+[class^="icon-types"] {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 16, ../../../../../../../wp-content/plugins/types/embedded/onthego-resources/onthego-styles/onthego-styles-helper.scss */
+[class^="icon-views"] {
+  margin: 0;
+  padding: 0;
+}
