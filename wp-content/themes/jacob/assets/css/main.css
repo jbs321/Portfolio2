@@ -21,6 +21,18 @@ body .home-overlay {
   background: repeat scroll 0 0 rgba(53, 60, 79, 0.8);
 }
 /* line 19, ../scss/base/_misc.scss */
+body .home-overlay i {
+  top: 10px;
+  left: 10px;
+  color: white;
+  z-index: 20;
+  padding: 10px;
+  cursor: pointer;
+  position: fixed;
+  font-size: 40px;
+  background-color: #F54F36;
+}
+/* line 31, ../scss/base/_misc.scss */
 body .home-overlay .video-container {
   top: 0px;
   left: 0px;
@@ -35,12 +47,12 @@ body .home-overlay .video-container {
   background-position: 50% 50%;
 }
 @media (min-width: 1200px) {
-  /* line 19, ../scss/base/_misc.scss */
+  /* line 31, ../scss/base/_misc.scss */
   body .home-overlay .video-container {
     display: block;
   }
 }
-/* line 36, ../scss/base/_misc.scss */
+/* line 48, ../scss/base/_misc.scss */
 body .home-overlay .video-container video {
   top: 50%;
   left: 50%;
@@ -52,68 +64,94 @@ body .home-overlay .video-container video {
   transform: translate(-50%, -50%);
   visibility: visible;
 }
-/* line 50, ../scss/base/_misc.scss */
+/* line 62, ../scss/base/_misc.scss */
 body .hidden {
+  animation: hideAnim 1s 1 forwards;
+}
+/* line 65, ../scss/base/_misc.scss */
+body .hidden-fixed {
   display: none !important;
 }
-/* line 54, ../scss/base/_misc.scss */
+/* line 69, ../scss/base/_misc.scss */
+body .display {
+  animation: showAnim 1s 1 forwards;
+}
+@-webkit-keyframes hideAnim {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none !important;
+  }
+}
+@-webkit-keyframes showAnim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    display: none !important;
+  }
+}
+/* line 83, ../scss/base/_misc.scss */
 body .noPad {
   padding: 0 !important;
 }
-/* line 58, ../scss/base/_misc.scss */
+/* line 87, ../scss/base/_misc.scss */
 body .pad-5 {
   padding: 5px;
 }
-/* line 62, ../scss/base/_misc.scss */
+/* line 91, ../scss/base/_misc.scss */
 body .pad-10 {
   padding: 5px;
 }
-/* line 66, ../scss/base/_misc.scss */
+/* line 95, ../scss/base/_misc.scss */
 body .pad-15 {
   padding: 5px;
 }
-/* line 70, ../scss/base/_misc.scss */
+/* line 99, ../scss/base/_misc.scss */
 body .pad-40 {
   padding: 0 20px;
 }
 @media (min-width: 768px) {
-  /* line 70, ../scss/base/_misc.scss */
+  /* line 99, ../scss/base/_misc.scss */
   body .pad-40 {
     padding: 0 40px;
   }
 }
-/* line 77, ../scss/base/_misc.scss */
+/* line 106, ../scss/base/_misc.scss */
 body .marg-5 {
   margin: 5px;
 }
-/* line 81, ../scss/base/_misc.scss */
+/* line 110, ../scss/base/_misc.scss */
 body .marg-10 {
   margin: 10px;
 }
-/* line 85, ../scss/base/_misc.scss */
+/* line 114, ../scss/base/_misc.scss */
 body .marg-15 {
   margin: 15px;
 }
-/* line 90, ../scss/base/_misc.scss */
+/* line 119, ../scss/base/_misc.scss */
 body #fp-nav.right {
   top: 100px;
 }
 @media (max-width: 767px) {
-  /* line 90, ../scss/base/_misc.scss */
+  /* line 119, ../scss/base/_misc.scss */
   body #fp-nav.right {
     display: none;
   }
 }
-/* line 99, ../scss/base/_misc.scss */
+/* line 128, ../scss/base/_misc.scss */
 body .fp-slidesNav span {
   background-color: #fff !important;
 }
-/* line 104, ../scss/base/_misc.scss */
+/* line 133, ../scss/base/_misc.scss */
 body .fp-controlArrow {
   display: none;
 }
 @media (min-width: 768px) {
-  /* line 104, ../scss/base/_misc.scss */
+  /* line 133, ../scss/base/_misc.scss */
   body .fp-controlArrow {
     display: block;
   }
@@ -1677,8 +1715,7 @@ span, h1, h2 {
 }
 /* line 22, ../scss/pages/_about-me.scss */
 .about-me h1.section-header {
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin: 70px auto;
 }
 @media (min-width: 1200px) {
   /* line 22, ../scss/pages/_about-me.scss */
@@ -1792,12 +1829,12 @@ span, h1, h2 {
   animation-delay: 11s;
 }
 
-/* line 36, ../scss/pages/_about-me.scss */
+/* line 35, ../scss/pages/_about-me.scss */
 .hobbies {
   position: relative;
   height: 300px;
 }
-/* line 39, ../scss/pages/_about-me.scss */
+/* line 38, ../scss/pages/_about-me.scss */
 .hobbies .glass {
   width: 100%;
   height: 100%;
@@ -1806,7 +1843,7 @@ span, h1, h2 {
   -webkit-filter: blur(3px);
   background-color: white;
 }
-/* line 47, ../scss/pages/_about-me.scss */
+/* line 46, ../scss/pages/_about-me.scss */
 .hobbies .glass::before {
   z-index: -1;
   display: block;

@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 <body id="perspective" class="perspective effect-airbnb">
 <div class="home-overlay">
+    <i class="fa fa-arrow-left"></i>
     <div class="video-container">
         <video id="my-video" class="video" autoplay muted loop>
             <source src="<?php echo get_template_directory_uri() ?>/assets/videos/bg_video.mp4" type="video/mp4">

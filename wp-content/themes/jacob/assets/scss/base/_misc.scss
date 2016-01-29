@@ -16,6 +16,18 @@ body {
     position: absolute;
     background: repeat scroll 0 0 rgba(53, 60, 79, .8);
 
+    i{
+      top: 10px;
+      left: 10px;
+      color: white;
+      z-index: 20;
+      padding: 10px;
+      cursor: pointer;
+      position: fixed;
+      font-size: 40px;
+      background-color: #F54F36;
+    }
+
     .video-container {
       top: 0px;
       left: 0px;
@@ -48,7 +60,24 @@ body {
   }
 
   .hidden{
+    animation: hideAnim 1s 1 forwards;
+  }
+  .hidden-fixed{
     display: none!important;
+  }
+
+  .display{
+    animation: showAnim 1s 1 forwards;
+  }
+
+  @-webkit-keyframes hideAnim {
+    0% { opacity: 1; }
+    100% { opacity: 0;  display: none!important;}
+  }
+
+  @-webkit-keyframes showAnim {
+    0% { opacity: 0; }
+    100% { opacity: 1;  display: none!important;}
   }
 
   .noPad{

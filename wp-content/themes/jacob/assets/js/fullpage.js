@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
     $('#fullpage').fullpage({
         //Navigation
         menu: '#menu',
@@ -37,7 +37,7 @@ $(document).ready(function() {
         ////Design
         controlArrows: true,
         verticalCentered: true,
-        resize : true,
+        resize: true,
         //sectionsColor : ['#ccc', '#fff'],
         //paddingTop: '-1em',
         //paddingBottom: '10px',
@@ -50,14 +50,25 @@ $(document).ready(function() {
         slideSelector: '.slide',
 
         //events
-        onLeave: function(index, nextIndex, direction){
-            console.log(index, nextIndex, direction);
+        onLeave: function (index, nextIndex, direction) {
+
         },
-        afterLoad: function(anchorLink, index){},
-        afterRender: function(){},
-        afterResize: function(){},
-        afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
-        onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){
+        afterLoad: function (anchorLink, index) {
+            if (index > 1) {
+                $('#go-up').removeClass('hidden hidden-fixed');
+                $('#go-up').addClass('display');
+            } else {
+                $('#go-up').removeClass('display');
+                $('#go-up').addClass('hidden');
+            }
+        },
+        afterRender: function () {
+        },
+        afterResize: function () {
+        },
+        afterSlideLoad: function (anchorLink, index, slideAnchor, slideIndex) {
+        },
+        onSlideLeave: function (anchorLink, index, slideIndex, direction, nextSlideIndex) {
             console.log(anchorLink, index, slideIndex, direction, nextSlideIndex);
         }
     });

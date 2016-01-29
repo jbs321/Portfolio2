@@ -57,6 +57,7 @@
 			// animate..
 			setTimeout( function() {
                 classie.add( perspectiveWrapper, 'animate' );
+                classie.add( showMenu, 'hidden-fixed');
                 classie.add( showMenu, 'hidden');
             }, 25 );
 		});
@@ -82,10 +83,21 @@
 				}
 				classie.remove( perspectiveWrapper, 'animate' );
 				classie.remove( showMenu, 'hidden' );
+				classie.remove( showMenu, 'hidden-fixed' );
 			}
 		}
 
 		perspectiveWrapper.addEventListener( clickevent, function( ev ) { return false; } );
+
+
+		$('.fa-arrow-left').click(function (e) {
+			e.preventDefault();
+			closeMenu(e);
+		});
+
+		$('#go-up').click(function () {
+			$.fn.fullpage.moveTo(1);
+		});
 
 		$outerNav.find('a').click(function (e) {
 			e.preventDefault();
