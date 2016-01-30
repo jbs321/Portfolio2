@@ -30,9 +30,9 @@
 </html>
 <script src="<?php echo get_template_directory_uri() ?>/assets/js/modernizr.js"></script>
 <script src="<?php echo get_template_directory_uri() ?>/assets/js/classie.js"></script>
+<script src="<?php echo get_template_directory_uri() ?>/assets/js/charts.js"></script>
 <script src="<?php echo get_template_directory_uri() ?>/assets/js/main.js"></script>
 <script src="<?php echo get_template_directory_uri() ?>/assets/js/menu.js"></script>
-<script src="<?php echo get_template_directory_uri() ?>/assets/js/charts.js"></script>
 <script src="<?php echo get_template_directory_uri() ?>/assets/js/fullpage.js"></script>
 <!-- Skill -->
 <!--<script src="--><?php //echo get_template_directory_uri() ?><!--/assets/js/skill/raphael.js"></script>-->

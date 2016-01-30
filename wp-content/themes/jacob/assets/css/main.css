@@ -2327,7 +2327,7 @@ span, h1, h2 {
   margin: auto;
   width: 90%;
   height: 80%;
-  background-color: #FFF;
+  background: #1A3742;
 }
 /* line 29, ../scss/pages/_skills.scss */
 .skills .slide {

@@ -3,6 +3,10 @@ $(function () {
         {
             "type": "serial",
             "categoryField": "category",
+            "angle": 30,
+            "depth3D": 30,
+            "color": "#FFFFFF",
+            "handDrawn": true,
             "startDuration": 1,
             "categoryAxis": {
                 "gridPosition": "start"
@@ -36,7 +40,8 @@ $(function () {
             "titles": [
                 {
                     "id": "Title-1",
-                    "size": 15,
+                    "size": 20,
+                    "color": "#FF6600",
                     "text": "Client Skills"
                 }
             ],
@@ -81,13 +86,16 @@ $(function () {
         }
     );
 
-
     AmCharts.makeChart("serverChart",
         {
             "type": "serial",
             "categoryField": "category",
             "startDuration": 1,
+            "angle": 30,
+            "depth3D": 30,
             "handDrawThickness": 0,
+            "handDrawn": true,
+            "color": "#FFFFFF",
             "theme": "light",
             "categoryAxis": {
                 "gridPosition": "start"
@@ -102,17 +110,13 @@ $(function () {
                     "title": "graph 1",
                     "type": "column",
                     "valueField": "column-1"
-                },
-                {
-                    "id": "AmGraph-2",
-                    "title": "graph 2",
-                    "valueField": "Compass"
                 }
             ],
             "guides": [],
             "valueAxes": [
                 {
                     "id": "ValueAxis-1",
+                    "color": "#fff",
                     "title": "Knowledge(%)"
                 }
             ],
@@ -121,7 +125,8 @@ $(function () {
             "titles": [
                 {
                     "id": "Title-1",
-                    "size": 15,
+                    "size": 20,
+                    "color": "#67B7DC",
                     "text": "Server Skills"
                 }
             ],
