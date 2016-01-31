@@ -1853,179 +1853,495 @@ span, h1, h2 {
 
 /* line 1, ../scss/pages/_timeline.scss */
 .timeline {
-  height: auto;
-  z-index: 15;
-  position: relative;
-  background-color: #fff;
+  background-color: #f8f8f8;
 }
-/* line 7, ../scss/pages/_timeline.scss */
-.timeline .timeline_container {
-  margin: 30px 0 0 0;
-  padding: 0;
-  position: relative;
-  list-style: none;
+/* line 8, ../scss/pages/_timeline.scss */
+.timeline a {
+  color: #7b9d6f;
+  text-decoration: none;
 }
 /* line 13, ../scss/pages/_timeline.scss */
-.timeline .timeline_container:before {
-  top: 0;
-  left: 5%;
-  width: 10px;
-  bottom: 0;
-  content: '';
+.timeline .cd-horizontal-timeline {
+  opacity: 0;
+  margin: 2em auto;
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -ms-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+/* line 18, ../scss/pages/_timeline.scss */
+.timeline .cd-horizontal-timeline::before {
+  /* never visible - this is used in jQuery to check the current MQ */
+  content: 'mobile';
   display: none;
+}
+/* line 24, ../scss/pages/_timeline.scss */
+.timeline .cd-horizontal-timeline.loaded {
+  /* show the timeline after events position has been set (using JavaScript) */
+  opacity: 1;
+}
+/* line 29, ../scss/pages/_timeline.scss */
+.timeline .cd-horizontal-timeline .timeline {
+  position: relative;
+  height: 100px;
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+/* line 37, ../scss/pages/_timeline.scss */
+.timeline .cd-horizontal-timeline .events-wrapper {
+  position: relative;
+  height: 100%;
+  margin: 0 40px;
+  overflow: hidden;
+}
+/* line 43, ../scss/pages/_timeline.scss */
+.timeline .cd-horizontal-timeline .events-wrapper::after, .timeline .cd-horizontal-timeline .events-wrapper::before {
+  /* these are used to create a shadow effect at the sides of the timeline */
+  content: '';
   position: absolute;
-  background: #afdcf8;
-  margin-left: -10px;
+  z-index: 2;
+  top: 0;
+  height: 100%;
+  width: 20px;
 }
-@media (min-width: 992px) {
-  /* line 13, ../scss/pages/_timeline.scss */
-  .timeline .timeline_container:before {
-    left: 5%;
-    display: block;
-  }
-}
-/* line 34, ../scss/pages/_timeline.scss */
-.timeline .timeline_container li:nth-child(odd) .cl_time span:last-child {
-  color: #6cbfee;
-}
-/* line 39, ../scss/pages/_timeline.scss */
-.timeline .timeline_container li:nth-child(odd) .cl_label {
-  background: #6cbfee;
-}
-/* line 42, ../scss/pages/_timeline.scss */
-.timeline .timeline_container li:nth-child(odd) .cl_label:after {
-  border-right-color: #6cbfee;
-}
-/* line 48, ../scss/pages/_timeline.scss */
-.timeline .timeline_container li .cl_time {
-  width: 30%;
-  display: block;
-  position: absolute;
-  padding-right: 100px;
-}
-@media (min-width: 992px) {
-  /* line 48, ../scss/pages/_timeline.scss */
-  .timeline .timeline_container li .cl_time {
-    display: none;
-  }
+/* line 53, ../scss/pages/_timeline.scss */
+.timeline .cd-horizontal-timeline .events-wrapper::before {
+  left: 0;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y4ZjhmOCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y4ZjhmOCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #f8f8f8), color-stop(100%, rgba(248, 248, 248, 0)));
+  background-image: -moz-linear-gradient(left, #f8f8f8, rgba(248, 248, 248, 0));
+  background-image: -webkit-linear-gradient(left, #f8f8f8, rgba(248, 248, 248, 0));
+  background-image: linear-gradient(to right, #f8f8f8, rgba(248, 248, 248, 0));
 }
 /* line 58, ../scss/pages/_timeline.scss */
-.timeline .timeline_container li .cl_time span {
-  display: block;
-  font-size: 2em;
-  text-align: center;
+.timeline .cd-horizontal-timeline .events-wrapper::after {
+  right: 0;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjEuMCIgeTE9IjAuNSIgeDI9IjAuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y4ZjhmOCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y4ZjhmOCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 100% 50%, 0% 50%, color-stop(0%, #f8f8f8), color-stop(100%, rgba(248, 248, 248, 0)));
+  background-image: -moz-linear-gradient(right, #f8f8f8, rgba(248, 248, 248, 0));
+  background-image: -webkit-linear-gradient(right, #f8f8f8, rgba(248, 248, 248, 0));
+  background-image: linear-gradient(to left, #f8f8f8, rgba(248, 248, 248, 0));
 }
-/* line 65, ../scss/pages/_timeline.scss */
-.timeline .timeline_container li .cl_label {
-  color: #fff;
-  margin: 0 10% 15px 10%;
-  padding: 2em;
-  position: relative;
-  font-size: 1.2em;
-  background: #3594cb;
-  font-weight: 300;
-  line-height: 1.4;
-  border-radius: 5px;
-}
-@media (min-width: 992px) {
-  /* line 65, ../scss/pages/_timeline.scss */
-  .timeline .timeline_container li .cl_label {
-    margin: 0 10% 15px 8%;
-  }
-}
-@media (max-width: 767px) {
-  /* line 80, ../scss/pages/_timeline.scss */
-  .timeline .timeline_container li .cl_label h1 {
-    font-size: 6vw;
-  }
-}
-/* line 86, ../scss/pages/_timeline.scss */
-.timeline .timeline_container li .cl_label h2 {
-  padding: 0 0 10px 0;
-  font-size: 1em;
-  margin-top: 0px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-}
-@media (max-width: 767px) {
-  /* line 86, ../scss/pages/_timeline.scss */
-  .timeline .timeline_container li .cl_label h2 {
-    font-size: 4vw;
-  }
-}
-/* line 97, ../scss/pages/_timeline.scss */
-.timeline .timeline_container li .cl_label:after {
-  top: 10px;
-  width: 0;
-  right: 100%;
-  border: solid transparent;
-  height: 0;
-  content: "";
+/* line 64, ../scss/pages/_timeline.scss */
+.timeline .cd-horizontal-timeline .events {
+  /* this is the grey line/timeline */
   position: absolute;
-  border-width: 10px;
-  pointer-events: none;
-  border-right-color: #3594cb;
+  z-index: 1;
+  left: 0;
+  top: 49px;
+  height: 2px;
+  /* width will be set using JavaScript */
+  background: #dfdfdf;
+  -webkit-transition: transform 0.4s;
+  -moz-transition: transform 0.4s;
+  -ms-transition: transform 0.4s;
+  -o-transition: transform 0.4s;
+  transition: transform 0.4s;
 }
-/* line 111, ../scss/pages/_timeline.scss */
-.timeline .timeline_container li .cl_icon {
+/* line 75, ../scss/pages/_timeline.scss */
+.timeline .cd-horizontal-timeline .events ol {
+  list-style: none;
+}
+/* line 80, ../scss/pages/_timeline.scss */
+.timeline .cd-horizontal-timeline .filling-line {
+  /* this is used to create the green line filling the timeline */
+  position: absolute;
+  z-index: 1;
+  left: 0;
   top: 0;
-  left: 20%;
-  speak: none;
-  width: 40px;
-  color: #fff;
-  height: 40px;
-  margin: 0 0 0 -25px;
+  height: 100%;
+  width: 100%;
+  background-color: #7b9d6f;
+  transform-origin: left 50%;
+  -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  -o-transform: scaleX(0);
+  transform: scaleX(0);
+  -moz-transform-origin: left center 50%;
+  -ms-transform-origin: left center 50%;
+  -webkit-transform-origin: left center 50%;
+  transform-origin: left center 50%;
+  -webkit-transition: transform 0.3s;
+  -moz-transition: transform 0.3s;
+  -ms-transition: transform 0.3s;
+  -o-transition: transform 0.3s;
+  transition: transform 0.3s;
+}
+/* line 95, ../scss/pages/_timeline.scss */
+.timeline .cd-horizontal-timeline .events a {
   position: absolute;
-  font-size: 1.4em;
+  bottom: 0;
+  z-index: 2;
   text-align: center;
-  background: #46a4da;
-  box-shadow: 0 0 0 8px #afdcf8;
-  font-style: normal;
-  line-height: 40px;
-  font-family: 'ecoico';
-  font-weight: normal;
-  font-variant: normal;
+  font-size: 1.3rem;
+  padding-bottom: 15px;
+  color: #383838;
+  /* fix bug on Safari - text flickering while timeline translates */
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+}
+/* line 106, ../scss/pages/_timeline.scss */
+.timeline .cd-horizontal-timeline .events a::after {
+  /* this is used to create the event spot */
+  content: '';
+  position: absolute;
+  left: 50%;
+  right: auto;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  bottom: -5px;
+  height: 12px;
+  width: 12px;
   border-radius: 50%;
-  text-transform: none;
-  -webkit-font-smoothing: antialiased;
+  border: 2px solid #dfdfdf;
+  background-color: #f8f8f8;
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  -ms-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  -webkit-transition: border-color 0.3s;
+  -moz-transition: border-color 0.3s;
+  -ms-transition: border-color 0.3s;
+  -o-transition: border-color 0.3s;
+  transition: border-color 0.3s;
 }
-@media (max-width: 767px) {
-  /* line 141, ../scss/pages/_timeline.scss */
-  .timeline .timeline_container li:nth-child(odd) .cl_label:after {
-    border-right-color: transparent;
-    border-bottom-color: #6cbfee;
+/* line 121, ../scss/pages/_timeline.scss */
+.no-touch .timeline .cd-horizontal-timeline .events a:hover::after {
+  background-color: #7b9d6f;
+  border-color: #7b9d6f;
+}
+/* line 126, ../scss/pages/_timeline.scss */
+.timeline .cd-horizontal-timeline .events a.selected {
+  pointer-events: none;
+}
+/* line 129, ../scss/pages/_timeline.scss */
+.timeline .cd-horizontal-timeline .events a.selected::after {
+  background-color: #7b9d6f;
+  border-color: #7b9d6f;
+}
+/* line 135, ../scss/pages/_timeline.scss */
+.timeline .cd-horizontal-timeline .events a.older-event::after {
+  border-color: #7b9d6f;
+}
+@media only screen and (min-width: 1100px) {
+  /* line 13, ../scss/pages/_timeline.scss */
+  .timeline .cd-horizontal-timeline {
+    margin: 6em auto;
   }
-  /* line 147, ../scss/pages/_timeline.scss */
-  .timeline .timeline_container li .cl_time {
-    width: 100%;
-    position: relative;
-    padding: 0 0 20px 0;
-  }
-  /* line 152, ../scss/pages/_timeline.scss */
-  .timeline .timeline_container li .cl_time span {
-    font-size: 1.5em;
-    text-align: left;
-  }
-  /* line 158, ../scss/pages/_timeline.scss */
-  .timeline .timeline_container li .cl_label {
-    margin: 0 0 30px 0;
-    padding: 1em;
-    font-weight: 400;
-    font-size: 95%;
-  }
-  /* line 164, ../scss/pages/_timeline.scss */
-  .timeline .timeline_container li .cl_label:after {
-    right: auto;
-    left: 20px;
-    border-right-color: transparent;
-    border-bottom-color: #3594cb;
-    top: -20px;
-  }
-  /* line 173, ../scss/pages/_timeline.scss */
-  .timeline .timeline_container li .cl_icon {
-    display: none !important;
+  /* line 143, ../scss/pages/_timeline.scss */
+  .timeline .cd-horizontal-timeline::before {
+    /* never visible - this is used in jQuery to check the current MQ */
+    content: 'desktop';
   }
 }
-
+/* line 150, ../scss/pages/_timeline.scss */
+.timeline .cd-timeline-navigation {
+  list-style: none;
+}
+/* line 154, ../scss/pages/_timeline.scss */
+.timeline .cd-timeline-navigation a {
+  /* these are the left/right arrows to navigate the timeline */
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  bottom: auto;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 34px;
+  width: 34px;
+  border-radius: 50%;
+  border: 2px solid #dfdfdf;
+  /* replace text with an icon */
+  overflow: hidden;
+  color: transparent;
+  text-indent: 100%;
+  white-space: nowrap;
+  -webkit-transition: border-color 0.3s;
+  -moz-transition: border-color 0.3s;
+  -ms-transition: border-color 0.3s;
+  -o-transition: border-color 0.3s;
+  transition: border-color 0.3s;
+}
+/* line 170, ../scss/pages/_timeline.scss */
+.timeline .cd-timeline-navigation a::after {
+  /* arrow icon */
+  content: '';
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  right: auto;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: url(../images/cd-arrow.svg) no-repeat 0 0;
+}
+/* line 180, ../scss/pages/_timeline.scss */
+.timeline .cd-timeline-navigation a.prev {
+  left: 0;
+  -webkit-transform: translateY(-50%) rotate(180deg);
+  -moz-transform: translateY(-50%) rotate(180deg);
+  -ms-transform: translateY(-50%) rotate(180deg);
+  -o-transform: translateY(-50%) rotate(180deg);
+  transform: translateY(-50%) rotate(180deg);
+}
+/* line 185, ../scss/pages/_timeline.scss */
+.timeline .cd-timeline-navigation a.next {
+  right: 0;
+}
+/* line 189, ../scss/pages/_timeline.scss */
+.no-touch .timeline .cd-timeline-navigation a:hover {
+  border-color: #7b9d6f;
+}
+/* line 193, ../scss/pages/_timeline.scss */
+.timeline .cd-timeline-navigation a.inactive {
+  cursor: not-allowed;
+}
+/* line 196, ../scss/pages/_timeline.scss */
+.timeline .cd-timeline-navigation a.inactive::after {
+  background-position: 0 -16px;
+}
+/* line 200, ../scss/pages/_timeline.scss */
+.no-touch .timeline .cd-timeline-navigation a.inactive:hover {
+  border-color: #dfdfdf;
+}
+/* line 206, ../scss/pages/_timeline.scss */
+.timeline .cd-horizontal-timeline .events-content {
+  position: relative;
+  width: 100%;
+  margin: 2em 0;
+  overflow: hidden;
+  -webkit-transition: height 0.4s;
+  -moz-transition: height 0.4s;
+  -ms-transition: height 0.4s;
+  -o-transition: height 0.4s;
+  transition: height 0.4s;
+}
+/* line 213, ../scss/pages/_timeline.scss */
+.timeline .cd-horizontal-timeline .events-content li {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  left: 0;
+  top: 0;
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  transform: translateX(-100%);
+  padding: 0 5%;
+  opacity: 0;
+  -moz-animation-duration: 0.4s;
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -moz-animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  list-style: none;
+}
+/* line 226, ../scss/pages/_timeline.scss */
+.timeline .cd-horizontal-timeline .events-content li.selected {
+  /* visible event content */
+  position: relative;
+  z-index: 2;
+  opacity: 1;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+}
+/* line 234, ../scss/pages/_timeline.scss */
+.timeline .cd-horizontal-timeline .events-content li.enter-right, .timeline .cd-horizontal-timeline .events-content li.leave-right {
+  -moz-animation-name: cd-enter-right;
+  -webkit-animation-name: cd-enter-right;
+  animation-name: cd-enter-right;
+}
+/* line 238, ../scss/pages/_timeline.scss */
+.timeline .cd-horizontal-timeline .events-content li.enter-left, .timeline .cd-horizontal-timeline .events-content li.leave-left {
+  -moz-animation-name: cd-enter-left;
+  -webkit-animation-name: cd-enter-left;
+  animation-name: cd-enter-left;
+}
+/* line 242, ../scss/pages/_timeline.scss */
+.timeline .cd-horizontal-timeline .events-content li.leave-right, .timeline .cd-horizontal-timeline .events-content li.leave-left {
+  -moz-animation-direction: reverse;
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse;
+}
+/* line 247, ../scss/pages/_timeline.scss */
+.timeline .cd-horizontal-timeline .events-content li > * {
+  max-width: 800px;
+  margin: 0 auto;
+}
+/* line 252, ../scss/pages/_timeline.scss */
+.timeline .cd-horizontal-timeline .events-content h2 {
+  font-weight: bold;
+  font-size: 2.6rem;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+/* line 260, ../scss/pages/_timeline.scss */
+.timeline .cd-horizontal-timeline .events-content em {
+  display: block;
+  font-style: italic;
+  margin: 10px auto;
+}
+/* line 265, ../scss/pages/_timeline.scss */
+.timeline .cd-horizontal-timeline .events-content em::before {
+  content: '- ';
+}
+/* line 270, ../scss/pages/_timeline.scss */
+.timeline .cd-horizontal-timeline .events-content p {
+  font-size: 1.4rem;
+  color: #959595;
+}
+/* line 275, ../scss/pages/_timeline.scss */
+.timeline .cd-horizontal-timeline .events-content em, .timeline .cd-horizontal-timeline .events-content p {
+  line-height: 1.6;
+}
+@media only screen and (min-width: 768px) {
+  /* line 281, ../scss/pages/_timeline.scss */
+  .timeline .cd-horizontal-timeline .events-content h2 {
+    font-size: 7rem;
+  }
+  /* line 285, ../scss/pages/_timeline.scss */
+  .timeline .cd-horizontal-timeline .events-content em {
+    font-size: 2rem;
+  }
+  /* line 289, ../scss/pages/_timeline.scss */
+  .timeline .cd-horizontal-timeline .events-content p {
+    font-size: 1.8rem;
+  }
+}
+@-moz-keyframes cd-enter-right {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -o-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+}
+@-webkit-keyframes cd-enter-right {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -o-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+}
+@keyframes cd-enter-right {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -o-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+}
+@-moz-keyframes cd-enter-left {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -o-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+}
+@-webkit-keyframes cd-enter-left {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -o-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+}
+@keyframes cd-enter-left {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -o-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+}
 /* line 1, ../scss/pages/_contact-me.scss */
 .contact-me {
   position: relative;
