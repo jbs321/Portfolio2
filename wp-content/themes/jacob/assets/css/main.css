@@ -688,6 +688,54 @@ span, h1, h2 {
     width: 0;
   }
 }
+/* line 1, ../scss/helpers/_slides.scss */
+[data-slide="true"] {
+  opacity: 0;
+}
+/* line 7, ../scss/helpers/_slides.scss */
+[data-slide="true"].slide-left {
+  animation: slide-left 0.8s;
+  opacity: 1;
+}
+/* line 12, ../scss/helpers/_slides.scss */
+[data-slide="true"].slide-top {
+  animation: slide-top 0.8s;
+  opacity: 1;
+}
+/* line 17, ../scss/helpers/_slides.scss */
+[data-slide="true"].slide-reverse {
+  animation: slide-reverse 0.5s;
+  opacity: 0;
+}
+
+@keyframes slide-reverse {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes slide-left {
+  from {
+    left: 100%;
+    opacity: 0;
+  }
+  to {
+    left: 0%;
+    opacity: 1;
+  }
+}
+@keyframes slide-top {
+  from {
+    top: 900px;
+    opacity: 0;
+  }
+  to {
+    top: 0%;
+    opacity: 1;
+  }
+}
 /* line 1, ../scss/components/_menu.scss */
 .wrapper {
   position: relative;
@@ -1095,35 +1143,35 @@ span, h1, h2 {
   background: #ffffff url("../images/bg1.jpg") no-repeat center center;
   max-height: 100%;
 }
-/* line 9, ../scss/pages/_top.scss */
+/* line 10, ../scss/pages/_top.scss */
 .top h1, .top h2 {
   color: #fff;
   margin: 0;
-  position: relative;
   height: 25%;
+  position: relative;
   text-align: center;
 }
-/* line 17, ../scss/pages/_top.scss */
+/* line 18, ../scss/pages/_top.scss */
 .top h1 {
   font-size: 12vw;
 }
 @media (min-width: 768px) {
-  /* line 17, ../scss/pages/_top.scss */
+  /* line 18, ../scss/pages/_top.scss */
   .top h1 {
     font-size: 8vw;
   }
 }
 @media (min-width: 992px) {
-  /* line 17, ../scss/pages/_top.scss */
+  /* line 18, ../scss/pages/_top.scss */
   .top h1 {
-    font-size: 5vw;
+    font-size: 7vw;
   }
 }
-/* line 28, ../scss/pages/_top.scss */
+/* line 24, ../scss/pages/_top.scss */
 .top h2 {
-  font-size: 4vw;
+  font-size: 3vw;
 }
-/* line 32, ../scss/pages/_top.scss */
+/* line 26, ../scss/pages/_top.scss */
 .top .home-overlay {
   top: 0;
   left: 0;
@@ -1132,462 +1180,18 @@ span, h1, h2 {
   position: absolute;
   background: repeat scroll 0 0 rgba(53, 60, 79, 0.8);
 }
-/* line 41, ../scss/pages/_top.scss */
-.top .info-container {
-  color: #FFFFFF;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-/* line 47, ../scss/pages/_top.scss */
-.top .info-container .info {
-  height: 50%;
-  position: relative;
-  padding-top: 10%;
-  padding-left: 15%;
-}
-/* line 53, ../scss/pages/_top.scss */
-.top .info-container .info .header {
-  height: 100%;
-  position: absolute;
-  font-weight: 800;
-}
-/* line 58, ../scss/pages/_top.scss */
-.top .info-container .info .header .titles {
-  bottom: 80px;
-  display: inline-block;
-  position: relative;
-}
-/* line 63, ../scss/pages/_top.scss */
-.top .info-container .info .header .titles h1, .top .info-container .info .header .titles h2 {
-  line-height: 1em;
-  font-family: 'raleway';
-  font-weight: bold;
-  padding-left: 10px;
-}
-/* line 70, ../scss/pages/_top.scss */
-.top .info-container .info .header .titles h1 {
-  font-size: 7vw;
-}
-/* line 74, ../scss/pages/_top.scss */
-.top .info-container .info .header .titles h2 {
-  font-size: 50px;
-}
-/* line 79, ../scss/pages/_top.scss */
-.top .info-container .info .header img {
-  width: 300px;
-  height: 300px;
-  border: 10px solid #eff0f4;
-  display: inline;
-  z-index: 5;
-  position: relative;
-  border-radius: 250px;
-}
-/* line 90, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer {
-  position: absolute;
-}
-/* line 93, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper {
-  width: 350px;
-  height: 350px;
-  margin: 0 auto;
-  z-index: 1;
-  position: relative;
-  border-radius: 50%;
-  -webkit-transform: rotateY(40deg);
-  -moz-transform: rotateY(40deg);
-  -ms-transform: rotateY(40deg);
-  -o-transform: rotateY(40deg);
-  transform: rotateY(40deg);
-  -webkit-transform-style: preserve-3d;
-}
-/* line 104, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper .planet {
-  top: 140px;
-  left: 140px;
-  z-index: 10;
-  position: absolute;
-  border-radius: 50%;
-  -webkit-animation: rotate 7s infinite linear;
-  -moz-animation: rotate 7s infinite linear;
-  -o-animation: rotate 7s infinite linear;
-}
-/* line 113, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper .planet:nth-child(1) {
-  animation-delay: -1s;
-}
-/* line 113, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper .planet:nth-child(2) {
-  animation-delay: -2s;
-}
-/* line 113, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper .planet:nth-child(3) {
-  animation-delay: -3s;
-}
-/* line 113, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper .planet:nth-child(4) {
-  animation-delay: -4s;
-}
-/* line 113, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper .planet:nth-child(5) {
-  animation-delay: -5s;
-}
-/* line 113, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper .planet:nth-child(6) {
-  animation-delay: -6s;
-}
-/* line 113, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper .planet:nth-child(7) {
-  animation-delay: -7s;
-}
-/* line 113, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper .planet:nth-child(8) {
-  animation-delay: -8s;
-}
-/* line 113, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper .planet:nth-child(9) {
-  animation-delay: -9s;
-}
-/* line 113, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper .planet:nth-child(10) {
-  animation-delay: -10s;
-}
-/* line 113, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper .planet:nth-child(11) {
-  animation-delay: -11s;
-}
-/* line 113, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper .planet:nth-child(12) {
-  animation-delay: -12s;
-}
-/* line 113, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper .planet:nth-child(13) {
-  animation-delay: -13s;
-}
-/* line 113, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper .planet:nth-child(14) {
-  animation-delay: -14s;
-}
-/* line 113, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper .planet:nth-child(15) {
-  animation-delay: -15s;
-}
-/* line 113, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper .planet:nth-child(16) {
-  animation-delay: -16s;
-}
-/* line 113, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper .planet:nth-child(17) {
-  animation-delay: -17s;
-}
-/* line 113, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper .planet:nth-child(18) {
-  animation-delay: -18s;
-}
-/* line 113, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper .planet:nth-child(19) {
-  animation-delay: -19s;
-}
-/* line 113, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper .planet:nth-child(20) {
-  animation-delay: -20s;
-}
-/* line 113, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper .planet:nth-child(21) {
-  animation-delay: -21s;
-}
-/* line 113, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper .planet:nth-child(22) {
-  animation-delay: -22s;
-}
-/* line 113, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper .planet:nth-child(23) {
-  animation-delay: -23s;
-}
-/* line 113, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper .planet:nth-child(24) {
-  animation-delay: -24s;
-}
-/* line 113, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper .planet:nth-child(25) {
-  animation-delay: -25s;
-}
-/* line 113, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper .planet:nth-child(26) {
-  animation-delay: -26s;
-}
-/* line 113, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper .planet:nth-child(27) {
-  animation-delay: -27s;
-}
-/* line 113, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper .planet:nth-child(28) {
-  animation-delay: -28s;
-}
-/* line 113, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper .planet:nth-child(29) {
-  animation-delay: -29s;
-}
-/* line 113, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper .planet:nth-child(30) {
-  animation-delay: -30s;
-}
-/* line 113, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper .planet:nth-child(31) {
-  animation-delay: -31s;
-}
-/* line 113, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper .planet:nth-child(32) {
-  animation-delay: -32s;
-}
-/* line 113, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper .planet:nth-child(33) {
-  animation-delay: -33s;
-}
-/* line 113, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper .planet:nth-child(34) {
-  animation-delay: -34s;
-}
-/* line 113, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper .planet:nth-child(35) {
-  animation-delay: -35s;
-}
-/* line 113, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper .planet:nth-child(36) {
-  animation-delay: -36s;
-}
-/* line 113, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper .planet:nth-child(37) {
-  animation-delay: -37s;
-}
-/* line 113, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper .planet:nth-child(38) {
-  animation-delay: -38s;
-}
-/* line 113, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper .planet:nth-child(39) {
-  animation-delay: -39s;
-}
-/* line 113, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper .planet:nth-child(40) {
-  animation-delay: -40s;
-}
-/* line 120, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper .planet:hover {
-  -webkit-animation-play-state: paused;
-}
-/* line 126, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper a.social-icon .fa {
-  color: #FFF;
-  color: rgba(255, 255, 255, 0.8);
-  width: 90px;
-  height: 90px;
-  font-size: 3em;
-  text-align: center;
-  box-shadow: inset 16px 0 40px 6px black, inset -3px 0 6px 2px rgba(255, 255, 255, 0.2);
-  line-height: 92px;
-  border-radius: 50%;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-/* line 139, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper a.social-icon .fa:nth-child(1) {
-  animation-delay: -4s;
-}
-/* line 139, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper a.social-icon .fa:nth-child(2) {
-  animation-delay: -5s;
-}
-/* line 139, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper a.social-icon .fa:nth-child(3) {
-  animation-delay: -6s;
-}
-/* line 139, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper a.social-icon .fa:nth-child(4) {
-  animation-delay: -7s;
-}
-/* line 139, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper a.social-icon .fa:nth-child(5) {
-  animation-delay: -8s;
-}
-/* line 139, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper a.social-icon .fa:nth-child(6) {
-  animation-delay: -9s;
-}
-/* line 139, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper a.social-icon .fa:nth-child(7) {
-  animation-delay: -10s;
-}
-/* line 139, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper a.social-icon .fa:nth-child(8) {
-  animation-delay: -11s;
-}
-/* line 139, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper a.social-icon .fa:nth-child(9) {
-  animation-delay: -12s;
-}
-/* line 139, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper a.social-icon .fa:nth-child(10) {
-  animation-delay: -13s;
-}
-/* line 139, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper a.social-icon .fa:nth-child(11) {
-  animation-delay: -14s;
-}
-/* line 139, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper a.social-icon .fa:nth-child(12) {
-  animation-delay: -15s;
-}
-/* line 139, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper a.social-icon .fa:nth-child(13) {
-  animation-delay: -16s;
-}
-/* line 139, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper a.social-icon .fa:nth-child(14) {
-  animation-delay: -17s;
-}
-/* line 139, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper a.social-icon .fa:nth-child(15) {
-  animation-delay: -18s;
-}
-/* line 139, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper a.social-icon .fa:nth-child(16) {
-  animation-delay: -19s;
-}
-/* line 139, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper a.social-icon .fa:nth-child(17) {
-  animation-delay: -20s;
-}
-/* line 139, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper a.social-icon .fa:nth-child(18) {
-  animation-delay: -21s;
-}
-/* line 139, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper a.social-icon .fa:nth-child(19) {
-  animation-delay: -22s;
-}
-/* line 139, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper a.social-icon .fa:nth-child(20) {
-  animation-delay: -23s;
-}
-/* line 139, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper a.social-icon .fa:nth-child(21) {
-  animation-delay: -24s;
-}
-/* line 139, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper a.social-icon .fa:nth-child(22) {
-  animation-delay: -25s;
-}
-/* line 139, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper a.social-icon .fa:nth-child(23) {
-  animation-delay: -26s;
-}
-/* line 139, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper a.social-icon .fa:nth-child(24) {
-  animation-delay: -27s;
-}
-/* line 139, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper a.social-icon .fa:nth-child(25) {
-  animation-delay: -28s;
-}
-/* line 139, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper a.social-icon .fa:nth-child(26) {
-  animation-delay: -29s;
-}
-/* line 139, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper a.social-icon .fa:nth-child(27) {
-  animation-delay: -30s;
-}
-/* line 139, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper a.social-icon .fa:nth-child(28) {
-  animation-delay: -31s;
-}
-/* line 139, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper a.social-icon .fa:nth-child(29) {
-  animation-delay: -32s;
-}
-/* line 139, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper a.social-icon .fa:nth-child(30) {
-  animation-delay: -33s;
-}
-/* line 139, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper a.social-icon .fa:nth-child(31) {
-  animation-delay: -34s;
-}
-/* line 139, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper a.social-icon .fa:nth-child(32) {
-  animation-delay: -35s;
-}
-/* line 139, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper a.social-icon .fa:nth-child(33) {
-  animation-delay: -36s;
-}
-/* line 139, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper a.social-icon .fa:nth-child(34) {
-  animation-delay: -37s;
-}
-/* line 139, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper a.social-icon .fa:nth-child(35) {
-  animation-delay: -38s;
-}
-/* line 139, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper a.social-icon .fa:nth-child(36) {
-  animation-delay: -39s;
-}
-/* line 139, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper a.social-icon .fa:nth-child(37) {
-  animation-delay: -40s;
-}
-/* line 139, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper a.social-icon .fa:nth-child(38) {
-  animation-delay: -41s;
-}
-/* line 139, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper a.social-icon .fa:nth-child(39) {
-  animation-delay: -42s;
-}
-/* line 139, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper a.social-icon .fa:nth-child(40) {
-  animation-delay: -43s;
-}
-/* line 144, ../scss/pages/_top.scss */
-.top .info-container .info .orbitContainer .orbitWrapper a.social-icon .fa:hover, .top .info-container .info .orbitContainer .orbitWrapper a.social-icon .fa:active {
-  color: #FFF;
-  -webkit-animation-play-state: paused;
-  -webkit-box-shadow: 1px 1px 3px #333;
-  -moz-box-shadow: 1px 1px 3px #333;
-  box-shadow: 1px 1px 3px #333;
-  -webkit-transform: scale(1.1);
-  -moz-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  -o-transform: scale(1.1);
-  transform: scale(1.1);
-  -webkit-transform: scale(2.1) rotate(360deg);
-  -moz-transform: scale(2.1) rotate(360deg);
-  -ms-transform: scale(2.1) rotate(360deg);
-  -o-transform: scale(2.1) rotate(360deg);
-  transform: scale(2.1) rotate(360deg);
-}
-/* line 160, ../scss/pages/_top.scss */
-.top .titles {
-  height: 50%;
-}
-/* line 164, ../scss/pages/_top.scss */
+/* line 35, ../scss/pages/_top.scss */
 .top .top-image {
   height: 200px;
   margin-bottom: 50px;
 }
 @media (min-width: 992px) {
-  /* line 164, ../scss/pages/_top.scss */
+  /* line 35, ../scss/pages/_top.scss */
   .top .top-image {
     height: 300px;
   }
 }
-/* line 172, ../scss/pages/_top.scss */
+/* line 40, ../scss/pages/_top.scss */
 .top .top-image img {
   height: 100%;
   border: 10px solid #eff0f4;
@@ -1598,24 +1202,82 @@ span, h1, h2 {
   border-radius: 50%;
 }
 @media (max-width: 767px) {
-  /* line 172, ../scss/pages/_top.scss */
+  /* line 40, ../scss/pages/_top.scss */
   .top .top-image img {
     max-width: 70%;
   }
 }
 @media (min-width: 768px) {
-  /* line 172, ../scss/pages/_top.scss */
+  /* line 40, ../scss/pages/_top.scss */
   .top .top-image img {
     max-width: 60%;
   }
 }
 @media (min-width: 992px) {
-  /* line 172, ../scss/pages/_top.scss */
+  /* line 40, ../scss/pages/_top.scss */
   .top .top-image img {
     max-width: 30%;
   }
 }
-
+/* line 1, ../scss/components/_go-down.scss */
+.top .slide-down-wrapper a.slide-down {
+  left: calc(50% - 21px);
+  color: #fff;
+  height: 100px;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  padding-top: 50px;
+}
+/* line 10, ../scss/components/_go-down.scss */
+.top .slide-down-wrapper a.slide-down:hover {
+  opacity: 0.5;
+  font-size: 1.1em;
+  text-decoration: none;
+  transition: font-size 1s;
+}
+/* line 17, ../scss/components/_go-down.scss */
+.top .slide-down-wrapper a.slide-down span {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 25px);
+  width: 50px;
+  height: 50px;
+  margin-left: -12px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotateZ(-45deg);
+  transform: rotateZ(-45deg);
+  -webkit-animation: sdb06 1.5s infinite;
+  animation: sdb06 1.5s infinite;
+  box-sizing: border-box;
+}
+@-webkit-keyframes sdb06 {
+  0% {
+    -webkit-transform: rotateY(0) rotateZ(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotateY(720deg) rotateZ(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
+}
+@keyframes sdb06 {
+  0% {
+    transform: rotateY(0) rotateZ(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotateY(720deg) rotateZ(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
+}
 /* line 1, ../scss/pages/_map.scss */
 .map {
   padding: 0;
@@ -1693,6 +1355,7 @@ span, h1, h2 {
   padding: 15px;
   z-index: 15;
   position: relative;
+  font-size: 13px;
   text-align: justify;
   background: #4B79A1;
   /* fallback for old browsers */
@@ -1700,7 +1363,20 @@ span, h1, h2 {
   /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to left, #4b79a1, #283e51);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  font-size: 13px;
+}
+/* line 12, ../scss/pages/_about-me.scss */
+.about-me .home-overlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: repeat scroll 0 0 rgba(53, 60, 79, 0.8);
+}
+/* line 21, ../scss/pages/_about-me.scss */
+.about-me .row, .about-me h1 {
+  z-index: 5;
+  position: relative;
 }
 @media (min-width: 992px) {
   /* line 1, ../scss/pages/_about-me.scss */
@@ -1709,16 +1385,16 @@ span, h1, h2 {
     padding: 0 25%;
   }
 }
-/* line 18, ../scss/pages/_about-me.scss */
+/* line 32, ../scss/pages/_about-me.scss */
 .about-me * {
   color: #fff;
 }
-/* line 22, ../scss/pages/_about-me.scss */
+/* line 36, ../scss/pages/_about-me.scss */
 .about-me h1.section-header {
   margin: 70px auto;
 }
 @media (min-width: 1200px) {
-  /* line 22, ../scss/pages/_about-me.scss */
+  /* line 36, ../scss/pages/_about-me.scss */
   .about-me h1.section-header {
     margin-top: 7%;
   }
@@ -1829,12 +1505,12 @@ span, h1, h2 {
   animation-delay: 11s;
 }
 
-/* line 35, ../scss/pages/_about-me.scss */
+/* line 49, ../scss/pages/_about-me.scss */
 .hobbies {
   position: relative;
   height: 300px;
 }
-/* line 38, ../scss/pages/_about-me.scss */
+/* line 52, ../scss/pages/_about-me.scss */
 .hobbies .glass {
   width: 100%;
   height: 100%;
@@ -1843,7 +1519,7 @@ span, h1, h2 {
   -webkit-filter: blur(3px);
   background-color: white;
 }
-/* line 46, ../scss/pages/_about-me.scss */
+/* line 60, ../scss/pages/_about-me.scss */
 .hobbies .glass::before {
   z-index: -1;
   display: block;
@@ -1854,385 +1530,6 @@ span, h1, h2 {
 /* line 1, ../scss/pages/_timeline.scss */
 .timeline {
   background-color: #f8f8f8;
-}
-/* line 8, ../scss/pages/_timeline.scss */
-.timeline a {
-  color: #7b9d6f;
-  text-decoration: none;
-}
-/* line 13, ../scss/pages/_timeline.scss */
-.timeline .cd-horizontal-timeline {
-  opacity: 0;
-  margin: 2em auto;
-  -webkit-transition: opacity 0.2s;
-  -moz-transition: opacity 0.2s;
-  -ms-transition: opacity 0.2s;
-  -o-transition: opacity 0.2s;
-  transition: opacity 0.2s;
-}
-/* line 18, ../scss/pages/_timeline.scss */
-.timeline .cd-horizontal-timeline::before {
-  /* never visible - this is used in jQuery to check the current MQ */
-  content: 'mobile';
-  display: none;
-}
-/* line 24, ../scss/pages/_timeline.scss */
-.timeline .cd-horizontal-timeline.loaded {
-  /* show the timeline after events position has been set (using JavaScript) */
-  opacity: 1;
-}
-/* line 29, ../scss/pages/_timeline.scss */
-.timeline .cd-horizontal-timeline .timeline {
-  position: relative;
-  height: 100px;
-  width: 90%;
-  max-width: 800px;
-  margin: 0 auto;
-}
-/* line 37, ../scss/pages/_timeline.scss */
-.timeline .cd-horizontal-timeline .events-wrapper {
-  position: relative;
-  height: 100%;
-  margin: 0 40px;
-  overflow: hidden;
-}
-/* line 43, ../scss/pages/_timeline.scss */
-.timeline .cd-horizontal-timeline .events-wrapper::after, .timeline .cd-horizontal-timeline .events-wrapper::before {
-  /* these are used to create a shadow effect at the sides of the timeline */
-  content: '';
-  position: absolute;
-  z-index: 2;
-  top: 0;
-  height: 100%;
-  width: 20px;
-}
-/* line 53, ../scss/pages/_timeline.scss */
-.timeline .cd-horizontal-timeline .events-wrapper::before {
-  left: 0;
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y4ZjhmOCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y4ZjhmOCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
-  background-size: 100%;
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #f8f8f8), color-stop(100%, rgba(248, 248, 248, 0)));
-  background-image: -moz-linear-gradient(left, #f8f8f8, rgba(248, 248, 248, 0));
-  background-image: -webkit-linear-gradient(left, #f8f8f8, rgba(248, 248, 248, 0));
-  background-image: linear-gradient(to right, #f8f8f8, rgba(248, 248, 248, 0));
-}
-/* line 58, ../scss/pages/_timeline.scss */
-.timeline .cd-horizontal-timeline .events-wrapper::after {
-  right: 0;
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjEuMCIgeTE9IjAuNSIgeDI9IjAuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y4ZjhmOCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y4ZjhmOCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
-  background-size: 100%;
-  background-image: -webkit-gradient(linear, 100% 50%, 0% 50%, color-stop(0%, #f8f8f8), color-stop(100%, rgba(248, 248, 248, 0)));
-  background-image: -moz-linear-gradient(right, #f8f8f8, rgba(248, 248, 248, 0));
-  background-image: -webkit-linear-gradient(right, #f8f8f8, rgba(248, 248, 248, 0));
-  background-image: linear-gradient(to left, #f8f8f8, rgba(248, 248, 248, 0));
-}
-/* line 64, ../scss/pages/_timeline.scss */
-.timeline .cd-horizontal-timeline .events {
-  /* this is the grey line/timeline */
-  position: absolute;
-  z-index: 1;
-  left: 0;
-  top: 49px;
-  height: 2px;
-  /* width will be set using JavaScript */
-  background: #dfdfdf;
-  -webkit-transition: transform 0.4s;
-  -moz-transition: transform 0.4s;
-  -ms-transition: transform 0.4s;
-  -o-transition: transform 0.4s;
-  transition: transform 0.4s;
-}
-/* line 75, ../scss/pages/_timeline.scss */
-.timeline .cd-horizontal-timeline .events ol {
-  list-style: none;
-}
-/* line 80, ../scss/pages/_timeline.scss */
-.timeline .cd-horizontal-timeline .filling-line {
-  /* this is used to create the green line filling the timeline */
-  position: absolute;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background-color: #7b9d6f;
-  transform-origin: left 50%;
-  -webkit-transform: scaleX(0);
-  -moz-transform: scaleX(0);
-  -ms-transform: scaleX(0);
-  -o-transform: scaleX(0);
-  transform: scaleX(0);
-  -moz-transform-origin: left center 50%;
-  -ms-transform-origin: left center 50%;
-  -webkit-transform-origin: left center 50%;
-  transform-origin: left center 50%;
-  -webkit-transition: transform 0.3s;
-  -moz-transition: transform 0.3s;
-  -ms-transition: transform 0.3s;
-  -o-transition: transform 0.3s;
-  transition: transform 0.3s;
-}
-/* line 95, ../scss/pages/_timeline.scss */
-.timeline .cd-horizontal-timeline .events a {
-  position: absolute;
-  bottom: 0;
-  z-index: 2;
-  text-align: center;
-  font-size: 1.3rem;
-  padding-bottom: 15px;
-  color: #383838;
-  /* fix bug on Safari - text flickering while timeline translates */
-  -webkit-transform: translateZ(0);
-  -moz-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  -o-transform: translateZ(0);
-  transform: translateZ(0);
-}
-/* line 106, ../scss/pages/_timeline.scss */
-.timeline .cd-horizontal-timeline .events a::after {
-  /* this is used to create the event spot */
-  content: '';
-  position: absolute;
-  left: 50%;
-  right: auto;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  transform: translateX(-50%);
-  bottom: -5px;
-  height: 12px;
-  width: 12px;
-  border-radius: 50%;
-  border: 2px solid #dfdfdf;
-  background-color: #f8f8f8;
-  -webkit-transition: background-color 0.3s;
-  -moz-transition: background-color 0.3s;
-  -ms-transition: background-color 0.3s;
-  -o-transition: background-color 0.3s;
-  transition: background-color 0.3s;
-  -webkit-transition: border-color 0.3s;
-  -moz-transition: border-color 0.3s;
-  -ms-transition: border-color 0.3s;
-  -o-transition: border-color 0.3s;
-  transition: border-color 0.3s;
-}
-/* line 121, ../scss/pages/_timeline.scss */
-.no-touch .timeline .cd-horizontal-timeline .events a:hover::after {
-  background-color: #7b9d6f;
-  border-color: #7b9d6f;
-}
-/* line 126, ../scss/pages/_timeline.scss */
-.timeline .cd-horizontal-timeline .events a.selected {
-  pointer-events: none;
-}
-/* line 129, ../scss/pages/_timeline.scss */
-.timeline .cd-horizontal-timeline .events a.selected::after {
-  background-color: #7b9d6f;
-  border-color: #7b9d6f;
-}
-/* line 135, ../scss/pages/_timeline.scss */
-.timeline .cd-horizontal-timeline .events a.older-event::after {
-  border-color: #7b9d6f;
-}
-@media only screen and (min-width: 1100px) {
-  /* line 13, ../scss/pages/_timeline.scss */
-  .timeline .cd-horizontal-timeline {
-    margin: 6em auto;
-  }
-  /* line 143, ../scss/pages/_timeline.scss */
-  .timeline .cd-horizontal-timeline::before {
-    /* never visible - this is used in jQuery to check the current MQ */
-    content: 'desktop';
-  }
-}
-/* line 150, ../scss/pages/_timeline.scss */
-.timeline .cd-timeline-navigation {
-  list-style: none;
-}
-/* line 154, ../scss/pages/_timeline.scss */
-.timeline .cd-timeline-navigation a {
-  /* these are the left/right arrows to navigate the timeline */
-  position: absolute;
-  z-index: 1;
-  top: 50%;
-  bottom: auto;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
-  height: 34px;
-  width: 34px;
-  border-radius: 50%;
-  border: 2px solid #dfdfdf;
-  /* replace text with an icon */
-  overflow: hidden;
-  color: transparent;
-  text-indent: 100%;
-  white-space: nowrap;
-  -webkit-transition: border-color 0.3s;
-  -moz-transition: border-color 0.3s;
-  -ms-transition: border-color 0.3s;
-  -o-transition: border-color 0.3s;
-  transition: border-color 0.3s;
-}
-/* line 170, ../scss/pages/_timeline.scss */
-.timeline .cd-timeline-navigation a::after {
-  /* arrow icon */
-  content: '';
-  position: absolute;
-  height: 16px;
-  width: 16px;
-  left: 50%;
-  top: 50%;
-  bottom: auto;
-  right: auto;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -o-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-  background: url(../images/cd-arrow.svg) no-repeat 0 0;
-}
-/* line 180, ../scss/pages/_timeline.scss */
-.timeline .cd-timeline-navigation a.prev {
-  left: 0;
-  -webkit-transform: translateY(-50%) rotate(180deg);
-  -moz-transform: translateY(-50%) rotate(180deg);
-  -ms-transform: translateY(-50%) rotate(180deg);
-  -o-transform: translateY(-50%) rotate(180deg);
-  transform: translateY(-50%) rotate(180deg);
-}
-/* line 185, ../scss/pages/_timeline.scss */
-.timeline .cd-timeline-navigation a.next {
-  right: 0;
-}
-/* line 189, ../scss/pages/_timeline.scss */
-.no-touch .timeline .cd-timeline-navigation a:hover {
-  border-color: #7b9d6f;
-}
-/* line 193, ../scss/pages/_timeline.scss */
-.timeline .cd-timeline-navigation a.inactive {
-  cursor: not-allowed;
-}
-/* line 196, ../scss/pages/_timeline.scss */
-.timeline .cd-timeline-navigation a.inactive::after {
-  background-position: 0 -16px;
-}
-/* line 200, ../scss/pages/_timeline.scss */
-.no-touch .timeline .cd-timeline-navigation a.inactive:hover {
-  border-color: #dfdfdf;
-}
-/* line 206, ../scss/pages/_timeline.scss */
-.timeline .cd-horizontal-timeline .events-content {
-  position: relative;
-  width: 100%;
-  margin: 2em 0;
-  overflow: hidden;
-  -webkit-transition: height 0.4s;
-  -moz-transition: height 0.4s;
-  -ms-transition: height 0.4s;
-  -o-transition: height 0.4s;
-  transition: height 0.4s;
-}
-/* line 213, ../scss/pages/_timeline.scss */
-.timeline .cd-horizontal-timeline .events-content li {
-  position: absolute;
-  z-index: 1;
-  width: 100%;
-  left: 0;
-  top: 0;
-  -webkit-transform: translateX(-100%);
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  -o-transform: translateX(-100%);
-  transform: translateX(-100%);
-  padding: 0 5%;
-  opacity: 0;
-  -moz-animation-duration: 0.4s;
-  -webkit-animation-duration: 0.4s;
-  animation-duration: 0.4s;
-  -moz-animation-timing-function: ease-in-out;
-  -webkit-animation-timing-function: ease-in-out;
-  animation-timing-function: ease-in-out;
-  list-style: none;
-}
-/* line 226, ../scss/pages/_timeline.scss */
-.timeline .cd-horizontal-timeline .events-content li.selected {
-  /* visible event content */
-  position: relative;
-  z-index: 2;
-  opacity: 1;
-  -webkit-transform: translateX(0);
-  -moz-transform: translateX(0);
-  -ms-transform: translateX(0);
-  -o-transform: translateX(0);
-  transform: translateX(0);
-}
-/* line 234, ../scss/pages/_timeline.scss */
-.timeline .cd-horizontal-timeline .events-content li.enter-right, .timeline .cd-horizontal-timeline .events-content li.leave-right {
-  -moz-animation-name: cd-enter-right;
-  -webkit-animation-name: cd-enter-right;
-  animation-name: cd-enter-right;
-}
-/* line 238, ../scss/pages/_timeline.scss */
-.timeline .cd-horizontal-timeline .events-content li.enter-left, .timeline .cd-horizontal-timeline .events-content li.leave-left {
-  -moz-animation-name: cd-enter-left;
-  -webkit-animation-name: cd-enter-left;
-  animation-name: cd-enter-left;
-}
-/* line 242, ../scss/pages/_timeline.scss */
-.timeline .cd-horizontal-timeline .events-content li.leave-right, .timeline .cd-horizontal-timeline .events-content li.leave-left {
-  -moz-animation-direction: reverse;
-  -webkit-animation-direction: reverse;
-  animation-direction: reverse;
-}
-/* line 247, ../scss/pages/_timeline.scss */
-.timeline .cd-horizontal-timeline .events-content li > * {
-  max-width: 800px;
-  margin: 0 auto;
-}
-/* line 252, ../scss/pages/_timeline.scss */
-.timeline .cd-horizontal-timeline .events-content h2 {
-  font-weight: bold;
-  font-size: 2.6rem;
-  font-family: "Playfair Display", serif;
-  font-weight: 700;
-  line-height: 1.2;
-}
-/* line 260, ../scss/pages/_timeline.scss */
-.timeline .cd-horizontal-timeline .events-content em {
-  display: block;
-  font-style: italic;
-  margin: 10px auto;
-}
-/* line 265, ../scss/pages/_timeline.scss */
-.timeline .cd-horizontal-timeline .events-content em::before {
-  content: '- ';
-}
-/* line 270, ../scss/pages/_timeline.scss */
-.timeline .cd-horizontal-timeline .events-content p {
-  font-size: 1.4rem;
-  color: #959595;
-}
-/* line 275, ../scss/pages/_timeline.scss */
-.timeline .cd-horizontal-timeline .events-content em, .timeline .cd-horizontal-timeline .events-content p {
-  line-height: 1.6;
-}
-@media only screen and (min-width: 768px) {
-  /* line 281, ../scss/pages/_timeline.scss */
-  .timeline .cd-horizontal-timeline .events-content h2 {
-    font-size: 7rem;
-  }
-  /* line 285, ../scss/pages/_timeline.scss */
-  .timeline .cd-horizontal-timeline .events-content em {
-    font-size: 2rem;
-  }
-  /* line 289, ../scss/pages/_timeline.scss */
-  .timeline .cd-horizontal-timeline .events-content p {
-    font-size: 1.8rem;
-  }
 }
 @-moz-keyframes cd-enter-right {
   0% {
@@ -2342,6 +1639,364 @@ span, h1, h2 {
     transform: translateX(0%);
   }
 }
+/* line 13, ../scss/pages/_timeline.scss */
+.timeline a {
+  color: #7b9d6f;
+  text-decoration: none;
+}
+/* line 18, ../scss/pages/_timeline.scss */
+.timeline .cd-horizontal-timeline {
+  margin: 2em auto;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -ms-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+/* line 23, ../scss/pages/_timeline.scss */
+.timeline .cd-horizontal-timeline::before {
+  /* never visible - this is used in jQuery to check the current MQ */
+  content: 'mobile';
+  display: none;
+}
+/* line 29, ../scss/pages/_timeline.scss */
+.timeline .cd-horizontal-timeline.loaded {
+  /* show the timeline after events position has been set (using JavaScript) */
+  opacity: 1;
+}
+/* line 34, ../scss/pages/_timeline.scss */
+.timeline .cd-horizontal-timeline .timeline {
+  width: 90%;
+  height: 100px;
+  margin: 0 auto;
+  position: relative;
+  max-width: 800px;
+}
+/* line 42, ../scss/pages/_timeline.scss */
+.timeline .cd-horizontal-timeline .events-wrapper {
+  height: 100%;
+  margin: 0 40px;
+  overflow: hidden;
+  position: relative;
+}
+/* line 48, ../scss/pages/_timeline.scss */
+.timeline .cd-horizontal-timeline .events-wrapper::after, .timeline .cd-horizontal-timeline .events-wrapper::before {
+  /* these are used to create a shadow effect at the sides of the timeline */
+  top: 0;
+  width: 20px;
+  height: 100%;
+  content: '';
+  z-index: 2;
+  position: absolute;
+}
+/* line 58, ../scss/pages/_timeline.scss */
+.timeline .cd-horizontal-timeline .events-wrapper::before {
+  left: 0;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y4ZjhmOCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y4ZjhmOCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #f8f8f8), color-stop(100%, rgba(248, 248, 248, 0)));
+  background-image: -moz-linear-gradient(left, #f8f8f8, rgba(248, 248, 248, 0));
+  background-image: -webkit-linear-gradient(left, #f8f8f8, rgba(248, 248, 248, 0));
+  background-image: linear-gradient(to right, #f8f8f8, rgba(248, 248, 248, 0));
+}
+/* line 63, ../scss/pages/_timeline.scss */
+.timeline .cd-horizontal-timeline .events-wrapper::after {
+  right: 0;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjEuMCIgeTE9IjAuNSIgeDI9IjAuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y4ZjhmOCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y4ZjhmOCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 100% 50%, 0% 50%, color-stop(0%, #f8f8f8), color-stop(100%, rgba(248, 248, 248, 0)));
+  background-image: -moz-linear-gradient(right, #f8f8f8, rgba(248, 248, 248, 0));
+  background-image: -webkit-linear-gradient(right, #f8f8f8, rgba(248, 248, 248, 0));
+  background-image: linear-gradient(to left, #f8f8f8, rgba(248, 248, 248, 0));
+}
+/* line 69, ../scss/pages/_timeline.scss */
+.timeline .cd-horizontal-timeline .events {
+  /* this is the grey line/timeline */
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 49px;
+  height: 2px;
+  /* width will be set using JavaScript */
+  background: #dfdfdf;
+  -webkit-transition: transform 0.4s;
+  -moz-transition: transform 0.4s;
+  -ms-transition: transform 0.4s;
+  -o-transition: transform 0.4s;
+  transition: transform 0.4s;
+}
+/* line 80, ../scss/pages/_timeline.scss */
+.timeline .cd-horizontal-timeline .events ol {
+  list-style: none;
+}
+/* line 85, ../scss/pages/_timeline.scss */
+.timeline .cd-horizontal-timeline .filling-line {
+  /* this is used to create the green line filling the timeline */
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #7b9d6f;
+  transform-origin: left 50%;
+  -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  -o-transform: scaleX(0);
+  transform: scaleX(0);
+  -moz-transform-origin: left center 50%;
+  -ms-transform-origin: left center 50%;
+  -webkit-transform-origin: left center 50%;
+  transform-origin: left center 50%;
+  -webkit-transition: transform 0.3s;
+  -moz-transition: transform 0.3s;
+  -ms-transition: transform 0.3s;
+  -o-transition: transform 0.3s;
+  transition: transform 0.3s;
+}
+/* line 100, ../scss/pages/_timeline.scss */
+.timeline .cd-horizontal-timeline .events a {
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  text-align: center;
+  font-size: 1.3rem;
+  padding-bottom: 15px;
+  color: #383838;
+  /* fix bug on Safari - text flickering while timeline translates */
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+}
+/* line 111, ../scss/pages/_timeline.scss */
+.timeline .cd-horizontal-timeline .events a::after {
+  /* this is used to create the event spot */
+  width: 12px;
+  bottom: -5px;
+  border: 2px solid #dfdfdf;
+  height: 12px;
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background-color: #f8f8f8;
+  left: 50%;
+  right: auto;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  -ms-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  -webkit-transition: border-color 0.3s;
+  -moz-transition: border-color 0.3s;
+  -ms-transition: border-color 0.3s;
+  -o-transition: border-color 0.3s;
+  transition: border-color 0.3s;
+}
+/* line 126, ../scss/pages/_timeline.scss */
+.no-touch .timeline .cd-horizontal-timeline .events a:hover::after {
+  border-color: #7b9d6f;
+  background-color: #7b9d6f;
+}
+/* line 131, ../scss/pages/_timeline.scss */
+.timeline .cd-horizontal-timeline .events a.selected {
+  pointer-events: none;
+}
+/* line 134, ../scss/pages/_timeline.scss */
+.timeline .cd-horizontal-timeline .events a.selected::after {
+  border-color: #7b9d6f;
+  background-color: #7b9d6f;
+}
+/* line 140, ../scss/pages/_timeline.scss */
+.timeline .cd-horizontal-timeline .events a.older-event::after {
+  border-color: #7b9d6f;
+}
+@media only screen and (min-width: 1100px) {
+  /* line 18, ../scss/pages/_timeline.scss */
+  .timeline .cd-horizontal-timeline {
+    margin: 6em auto;
+  }
+  /* line 148, ../scss/pages/_timeline.scss */
+  .timeline .cd-horizontal-timeline::before {
+    /* never visible - this is used in jQuery to check the current MQ */
+    content: 'desktop';
+  }
+}
+/* line 155, ../scss/pages/_timeline.scss */
+.timeline .cd-timeline-navigation {
+  list-style: none;
+}
+/* line 159, ../scss/pages/_timeline.scss */
+.timeline .cd-timeline-navigation a {
+  /* these are the left/right arrows to navigate the timeline */
+  position: absolute;
+  z-index: 1;
+  width: 34px;
+  border: 2px solid #dfdfdf;
+  height: 34px;
+  border-radius: 50%;
+  /* replace text with an icon */
+  overflow: hidden;
+  color: transparent;
+  text-indent: 100%;
+  white-space: nowrap;
+  top: 50%;
+  bottom: auto;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: border-color 0.3s;
+  -moz-transition: border-color 0.3s;
+  -ms-transition: border-color 0.3s;
+  -o-transition: border-color 0.3s;
+  transition: border-color 0.3s;
+}
+/* line 175, ../scss/pages/_timeline.scss */
+.timeline .cd-timeline-navigation a::after {
+  /* arrow icon */
+  width: 16px;
+  height: 16px;
+  content: '';
+  position: absolute;
+  background: url(../images/cd-arrow.svg) no-repeat 0 0;
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  right: auto;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+/* line 185, ../scss/pages/_timeline.scss */
+.timeline .cd-timeline-navigation a.prev {
+  left: 0;
+  -webkit-transform: translateY(-50%) rotate(180deg);
+  -moz-transform: translateY(-50%) rotate(180deg);
+  -ms-transform: translateY(-50%) rotate(180deg);
+  -o-transform: translateY(-50%) rotate(180deg);
+  transform: translateY(-50%) rotate(180deg);
+}
+/* line 190, ../scss/pages/_timeline.scss */
+.timeline .cd-timeline-navigation a.next {
+  right: 0;
+}
+/* line 194, ../scss/pages/_timeline.scss */
+.no-touch .timeline .cd-timeline-navigation a:hover {
+  border-color: #7b9d6f;
+}
+/* line 198, ../scss/pages/_timeline.scss */
+.timeline .cd-timeline-navigation a.inactive {
+  cursor: not-allowed;
+}
+/* line 201, ../scss/pages/_timeline.scss */
+.timeline .cd-timeline-navigation a.inactive::after {
+  background-position: 0 -16px;
+}
+/* line 205, ../scss/pages/_timeline.scss */
+.no-touch .timeline .cd-timeline-navigation a.inactive:hover {
+  border-color: #dfdfdf;
+}
+/* line 211, ../scss/pages/_timeline.scss */
+.timeline .cd-horizontal-timeline .events-content {
+  position: relative;
+  width: 100%;
+  margin: 2em 0;
+  overflow: hidden;
+  -webkit-transition: height 0.4s;
+  -moz-transition: height 0.4s;
+  -ms-transition: height 0.4s;
+  -o-transition: height 0.4s;
+  transition: height 0.4s;
+}
+/* line 218, ../scss/pages/_timeline.scss */
+.timeline .cd-horizontal-timeline .events-content li {
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 5%;
+  z-index: 1;
+  opacity: 0;
+  position: absolute;
+  list-style: none;
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  transform: translateX(-100%);
+  -moz-animation-duration: 0.4s;
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -moz-animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+/* line 231, ../scss/pages/_timeline.scss */
+.timeline .cd-horizontal-timeline .events-content li.selected {
+  /* visible event content */
+  z-index: 2;
+  opacity: 1;
+  position: relative;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+}
+/* line 239, ../scss/pages/_timeline.scss */
+.timeline .cd-horizontal-timeline .events-content li.enter-right, .timeline .cd-horizontal-timeline .events-content li.leave-right {
+  -moz-animation-name: cd-enter-right;
+  -webkit-animation-name: cd-enter-right;
+  animation-name: cd-enter-right;
+}
+/* line 243, ../scss/pages/_timeline.scss */
+.timeline .cd-horizontal-timeline .events-content li.enter-left, .timeline .cd-horizontal-timeline .events-content li.leave-left {
+  -moz-animation-name: cd-enter-left;
+  -webkit-animation-name: cd-enter-left;
+  animation-name: cd-enter-left;
+}
+/* line 247, ../scss/pages/_timeline.scss */
+.timeline .cd-horizontal-timeline .events-content li.leave-right, .timeline .cd-horizontal-timeline .events-content li.leave-left {
+  -moz-animation-direction: reverse;
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse;
+}
+/* line 252, ../scss/pages/_timeline.scss */
+.timeline .cd-horizontal-timeline .events-content li > * {
+  margin: 0 auto;
+  max-width: 800px;
+}
+/* line 264, ../scss/pages/_timeline.scss */
+.timeline .cd-horizontal-timeline .events-content em {
+  margin: 10px auto;
+  display: block;
+  font-style: italic;
+}
+/* line 269, ../scss/pages/_timeline.scss */
+.timeline .cd-horizontal-timeline .events-content em::before {
+  content: '- ';
+}
+/* line 274, ../scss/pages/_timeline.scss */
+.timeline .cd-horizontal-timeline .events-content p {
+  font-size: 1.4rem;
+  color: #959595;
+}
+/* line 279, ../scss/pages/_timeline.scss */
+.timeline .cd-horizontal-timeline .events-content em, .timeline .cd-horizontal-timeline .events-content p {
+  line-height: 1.6;
+}
+
 /* line 1, ../scss/pages/_contact-me.scss */
 .contact-me {
   position: relative;
@@ -2627,6 +2282,7 @@ span, h1, h2 {
 /* line 15, ../scss/pages/_skills.scss */
 .skills .skills-meta {
   margin: 0;
+  position: relative;
   font-size: 13px;
   margin-bottom: 10%;
 }
@@ -2645,24 +2301,24 @@ span, h1, h2 {
   height: 80%;
   background: #1A3742;
 }
-/* line 29, ../scss/pages/_skills.scss */
+/* line 30, ../scss/pages/_skills.scss */
 .skills .slide {
   position: relative;
 }
-/* line 32, ../scss/pages/_skills.scss */
+/* line 33, ../scss/pages/_skills.scss */
 .skills .slide .get {
   display: none;
 }
-/* line 36, ../scss/pages/_skills.scss */
+/* line 37, ../scss/pages/_skills.scss */
 .skills .slide a {
   text-decoration: none;
   color: #333;
 }
-/* line 41, ../scss/pages/_skills.scss */
+/* line 42, ../scss/pages/_skills.scss */
 .skills .slide #content {
   display: none;
 }
-/* line 44, ../scss/pages/_skills.scss */
+/* line 45, ../scss/pages/_skills.scss */
 .skills .slide #content h1 {
   font-family: 'Cabin Sketch', arial, serif;
   text-shadow: 3px 3px 0 #ddd;
@@ -2672,31 +2328,31 @@ span, h1, h2 {
   text-align: right;
 }
 @media (min-width: 992px) {
-  /* line 41, ../scss/pages/_skills.scss */
+  /* line 42, ../scss/pages/_skills.scss */
   .skills .slide #content {
     display: block;
   }
 }
-/* line 57, ../scss/pages/_skills.scss */
+/* line 58, ../scss/pages/_skills.scss */
 .skills .slide #content .legend {
   float: left;
   width: 250px;
   margin-top: 140px;
 }
-/* line 62, ../scss/pages/_skills.scss */
+/* line 63, ../scss/pages/_skills.scss */
 .skills .slide #content .legend .skills {
   float: left;
   clear: both;
   width: 100%;
 }
-/* line 67, ../scss/pages/_skills.scss */
+/* line 68, ../scss/pages/_skills.scss */
 .skills .slide #content .legend .skills ul, .skills .slide #content .legend .skills li {
   display: block;
   list-style: none;
   margin: 0;
   padding: 0;
 }
-/* line 75, ../scss/pages/_skills.scss */
+/* line 76, ../scss/pages/_skills.scss */
 .skills .slide #content .legend .skills li {
   float: right;
   clear: both;
@@ -2707,35 +2363,35 @@ span, h1, h2 {
   margin-bottom: 1px;
   font-size: 18px;
 }
-/* line 86, ../scss/pages/_skills.scss */
+/* line 87, ../scss/pages/_skills.scss */
 .skills .slide #content .legend .skills .jq {
   background: #97BE0D;
 }
-/* line 89, ../scss/pages/_skills.scss */
+/* line 90, ../scss/pages/_skills.scss */
 .skills .slide #content .legend .skills .css {
   background: #D84F5F;
 }
-/* line 92, ../scss/pages/_skills.scss */
+/* line 93, ../scss/pages/_skills.scss */
 .skills .slide #content .legend .skills .php {
   background: #BEDBE9;
 }
-/* line 95, ../scss/pages/_skills.scss */
+/* line 96, ../scss/pages/_skills.scss */
 .skills .slide #content .legend .skills .html {
   background: #88B8E6;
 }
-/* line 98, ../scss/pages/_skills.scss */
+/* line 99, ../scss/pages/_skills.scss */
 .skills .slide #content .legend .skills .sql {
   background: #EDEBEE;
 }
-/* line 101, ../scss/pages/_skills.scss */
+/* line 102, ../scss/pages/_skills.scss */
 .skills .slide #content .legend .skills .java {
   background: #E4842C;
 }
-/* line 107, ../scss/pages/_skills.scss */
+/* line 108, ../scss/pages/_skills.scss */
 .skills .slide #content #diagram {
   height: 80%;
 }
-/* line 112, ../scss/pages/_skills.scss */
+/* line 113, ../scss/pages/_skills.scss */
 .skills .slide .footer {
   position: absolute;
   bottom: 0;
@@ -2745,15 +2401,15 @@ span, h1, h2 {
   color: #EAEAEA;
   padding: 20px 0;
 }
-/* line 121, ../scss/pages/_skills.scss */
+/* line 122, ../scss/pages/_skills.scss */
 .skills .slide .footer a {
   color: #EAEAEA;
 }
-/* line 124, ../scss/pages/_skills.scss */
+/* line 125, ../scss/pages/_skills.scss */
 .skills .slide .footer a:hover {
   color: #E4842C;
 }
-/* line 129, ../scss/pages/_skills.scss */
+/* line 130, ../scss/pages/_skills.scss */
 .skills .slide .footer .inside {
   font-family: 'Cabin Sketch', arial, serif;
   font-size: 22px;

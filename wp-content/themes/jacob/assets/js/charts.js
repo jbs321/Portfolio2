@@ -94,7 +94,7 @@ $(function () {
             "angle": 30,
             "depth3D": 30,
             "handDrawThickness": 0,
-            "handDrawn": true,
+            //"handDrawn": true,
             "color": "#FFFFFF",
             "theme": "light",
             "categoryAxis": {

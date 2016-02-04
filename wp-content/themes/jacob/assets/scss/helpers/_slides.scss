@@ -1,0 +1,55 @@
+[data-slide="true"]{
+  $slide-speed: .8s;
+  $slide-reverse-speed: .5s;
+  opacity: 0;
+
+
+  &.slide-left{
+    animation: slide-left $slide-speed;
+    opacity: 1;
+  }
+
+  &.slide-top{
+    animation: slide-top $slide-speed;
+    opacity: 1;
+  }
+
+  &.slide-reverse{
+    animation: slide-reverse $slide-reverse-speed;
+    opacity: 0;
+  }
+}
+
+
+
+@keyframes slide-reverse {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes slide-left {
+  from {
+    left: 100%;
+    opacity: 0;
+  }
+  to {
+    left: 0%;
+    opacity: 1;
+  }
+}
+
+@keyframes slide-top {
+  from {
+    top: 900px;
+    opacity: 0;
+  }
+  to {
+    top: 0%;
+    opacity: 1;
+
+  }
+}

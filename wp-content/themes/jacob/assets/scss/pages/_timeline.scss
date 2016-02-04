@@ -1,7 +1,12 @@
 .timeline {
-  @import '../components/timeline/variables'; // colors, fonts etc...
+  $color-1: #383838; // Mine Shaft
+  $color-2: #7b9d6f; // Highland
+  $color-3: #ffffff; // White
+  $color-4: #f8f8f8; // Alabaster
+
   @import '../components/timeline/mixins'; // custom mixins
   @import '../components/timeline/layout'; // responsive grid and media queries
+  @import '../components/timeline/keyframes';
 
   background-color: $color-4;
 
@@ -11,8 +16,8 @@
   }
 
   .cd-horizontal-timeline {
-    opacity: 0;
     margin: 2em auto;
+    opacity: 0;
     @include transition(opacity .2s);
 
     &::before {
@@ -27,27 +32,27 @@
     }
 
     .timeline {
-      position: relative;
-      height: 100px;
       width: 90%;
-      max-width: 800px;
+      height: 100px;
       margin: 0 auto;
+      position: relative;
+      max-width: 800px;
     }
 
     .events-wrapper {
-      position: relative;
       height: 100%;
       margin: 0 40px;
       overflow: hidden;
+      position: relative;
 
       &::after, &::before {
         /* these are used to create a shadow effect at the sides of the timeline */
-        content: '';
-        position: absolute;
-        z-index: 2;
         top: 0;
-        height: 100%;
         width: 20px;
+        height: 100%;
+        content: '';
+        z-index: 2;
+        position: absolute;
       }
 
       &::before {
@@ -105,30 +110,30 @@
 
       &::after {
         /* this is used to create the event spot */
+        width: 12px;
+        bottom: -5px;
+        border: 2px solid darken($color-4, 10%);
+        height: 12px;
         content: '';
         position: absolute;
-        @include center(x);
-        bottom: -5px;
-        height: 12px;
-        width: 12px;
         border-radius: 50%;
-        border: 2px solid darken($color-4, 10%);
         background-color: $color-4;
+        @include center(x);
         @include transition(background-color .3s);
         @include transition(border-color .3s);
       }
 
       .no-touch &:hover::after {
-        background-color: $color-2;
         border-color: $color-2;
+        background-color: $color-2;
       }
 
       &.selected {
         pointer-events: none;
 
         &::after {
-          background-color: $color-2;
           border-color: $color-2;
+          background-color: $color-2;
         }
       }
 
@@ -155,26 +160,26 @@
     /* these are the left/right arrows to navigate the timeline */
     position: absolute;
     z-index: 1;
-    @include center(y);
-    height: 34px;
     width: 34px;
-    border-radius: 50%;
     border: 2px solid darken($color-4, 10%);
+    height: 34px;
+    border-radius: 50%;
     /* replace text with an icon */
     overflow: hidden;
     color: transparent;
     text-indent: 100%;
     white-space: nowrap;
+    @include center(y);
     @include transition(border-color .3s);
 
     &::after {
       /* arrow icon */
+      width: 16px;
+      height: 16px;
       content: '';
       position: absolute;
-      height: 16px;
-      width: 16px;
-      @include center;
       background: url(../images/cd-arrow.svg) no-repeat 0 0;
+      @include center;
     }
 
     &.prev {
@@ -211,23 +216,23 @@
     @include transition(height .4s);
 
     li {
-      position: absolute;
-      z-index: 1;
-      width: 100%;
-      left: 0;
       top: 0;
-      @include transform(translateX(-100%));
+      left: 0;
+      width: 100%;
       padding: 0 5%;
+      z-index: 1;
       opacity: 0;
+      position: absolute;
+      list-style: none;
+      @include transform(translateX(-100%));
       @include animation-duration(.4s);
       @include animation-timing-function(ease-in-out);
-      list-style: none;
 
       &.selected {
         /* visible event content */
-        position: relative;
         z-index: 2;
         opacity: 1;
+        position: relative;
         @include transform(translateX(0));
       }
 
@@ -245,22 +250,21 @@
     }
 
     li > * {
-      max-width: 800px;
       margin: 0 auto;
+      max-width: 800px;
     }
 
-    h2 {
-      font-weight: bold;
-      font-size: 2.6rem;
-      font-family: $secondary-font;
-      font-weight: 700;
-      line-height: 1.2;
-    }
+    //h2 {
+    //  font-size: 2.6rem;
+    //  font-weight: bold;
+    //  font-weight: 700;
+    //  line-height: 1.2;
+    //}
 
     em {
+      margin: 10px auto;
       display: block;
       font-style: italic;
-      margin: 10px auto;
 
       &::before {
         content: '- ';
@@ -275,46 +279,5 @@
     em, p {
       line-height: 1.6;
     }
-
-    @include MQ(M) {
-
-      h2 {
-        font-size: 7rem;
-      }
-
-      em {
-        font-size: 2rem;
-      }
-
-      p {
-        font-size: 1.8rem;
-      }
-    }
-
   }
-
-  @include keyframes(cd-enter-right) {
-    0% {
-      opacity: 0;
-      @include transform(translateX(100%));
-    }
-
-    100% {
-      opacity: 1;
-      @include transform(translateX(0%));
-    }
-  }
-
-  @include keyframes(cd-enter-left) {
-    0% {
-      opacity: 0;
-      @include transform(translateX(-100%));
-    }
-
-    100% {
-      opacity: 1;
-      @include transform(translateX(0%));
-    }
-  }
-
 }

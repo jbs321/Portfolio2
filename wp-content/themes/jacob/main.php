@@ -13,18 +13,7 @@
     </div>
 
 
-    <!--    <div class="info-cnotainer">-->
-    <!--        <div class="info">-->
-    <!--            <div class="orbitContainer">-->
-    <!--                <div class="orbitWrapper">-->
-    <!--                    <a class="social-icon planet" href="#"><i class="fa fa-linkedin"></i></a>-->
-    <!--                    <a class="social-icon planet" href="#"><i class="fa fa-facebook"></i></a>-->
-    <!--                    <a class="social-icon planet" href="#"><i class="fa fa-google-plus"></i></a>-->
-    <!--                    <a class="social-icon planet" href="#"><i class="fa fa-github"></i></a>-->
-    <!--                </div>-->
-    <!--            </div>-->
-    <!--        </div>-->
-    <!--    </div>-->
-
-
+<!--    <div class="col-xs-12 slide-down-wrapper">-->
+<!--        <a href="#" class="slide-down" data-havto="2"><span></span>Scroll</a>-->
+<!--    </div>-->
 </div>

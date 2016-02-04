@@ -1,0 +1,23 @@
+@include keyframes(cd-enter-right) {
+  0% {
+    opacity: 0;
+    @include transform(translateX(100%));
+  }
+
+  100% {
+    opacity: 1;
+    @include transform(translateX(0%));
+  }
+}
+
+@include keyframes(cd-enter-left) {
+  0% {
+    opacity: 0;
+    @include transform(translateX(-100%));
+  }
+
+  100% {
+    opacity: 1;
+    @include transform(translateX(0%));
+  }
+}
