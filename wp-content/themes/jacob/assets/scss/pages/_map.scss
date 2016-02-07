@@ -2,18 +2,31 @@
   padding: 0;
   z-index: 12;
   position: relative;
-  //background-color: #337ab7;
-  
-  h3{
+  background: #000;
+
+  h1 {
     color: #fff;
-  }
-  
-  iframe {
-    height: 400px;
-    width: 100%;
+    position: relative;
+    z-index: 15;
   }
 
-  .buttons{
+  iframe {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+
+  .home-overlay {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .buttons {
     padding: 30px 0;
     background-color: #337ab7;
 
@@ -25,13 +38,13 @@
     .btn-light {
       border-radius: 0;
       color: #333;
-      background-color: rgb(255,255,255);
+      //background-color: rgb(255,255,255);
     }
 
     .btn-dark {
       border-radius: 0;
       color: #fff;
-      background-color: rgba(0,0,0,0.4);
+      //background-color: rgba(0,0,0,0.4);
     }
 
     .call-to-action .btn {
@@ -61,11 +74,38 @@
     }
   }
 
-  .contact{
+  .contact {
     width: 100%;
     margin: -10px 0 0 0;
     padding: 40px 0;
-    background-color: #fff;
+    position: relative;
+    z-index: 15;
 
+    * {
+      color: #fff;
+    }
+
+    form {
+      input, textarea, :not(button) {
+        color: #000;
+      }
+    }
+  }
+
+  .footer {
+    width: 100%;
+    height: 30px;
+    background: #898989;
+    display: table;
+    position: relative;
+    z-index: 15;
+
+    div {
+      color: #000;
+      height: 100%;
+      text-align: center;
+      display: table-cell;
+      vertical-align: middle;
+    }
   }
 }

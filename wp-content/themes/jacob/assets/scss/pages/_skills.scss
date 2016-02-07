@@ -1,137 +1,79 @@
 .skills {
+$path: 'http://static.livedemo00.template-help.com/wordpress_50917/wp-content/themes/theme50917/images/';
+
   color: #fff;
   height: 100%;
   width: 100%;
   z-index: 15;
   position: relative;
   max-height: 100%;
-  background: #1A3742;
+  //background: #1A3742;
+  background: url($path + "/header-bg.jpg");
 
-  h1{
-    margin-top: 7% !important;
-    margin-bottom: 40px !important;
+  .battery-title{
+    font-size: 1.5em;
   }
 
-  .skills-meta{
-    margin: 0;
-    position: relative;
-    font-size: 13px;
-    margin-bottom: 10%;
-
-    @include breakpoint(md){
-      margin: 0 25%;
-      margin-bottom: 8%;
-      font-size: 16px;
-    }
+  .battery-percentage{
+    top: calc(50% - 6px);
+    left: 77%;
+    display: inline-block;
+    position: absolute;
+    font-size: 2em;
   }
-  
-  @import "../components/charts";
 
-  .slide {
+  .battery-wrapper {
+    width: 400px;
+    height: 56px;
+    border: 3px solid #1ABC9C;
     position: relative;
+    border-radius: 5px;
+    border-right: none;
 
-    .get {
-      display: none;
-    }
-
-    a {
-      text-decoration: none;
-      color: #333;
-    }
-
-    #content {
-      display: none;
-
-      h1 {
-        font-family: 'Cabin Sketch', arial, serif;
-        text-shadow: 3px 3px 0 #ddd;
-        color: #193340;
-        font-size: 40px;
-        margin-bottom: 40px;
-        text-align: right;
-      }
-
-      @include breakpoint(md) {
-        display: block;
-      }
-
-      .legend {
-        float: left;
-        width: 250px;
-        margin-top: 140px;
-
-        .skills {
-          float: left;
-          clear: both;
-          width: 100%;
-
-          & ul,
-          & li {
-            display: block;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-          }
-
-          li {
-            float: right;
-            clear: both;
-            padding: 0 15px;
-            height: 35px;
-            line-height: 35px;
-            color: #fff;
-            margin-bottom: 1px;
-            font-size: 18px;
-          }
-
-          .jq {
-            background: #97BE0D;
-          }
-          .css {
-            background: #D84F5F;
-          }
-          .php {
-            background: #BEDBE9;
-          }
-          .html {
-            background: #88B8E6;
-          }
-          .sql {
-            background: #EDEBEE;
-          }
-          .java {
-            background: #E4842C;
-          }
-        }
-      }
-
-      #diagram {
-          height: 80%;
-      }
-    }
-
-    .footer {
+    &:after{
+      top: -3px;
+      right: -5px;
+      width: 12px;
+      height: 109%;
+      content: "";
       position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background: #2D2D2D;
-      color: #EAEAEA;
-      padding: 20px 0;
+      background: url($path + '/diagram-right.png') no-repeat 100% 100% ;
+    }
 
-      a {
-        color: #EAEAEA;
+    &:before{
+      width: 20%;
+      height: 80%;
+      margin: 5px;
+      content: "";
+      position: absolute;
+      background: rgba(1, 1, 1, 0) url("http://static.livedemo00.template-help.com/wordpress_50917/wp-content/themes/theme50917/images/diagram-active.gif");
+    }
 
-        &:hover {
-          color: #E4842C;
+
+    &[data-battery="true"]{
+
+      @for $i from 1 through 20 {
+        $grouth: $i * 5;
+
+        &[data-battery-percente='#{$grouth}']{
+          &:before{
+            width: $grouth * 1%;
+            transition: width .5s;
+          }
         }
       }
 
-      .inside {
-        font-family: 'Cabin Sketch', arial, serif;
-        font-size: 22px;
-        text-align: center;
-      }
+
+    }
+
+    em {
+      left: 28px;
+      width: calc(100% - 30px);
+      height: 100%;
+      z-index: -1;
+      position: absolute;
+      margin-top: 2px;
+      background: url("http://static.livedemo00.template-help.com/wordpress_50917/wp-content/themes/theme50917/images//diagram-tail.gif") 100% 100%;
     }
   }
 }

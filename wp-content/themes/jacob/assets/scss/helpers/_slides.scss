@@ -3,9 +3,13 @@
   $slide-reverse-speed: .5s;
   opacity: 0;
 
-
   &.slide-left{
     animation: slide-left $slide-speed;
+    opacity: 1;
+  }
+
+  &.slide-right{
+    animation: slide-right $slide-speed;
     opacity: 1;
   }
 
@@ -14,13 +18,16 @@
     opacity: 1;
   }
 
+  &.slide-opacity{
+    animation: slide-opacity 4s;
+    opacity: 1;
+  }
+
   &.slide-reverse{
     animation: slide-reverse $slide-reverse-speed;
     opacity: 0;
   }
 }
-
-
 
 @keyframes slide-reverse {
   from {
@@ -42,14 +49,35 @@
   }
 }
 
-@keyframes slide-top {
+@keyframes slide-opacity {
   from {
-    top: 900px;
     opacity: 0;
   }
   to {
-    top: 0%;
     opacity: 1;
+  }
+}
 
+@keyframes slide-right {
+  from {
+    right: 100%;
+    opacity: 0;
+  }
+  to {
+    right: 0%;
+    opacity: 1;
+  }
+}
+
+@keyframes slide-top {
+  from {
+    top: -900px;
+    opacity: 0;
+    position: absolute;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+    position: absolute;
   }
 }

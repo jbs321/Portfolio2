@@ -52,20 +52,35 @@ $(document).ready(function () {
         //events
         onLeave: function (index, nextIndex, direction) {
 
-            if (index > nextIndex) {
-                $("[data-slide-section='"+ index +"']").addClass('slide-reverse');
-                $("[data-slide-section='"+ index +"']").removeClass('slide-' + $("[data-slide-section='"+ index +"']").attr('data-slide-dir'));
+            if ($("[data-slide-section='" + index + "'][data-battery='true']").attr('data-battery') == "true") {
+                $("[data-slide-section='" + index + "'][data-battery='true']").attr('data-battery', "false");
             }
 
+            //go down
+            if (index > nextIndex) {
+                $("[data-slide-section='" + index + "']").addClass('slide-reverse');
+                $("[data-slide-section='" + index + "']").removeClass('slide-' + $("[data-slide-section='" + index + "']").attr('data-slide-dir'));
+            }
+
+            //go up
             if (index < nextIndex) {
-                $("[data-slide-section='"+ nextIndex +"']").removeClass('slide-reverse');
-                $("[data-slide-section='"+ nextIndex +"']").addClass('slide-' + $("[data-slide-section='"+ nextIndex +"']").attr('data-slide-dir'));
+                $("[data-slide-section='" + nextIndex + "']").removeClass('slide-reverse');
+                $("[data-slide-section='" + nextIndex + "']").addClass('slide-' + $("[data-slide-section='" + nextIndex + "']").attr('data-slide-dir'));
             }
         },
         afterLoad: function (anchorLink, index) {
+
+            if ($("[data-slide-section='" + index + "'][data-battery='false']").attr('data-battery') == "false") {
+                $("[data-slide-section='" + index + "'][data-battery='false']").attr('data-battery', "true");
+            }
+
+
             if (index > 1) {
+                $("[data-battery='false']").attr('data-battery', "true");
                 $('#go-up').removeClass('hidden hidden-fixed');
                 $('#go-up').addClass('display');
+            } else if (index == 1) {
+                $("[data-slide-section='" + index + "']").addClass('slide-' + $("[data-slide-section='" + index + "']").attr('data-slide-dir'));
             } else {
                 $('#go-up').removeClass('display');
                 $('#go-up').addClass('hidden');
