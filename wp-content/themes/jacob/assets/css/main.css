@@ -1643,32 +1643,55 @@ span, h1, h2 {
   }
 }
 /* line 13, ../scss/pages/_timeline.scss */
+.timeline h1 {
+  margin: 10px auto !important;
+  font-size: 3vw !important;
+}
+/* line 18, ../scss/pages/_timeline.scss */
 .timeline a {
   color: #7b9d6f;
   text-decoration: none;
 }
-/* line 18, ../scss/pages/_timeline.scss */
+/* line 25, ../scss/pages/_timeline.scss */
+.timeline .education .box {
+  margin: 20px 0;
+}
+/* line 28, ../scss/pages/_timeline.scss */
+.timeline .education .box .range {
+  border-bottom: 1px solid #b9b9b9;
+  padding: 10px 0;
+  font-weight: 700;
+  font-size: 2em;
+}
+/* line 35, ../scss/pages/_timeline.scss */
+.timeline .education .box .description .bold {
+  padding: 10px 0;
+  font-weight: 600;
+  font-size: 1.5em;
+}
+/* line 44, ../scss/pages/_timeline.scss */
 .timeline .cd-horizontal-timeline {
   margin: 2em auto;
   opacity: 0;
+  border-left: 1px solid #b9b9b9;
   -webkit-transition: opacity 0.2s;
   -moz-transition: opacity 0.2s;
   -ms-transition: opacity 0.2s;
   -o-transition: opacity 0.2s;
   transition: opacity 0.2s;
 }
-/* line 23, ../scss/pages/_timeline.scss */
+/* line 50, ../scss/pages/_timeline.scss */
 .timeline .cd-horizontal-timeline::before {
   /* never visible - this is used in jQuery to check the current MQ */
   content: 'mobile';
   display: none;
 }
-/* line 29, ../scss/pages/_timeline.scss */
+/* line 56, ../scss/pages/_timeline.scss */
 .timeline .cd-horizontal-timeline.loaded {
   /* show the timeline after events position has been set (using JavaScript) */
   opacity: 1;
 }
-/* line 34, ../scss/pages/_timeline.scss */
+/* line 61, ../scss/pages/_timeline.scss */
 .timeline .cd-horizontal-timeline .timeline {
   width: 90%;
   height: 100px;
@@ -1676,14 +1699,14 @@ span, h1, h2 {
   position: relative;
   max-width: 800px;
 }
-/* line 42, ../scss/pages/_timeline.scss */
+/* line 69, ../scss/pages/_timeline.scss */
 .timeline .cd-horizontal-timeline .events-wrapper {
   height: 100%;
   margin: 0 40px;
   overflow: hidden;
   position: relative;
 }
-/* line 48, ../scss/pages/_timeline.scss */
+/* line 75, ../scss/pages/_timeline.scss */
 .timeline .cd-horizontal-timeline .events-wrapper::after, .timeline .cd-horizontal-timeline .events-wrapper::before {
   /* these are used to create a shadow effect at the sides of the timeline */
   top: 0;
@@ -1693,7 +1716,7 @@ span, h1, h2 {
   z-index: 2;
   position: absolute;
 }
-/* line 58, ../scss/pages/_timeline.scss */
+/* line 85, ../scss/pages/_timeline.scss */
 .timeline .cd-horizontal-timeline .events-wrapper::before {
   left: 0;
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y4ZjhmOCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y4ZjhmOCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
@@ -1703,7 +1726,7 @@ span, h1, h2 {
   background-image: -webkit-linear-gradient(left, #f8f8f8, rgba(248, 248, 248, 0));
   background-image: linear-gradient(to right, #f8f8f8, rgba(248, 248, 248, 0));
 }
-/* line 63, ../scss/pages/_timeline.scss */
+/* line 90, ../scss/pages/_timeline.scss */
 .timeline .cd-horizontal-timeline .events-wrapper::after {
   right: 0;
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjEuMCIgeTE9IjAuNSIgeDI9IjAuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y4ZjhmOCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y4ZjhmOCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
@@ -1713,7 +1736,7 @@ span, h1, h2 {
   background-image: -webkit-linear-gradient(right, #f8f8f8, rgba(248, 248, 248, 0));
   background-image: linear-gradient(to left, #f8f8f8, rgba(248, 248, 248, 0));
 }
-/* line 69, ../scss/pages/_timeline.scss */
+/* line 96, ../scss/pages/_timeline.scss */
 .timeline .cd-horizontal-timeline .events {
   /* this is the grey line/timeline */
   position: absolute;
@@ -1729,11 +1752,11 @@ span, h1, h2 {
   -o-transition: transform 0.4s;
   transition: transform 0.4s;
 }
-/* line 80, ../scss/pages/_timeline.scss */
+/* line 107, ../scss/pages/_timeline.scss */
 .timeline .cd-horizontal-timeline .events ol {
   list-style: none;
 }
-/* line 85, ../scss/pages/_timeline.scss */
+/* line 112, ../scss/pages/_timeline.scss */
 .timeline .cd-horizontal-timeline .filling-line {
   /* this is used to create the green line filling the timeline */
   position: absolute;
@@ -1759,7 +1782,7 @@ span, h1, h2 {
   -o-transition: transform 0.3s;
   transition: transform 0.3s;
 }
-/* line 100, ../scss/pages/_timeline.scss */
+/* line 127, ../scss/pages/_timeline.scss */
 .timeline .cd-horizontal-timeline .events a {
   position: absolute;
   bottom: 0;
@@ -1775,7 +1798,7 @@ span, h1, h2 {
   -o-transform: translateZ(0);
   transform: translateZ(0);
 }
-/* line 111, ../scss/pages/_timeline.scss */
+/* line 138, ../scss/pages/_timeline.scss */
 .timeline .cd-horizontal-timeline .events a::after {
   /* this is used to create the event spot */
   width: 12px;
@@ -1804,40 +1827,40 @@ span, h1, h2 {
   -o-transition: border-color 0.3s;
   transition: border-color 0.3s;
 }
-/* line 126, ../scss/pages/_timeline.scss */
+/* line 153, ../scss/pages/_timeline.scss */
 .no-touch .timeline .cd-horizontal-timeline .events a:hover::after {
   border-color: #7b9d6f;
   background-color: #7b9d6f;
 }
-/* line 131, ../scss/pages/_timeline.scss */
+/* line 158, ../scss/pages/_timeline.scss */
 .timeline .cd-horizontal-timeline .events a.selected {
   pointer-events: none;
 }
-/* line 134, ../scss/pages/_timeline.scss */
+/* line 161, ../scss/pages/_timeline.scss */
 .timeline .cd-horizontal-timeline .events a.selected::after {
   border-color: #7b9d6f;
   background-color: #7b9d6f;
 }
-/* line 140, ../scss/pages/_timeline.scss */
+/* line 167, ../scss/pages/_timeline.scss */
 .timeline .cd-horizontal-timeline .events a.older-event::after {
   border-color: #7b9d6f;
 }
 @media only screen and (min-width: 1100px) {
-  /* line 18, ../scss/pages/_timeline.scss */
+  /* line 44, ../scss/pages/_timeline.scss */
   .timeline .cd-horizontal-timeline {
     margin: 6em auto;
   }
-  /* line 148, ../scss/pages/_timeline.scss */
+  /* line 175, ../scss/pages/_timeline.scss */
   .timeline .cd-horizontal-timeline::before {
     /* never visible - this is used in jQuery to check the current MQ */
     content: 'desktop';
   }
 }
-/* line 155, ../scss/pages/_timeline.scss */
+/* line 182, ../scss/pages/_timeline.scss */
 .timeline .cd-timeline-navigation {
   list-style: none;
 }
-/* line 159, ../scss/pages/_timeline.scss */
+/* line 186, ../scss/pages/_timeline.scss */
 .timeline .cd-timeline-navigation a {
   /* these are the left/right arrows to navigate the timeline */
   position: absolute;
@@ -1864,7 +1887,7 @@ span, h1, h2 {
   -o-transition: border-color 0.3s;
   transition: border-color 0.3s;
 }
-/* line 175, ../scss/pages/_timeline.scss */
+/* line 202, ../scss/pages/_timeline.scss */
 .timeline .cd-timeline-navigation a::after {
   /* arrow icon */
   width: 16px;
@@ -1882,7 +1905,7 @@ span, h1, h2 {
   -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
 }
-/* line 185, ../scss/pages/_timeline.scss */
+/* line 212, ../scss/pages/_timeline.scss */
 .timeline .cd-timeline-navigation a.prev {
   left: 0;
   -webkit-transform: translateY(-50%) rotate(180deg);
@@ -1891,27 +1914,27 @@ span, h1, h2 {
   -o-transform: translateY(-50%) rotate(180deg);
   transform: translateY(-50%) rotate(180deg);
 }
-/* line 190, ../scss/pages/_timeline.scss */
+/* line 217, ../scss/pages/_timeline.scss */
 .timeline .cd-timeline-navigation a.next {
   right: 0;
 }
-/* line 194, ../scss/pages/_timeline.scss */
+/* line 221, ../scss/pages/_timeline.scss */
 .no-touch .timeline .cd-timeline-navigation a:hover {
   border-color: #7b9d6f;
 }
-/* line 198, ../scss/pages/_timeline.scss */
+/* line 225, ../scss/pages/_timeline.scss */
 .timeline .cd-timeline-navigation a.inactive {
   cursor: not-allowed;
 }
-/* line 201, ../scss/pages/_timeline.scss */
+/* line 228, ../scss/pages/_timeline.scss */
 .timeline .cd-timeline-navigation a.inactive::after {
   background-position: 0 -16px;
 }
-/* line 205, ../scss/pages/_timeline.scss */
+/* line 232, ../scss/pages/_timeline.scss */
 .no-touch .timeline .cd-timeline-navigation a.inactive:hover {
   border-color: #dfdfdf;
 }
-/* line 211, ../scss/pages/_timeline.scss */
+/* line 238, ../scss/pages/_timeline.scss */
 .timeline .cd-horizontal-timeline .events-content {
   position: relative;
   width: 100%;
@@ -1923,7 +1946,7 @@ span, h1, h2 {
   -o-transition: height 0.4s;
   transition: height 0.4s;
 }
-/* line 218, ../scss/pages/_timeline.scss */
+/* line 245, ../scss/pages/_timeline.scss */
 .timeline .cd-horizontal-timeline .events-content li {
   top: 0;
   left: 0;
@@ -1945,7 +1968,7 @@ span, h1, h2 {
   -webkit-animation-timing-function: ease-in-out;
   animation-timing-function: ease-in-out;
 }
-/* line 231, ../scss/pages/_timeline.scss */
+/* line 258, ../scss/pages/_timeline.scss */
 .timeline .cd-horizontal-timeline .events-content li.selected {
   /* visible event content */
   z-index: 2;
@@ -1957,45 +1980,45 @@ span, h1, h2 {
   -o-transform: translateX(0);
   transform: translateX(0);
 }
-/* line 239, ../scss/pages/_timeline.scss */
+/* line 266, ../scss/pages/_timeline.scss */
 .timeline .cd-horizontal-timeline .events-content li.enter-right, .timeline .cd-horizontal-timeline .events-content li.leave-right {
   -moz-animation-name: cd-enter-right;
   -webkit-animation-name: cd-enter-right;
   animation-name: cd-enter-right;
 }
-/* line 243, ../scss/pages/_timeline.scss */
+/* line 270, ../scss/pages/_timeline.scss */
 .timeline .cd-horizontal-timeline .events-content li.enter-left, .timeline .cd-horizontal-timeline .events-content li.leave-left {
   -moz-animation-name: cd-enter-left;
   -webkit-animation-name: cd-enter-left;
   animation-name: cd-enter-left;
 }
-/* line 247, ../scss/pages/_timeline.scss */
+/* line 274, ../scss/pages/_timeline.scss */
 .timeline .cd-horizontal-timeline .events-content li.leave-right, .timeline .cd-horizontal-timeline .events-content li.leave-left {
   -moz-animation-direction: reverse;
   -webkit-animation-direction: reverse;
   animation-direction: reverse;
 }
-/* line 252, ../scss/pages/_timeline.scss */
+/* line 279, ../scss/pages/_timeline.scss */
 .timeline .cd-horizontal-timeline .events-content li > * {
   margin: 0 auto;
   max-width: 800px;
 }
-/* line 264, ../scss/pages/_timeline.scss */
+/* line 284, ../scss/pages/_timeline.scss */
 .timeline .cd-horizontal-timeline .events-content em {
   margin: 10px auto;
   display: block;
   font-style: italic;
 }
-/* line 269, ../scss/pages/_timeline.scss */
+/* line 289, ../scss/pages/_timeline.scss */
 .timeline .cd-horizontal-timeline .events-content em::before {
   content: '- ';
 }
-/* line 274, ../scss/pages/_timeline.scss */
+/* line 294, ../scss/pages/_timeline.scss */
 .timeline .cd-horizontal-timeline .events-content p {
   font-size: 1.4rem;
   color: #959595;
 }
-/* line 279, ../scss/pages/_timeline.scss */
+/* line 299, ../scss/pages/_timeline.scss */
 .timeline .cd-horizontal-timeline .events-content em, .timeline .cd-horizontal-timeline .events-content p {
   line-height: 1.6;
 }

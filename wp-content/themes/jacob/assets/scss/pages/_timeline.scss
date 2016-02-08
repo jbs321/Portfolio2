@@ -10,14 +10,41 @@
 
   background-color: $color-4;
 
+  h1{
+    margin: 10px auto!important;
+    font-size: 3vw!important;
+  }
+
   a {
     color: $color-2;
     text-decoration: none;
   }
 
+  .education{
+
+    .box{
+      margin: 20px 0;
+
+      .range{
+        border-bottom: 1px solid #b9b9b9;
+        padding: 10px 0;
+        font-weight: 700;
+        font-size: 2em;
+      }
+      .description{
+        .bold{
+          padding: 10px 0;
+          font-weight: 600;
+          font-size: 1.5em;
+        }
+      }
+    }
+  }
+
   .cd-horizontal-timeline {
     margin: 2em auto;
     opacity: 0;
+    border-left: 1px solid #b9b9b9;
     @include transition(opacity .2s);
 
     &::before {
@@ -253,13 +280,6 @@
       margin: 0 auto;
       max-width: 800px;
     }
-
-    //h2 {
-    //  font-size: 2.6rem;
-    //  font-weight: bold;
-    //  font-weight: 700;
-    //  line-height: 1.2;
-    //}
 
     em {
       margin: 10px auto;
