@@ -36,11 +36,11 @@ $(document).ready(function () {
 
         ////Design
         controlArrows: true,
-        verticalCentered: true,
+        verticalCentered: false,
         resize: true,
         //sectionsColor : ['#ccc', '#fff'],
-        //paddingTop: '-1em',
-        //paddingBottom: '10px',
+        //paddingTop: '0',
+        //paddingBottom: '0',
         //fixedElements: '#header, .footer',
         //responsiveWidth: 0,
         responsiveHeight: 0,
@@ -59,24 +59,37 @@ $(document).ready(function () {
             //go down
             if (index > nextIndex) {
                 $("[data-slide-section='" + index + "']").addClass('slide-reverse');
-                $("[data-slide-section='" + index + "']").removeClass('slide-' + $("[data-slide-section='" + index + "']").attr('data-slide-dir'));
+                //$("[data-slide-section='" + index + "']").removeClass('slide-' + $("[data-slide-section='" + index + "']").attr('data-slide-dir'));
             }
 
             //go up
             if (index < nextIndex) {
+                $('[data-section="' + nextIndex + '"] .animated').each(function () {
+                    var anim_type = $(this).data('animate-type');
+                    var anim_end = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+
+                    $(this).addClass(anim_type);
+
+                    $(this).one(anim_end, function () {
+                        $(this).removeClass(anim_type);
+                    })
+                });
+
+
                 $("[data-slide-section='" + nextIndex + "']").removeClass('slide-reverse');
-                $("[data-slide-section='" + nextIndex + "']").addClass('slide-' + $("[data-slide-section='" + nextIndex + "']").attr('data-slide-dir'));
+                $("[data-slide-section='" + nextIndex + "']").each(function() {
+                    $(this).addClass('slide-' + $(this).attr('data-slide-dir'));
+                });
             }
         },
         afterLoad: function (anchorLink, index) {
 
+            //switch Battery effect on
             if ($("[data-slide-section='" + index + "'][data-battery='false']").attr('data-battery') == "false") {
                 $("[data-slide-section='" + index + "'][data-battery='false']").attr('data-battery', "true");
             }
 
-
             if (index > 1) {
-                $("[data-battery='false']").attr('data-battery', "true");
                 $('#go-up').removeClass('hidden hidden-fixed');
                 $('#go-up').addClass('display');
             } else if (index == 1) {
@@ -106,6 +119,4 @@ $(document).ready(function () {
             console.log(data);
         }
     }
-
-
 });

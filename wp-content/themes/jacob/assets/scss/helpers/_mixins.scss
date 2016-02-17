@@ -20,6 +20,13 @@
   box-shadow: $cmd;
 }
 
+@mixin border-radius($cmd) {
+  -webkit-border-radius: $cmd;
+  -moz-border-radius: $cmd;
+  border-radius: $cmd;
+}
+
+
 @mixin animation($cmd) {
   -webkit-animation: $cmd;
   -moz-animation: $cmd;

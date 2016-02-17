@@ -7,6 +7,8 @@
   background: #ffffff url('../images/bg1.jpg') no-repeat center center;
   max-height: 100%;
 
+  @import "../components/go-down";
+
   h1, h2 {
     color: #fff;
     margin: 0;
@@ -21,28 +23,36 @@
     @include breakpoint(md) {font-size: 7vw;}
   }
 
-  h2 {font-size: 3vw;}
+  h2 {font-size: 3vw; margin-bottom: 20px;}
 
-  .top-image {
-    height: 200px;
-    margin-bottom: 50px;
-    @include breakpoint(md) { height: 300px;}
+  .row-wrapper{
+    width: 100%;
+    height: 100%;
+    display: table;
 
-    img {
-      height: 100%;
-      border: 10px solid #eff0f4;
-      display: block;
-      z-index: 5;
-      margin: auto;
-      position: relative;
-      border-radius: 50%;
-      @include breakpoint(xs) { max-width: 70%;}
-      @include breakpoint(sm) {max-width: 60%;}
-      @include breakpoint(md) {max-width: 30%;}
+    .row{
+      display: table-cell;
+      padding-top: 30px;
+      vertical-align: middle;
+
+      .top-image {
+        height: 200px;
+        margin-bottom: 50px;
+        @include breakpoint(md) { height: 300px;}
+
+        img {
+          height: 100%;
+          border: 10px solid #eff0f4;
+          display: block;
+          z-index: 5;
+          margin: auto;
+          position: relative;
+          border-radius: 50%;
+          @include breakpoint(xs) { max-width: 70%;}
+          @include breakpoint(sm) {max-width: 60%;}
+          @include breakpoint(md) {max-width: 30%;}
+        }
+      }
     }
-  }
-
-  .slide-down-wrapper{
-      @import "../components/go-down";
   }
 }

@@ -6,16 +6,19 @@
   font-size: 13px;
   text-align: justify;
   background: url('http://static.livedemo00.template-help.com/wordpress_50917/wp-content/uploads/2014/07/parallax-img1.jpg');
+  background-size: cover;
 
-  .row {
+  .meta {
     color: #fff;
     z-index: 5;
     position: relative;
+    padding-top: 30px;
+    margin-bottom: 40px;
 
     h1 {
       color: #fff;
-      z-index: 5;
       margin: 20px !important;
+      z-index: 5;
     }
 
     h2 {
@@ -24,30 +27,41 @@
     }
   }
 
+  .row-wrapper {
+    width: 100%;
+    height: 100%;
+    display: table;
+
+    .row {
+      display: table-cell;
+      padding-top: 30px;
+      vertical-align: middle;
+    }
+  }
+
+
   .me-section {
     .service-box{
+      margin-top: 50px;
+
       &:hover .icon {
-      border-color: #1abc9c;
-      -webkit-box-shadow: 0 0 20px rgba(26,188,156,0.6);
-      -moz-box-shadow: 0 0 20px rgba(26,188,156,0.6);
-      box-shadow: 0 0 20px rgba(26,188,156,0.6);
+        border-color: #1abc9c;
+        @include box-shadow(0 0 20px rgba(26,188,156,0.6));
       }
 
       .icon {
         float: none;
-        position: relative;
         width: 82px;
-        height: 82px;
-        line-height: 82px;
-        border: 2px solid transparent;
-        font-size: 36px;
         color: #1abc9c;
+        height: 82px;
         margin: 0 auto 20px;
+        border: 2px solid transparent;
         display: block;
+        position: relative;
+        font-size: 36px;
+        line-height: 82px;
         @include transition(.5s);
-        -webkit-border-radius: 100%;
-        -moz-border-radius: 100%;
-        border-radius: 100%;
+        @include border-radius(100%);
 
         &:before {
           top: 0;
@@ -59,9 +73,7 @@
           border: 2px solid #1abc9c;
           content: '';
           position: absolute;
-          border-radius: 100%;
-          -webkit-border-radius: 100%;
-          -moz-border-radius: 100%;
+          @include border-radius(100%);
         }
 
         .fa {
@@ -106,8 +118,9 @@
 
   .me-container{
     width: 100%;
-    min-height: 200px;
     position: relative;
+    min-height: 200px;
+    margin-top: 40px;
   }
 }
 

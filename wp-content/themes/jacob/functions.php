@@ -54,6 +54,7 @@ function custom_post_type()
         'publicly_queryable' => true,
         'capability_type' => 'page',
     );
+
     register_post_type('timeline', $args);
 }
 

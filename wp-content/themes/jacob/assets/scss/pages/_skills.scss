@@ -9,9 +9,26 @@ $path: 'http://static.livedemo00.template-help.com/wordpress_50917/wp-content/th
   max-height: 100%;
   //background: #1A3742;
   background: url($path + "/header-bg.jpg");
+  background-size: cover;
+
+  .row-wrapper {
+    width: 100%;
+    height: 100%;
+    display: table;
+
+    .row {
+      display: table-cell;
+      padding-top: 30px;
+      vertical-align: middle;
+    }
+  }
 
   .battery-title{
-    font-size: 1.5em;
+    font-size: 4vw;
+
+    @include breakpoint(md){
+      font-size: 1.5em;
+    }
   }
 
   .battery-percentage{
@@ -20,15 +37,35 @@ $path: 'http://static.livedemo00.template-help.com/wordpress_50917/wp-content/th
     display: inline-block;
     position: absolute;
     font-size: 2em;
+
+    @include breakpoint(xs){
+      top: calc(50% - 16px);
+      left: 14%;
+      display: inline-block;
+      position: absolute;
+      font-size: 2em;
+      z-index: 999;
+    }
+
+    @include breakpoint(md){
+      top: calc(50% - 17px);
+      left: initial;
+      right: 4%;
+    }
   }
 
   .battery-wrapper {
-    width: 400px;
+    width: 100%;
     height: 56px;
     border: 3px solid #1ABC9C;
     position: relative;
     border-radius: 5px;
     border-right: none;
+    margin: 0 0 20px 0;
+
+    @include breakpoint(md){
+      width: 85%;
+    }
 
     &:after{
       top: -3px;
@@ -62,8 +99,6 @@ $path: 'http://static.livedemo00.template-help.com/wordpress_50917/wp-content/th
           }
         }
       }
-
-
     }
 
     em {
