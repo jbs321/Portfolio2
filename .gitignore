@@ -2,5 +2,5 @@
 .prepros.cfg
 .env
 .idea
-#wp-config.php
+wp-config.php
 uploads
