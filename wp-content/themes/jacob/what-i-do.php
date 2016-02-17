@@ -3,7 +3,8 @@
         <i class="fa fa-arrow-left"></i>
         <div class="video-container">
             <video id="my-video" class="video" autoplay muted loop>
-                <source src="<?php echo get_template_directory_uri() ?>/assets/videos/machiko.mp4" type="video/mp4">
+<!--                <source src="--><?php //echo get_template_directory_uri() ?><!--/assets/videos/machiko.mp4" type="video/mp4">-->
+                <source src="http://jacob-balabanov.com/wp-content/uploads/2016/02/machiko.mp4" type="video/mp4">
             </video>
         </div>
     </div>
