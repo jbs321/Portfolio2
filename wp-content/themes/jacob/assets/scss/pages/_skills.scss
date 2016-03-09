@@ -1,5 +1,4 @@
 .skills {
-$path: 'http://static.livedemo00.template-help.com/wordpress_50917/wp-content/themes/theme50917/images/';
 
   color: #fff;
   height: 100%;
@@ -7,8 +6,7 @@ $path: 'http://static.livedemo00.template-help.com/wordpress_50917/wp-content/th
   z-index: 15;
   position: relative;
   max-height: 100%;
-  //background: #1A3742;
-  background: url($path + "/header-bg.jpg");
+  background: url("../images/header-bg.jpg");
   background-size: cover;
 
   .row-wrapper {
@@ -23,34 +21,24 @@ $path: 'http://static.livedemo00.template-help.com/wordpress_50917/wp-content/th
     }
   }
 
-  .battery-title{
+  .battery-title {
     font-size: 4vw;
 
-    @include breakpoint(md){
+    @include breakpoint(md) {
       font-size: 1.5em;
     }
   }
 
-  .battery-percentage{
-    top: calc(50% - 6px);
-    left: 77%;
+  .battery-percentage {
+    left: 78%;
     display: inline-block;
+    z-index: 999;
     position: absolute;
-    font-size: 2em;
+    font-size: 1.5em;
 
-    @include breakpoint(xs){
-      top: calc(50% - 16px);
-      left: 14%;
-      display: inline-block;
-      position: absolute;
-      font-size: 2em;
-      z-index: 999;
-    }
-
-    @include breakpoint(md){
-      top: calc(50% - 17px);
-      left: initial;
-      right: 4%;
+    @include breakpoint(xs) {
+      left: 86%;
+      font-size: 4vw;
     }
   }
 
@@ -63,39 +51,43 @@ $path: 'http://static.livedemo00.template-help.com/wordpress_50917/wp-content/th
     border-right: none;
     margin: 0 0 20px 0;
 
-    @include breakpoint(md){
+    @include breakpoint(md) {
       width: 85%;
     }
 
-    &:after{
+    &:after {
       top: -3px;
       right: -5px;
       width: 12px;
       height: 109%;
       content: "";
       position: absolute;
-      background: url($path + '/diagram-right.png') no-repeat 100% 100% ;
+      background: url('../images/diagram-right.png') no-repeat 100% 100%;
     }
 
-    &:before{
+    &:before {
       width: 20%;
       height: 80%;
       margin: 5px;
       content: "";
       position: absolute;
-      background: rgba(1, 1, 1, 0) url("http://static.livedemo00.template-help.com/wordpress_50917/wp-content/themes/theme50917/images/diagram-active.gif");
+      background: rgba(1, 1, 1, 0) url("../images/diagram-active.gif");
     }
 
+    &[data-battery="true"] {
 
-    &[data-battery="true"]{
+      &:before {
+
+          transition-delay: 5s;
+      }
 
       @for $i from 1 through 20 {
         $grouth: $i * 5;
 
-        &[data-battery-percente='#{$grouth}']{
-          &:before{
+        &[data-battery-percente='#{$grouth}'] {
+          &:before {
             width: $grouth * 1%;
-            transition: width .5s;
+            @include transition(width .5s);
           }
         }
       }
@@ -108,7 +100,113 @@ $path: 'http://static.livedemo00.template-help.com/wordpress_50917/wp-content/th
       z-index: -1;
       position: absolute;
       margin-top: 2px;
-      background: url("http://static.livedemo00.template-help.com/wordpress_50917/wp-content/themes/theme50917/images//diagram-tail.gif") 100% 100%;
+      background: url("../images/diagram-tail.gif") 100% 100%;
     }
+  }
+  .moving-zone {
+    position: absolute;
+    top:50%; left:50%;
+    width:300px; height:120px;
+    margin: -60px 0 0 -150px;
+    perspective: 800px;
+  }
+  .popup {
+    position: absolute;
+    width:300px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px 0 20px 0;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    background: -webkit-linear-gradient(top left, white 50%, coral 50%);
+    background:    -moz-linear-gradient(top left, white 50%, coral 50%);
+    background:     -ms-linear-gradient(top left, white 50%, coral 50%);
+    background:      -o-linear-gradient(top left, white 50%, coral 50%);
+    background:         linear-gradient(top left, white 50%, coral 50%);
+
+    &:before {
+      content: '';
+      position: absolute;
+      left:5%; top:5%;
+      width:90%; height:90%;
+      border-radius: inherit;
+      background: rgba(0,0,0,.1);
+      box-shadow: 0 0 40px 20px rgba(0,0,0,.1);
+      transform: translateZ(-100px);
+    }
+
+    .popup-content {
+      background: #444;
+      padding: 20px;
+      box-sizing: border-box;
+      border-radius: 10px 0 10px 0;
+    }
+
+    .popup-text {
+      color: white;
+      font-family: 'Roboto', sans-serif;
+      font-size: 20px;
+      line-height: 30px;
+      font-weight: 100;
+      text-align: center;
+      transform: translateZ(15px);
+
+      b {
+        color: coral;
+        font-weight: 300;
+      }
+    }
+  }
+
+
+  @import url(http://fonts.googleapis.com/css?family=Noto+Sans);
+
+//{
+//  margin: 0;
+//  padding: 0;
+//}
+
+  #wrap {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #333;
+    overflow: hidden;
+  }
+
+  #popup {
+    position: absolute;
+    width: 300px;
+    height: auto;
+    top: 50%; left: 50%;
+    margin-left: -150px; margin-top: -100px;
+
+    -webkit-perspective: 800px;
+    -webkit-perspective-origin: 50% 50px;
+    perspective: 800px;
+    perspective-origin: 50% 50px;
+  }
+
+  .piece {
+    background: rgba(95,144,222,0.5);
+    float: left;
+  }
+
+  #popup h1 {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    top: 50%; margin-top: -20px;
+    font-family: 'Noto Sans', sans-serif;
+    color: #ccc;
+  }
+
+  .reverse {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-family: 'Noto Sans', sans-serif;
+    color: #ccc;
+    cursor: pointer;
   }
 }

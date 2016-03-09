@@ -1,18 +1,9 @@
-<div class="section container-fluid what-i-do">
-    <div class="home-overlay">
-        <i class="fa fa-arrow-left"></i>
-        <div class="video-container">
-            <video id="my-video" class="video" autoplay muted loop>
-<!--                <source src="--><?php //echo get_template_directory_uri() ?><!--/assets/videos/machiko.mp4" type="video/mp4">-->
-                <source src="http://jacob-balabanov.com/wp-content/uploads/2016/02/machiko.mp4" type="video/mp4">
-            </video>
-        </div>
-    </div>
-
+<div class="section container-fluid what-i-do" data-section="4">
+    <div class="home-overlay"></div>
 
     <div class="row-wrapper">
         <div class="row">
-            <div class="col-xs-12 col-md-6">
+            <div class="col-xs-12 col-md-5 col-md-offset-1 animated " data-animate-type="slideInLeft">
                 <ul>
                     <li>
                         <input type="checkbox" checked>
@@ -34,8 +25,8 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-xs-12 col-md-6">
-                <img src="<?php echo get_template_directory_uri() ?>/assets/images/services-img.png">
+            <div class="col-xs-12 col-md-4 animated" data-animate-type="slideInRight">
+                <img class="img-responsive col-xs-12" src="<?php echo get_template_directory_uri() ?>/assets/images/services-img.png">
             </div>
         </div>
     </div>

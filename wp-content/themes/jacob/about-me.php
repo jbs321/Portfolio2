@@ -3,11 +3,11 @@
     <div class="row-wrapper">
         <div class="row">
 
-            <div class="col-xs-12 meta animated" data-animate-type="zoomIn">
+            <div class="col-xs-10 col-xs-offset-1 meta animated" data-animate-type="zoomIn">
                 <h1 class="section-header">Personal Details</h1>
                 <h2 class="section-sub-header">I introduce the most creative and original ideas for my customers!</h2>
 
-                <span>
+                <div class="about-me-text">
                     Hi, My name is Jacob Balabanov Lanir. I am a Web Developer from Israel who has a big passion for building websites.
                     I like to think that I'm a super diligent person,
                     That loves to use my coding skills to make super fast, super fun websites. I see a challenges in every bit of
@@ -15,13 +15,13 @@
                     makes me a better code developer and it's my next step for a world of technological possibilities where ever I
                     go.
                     So, Lastly I hope that who ever is visiting here, please enjoy, and let me know
-                    <a href="#" data-navto=".contact-me">what you think</a>.
+                    <a href="#" class="hvr-wobble-bottom" data-navto=".contact-me">what you think</a>.
                     P.S. Here are some more of my hobbies and interests I do in my spear time the best one's are swimming and
-                    Coffee....</span>
+                    Coffee....</div>
             </div>
-            <div class="me-container">
+            <div class="me-container col-xs-10 col-xs-offset-1">
                 <div class="col-xs-12 col-md-4 me-section animated delay-0-2" data-animate-type="slideInLeft">
-                    <div class="service-box ">
+                    <div class="service-box">
                         <figure class="icon"><i class="fa fa-star"></i></figure>
                         <div class="service-box_body">
                             <h2 class="title">Hobbies</h2>

@@ -9,7 +9,7 @@
                      data-slide-dir="opacity" data-slide-section="3"><em></em></div>
             </div>
             <div class="col-xs-12 col-md-5">
-                <span class="battery-title">DESIGN PATTERNS OOP/MVC AND MORE</span><span
+                <span class="battery-title">DESIGN PATTERNS</span><span
                     class="battery-percentage">95%</span>
                 <div class="battery-wrapper" data-battery="false" data-battery-percente="95" data-slide="true"
                      data-slide-dir="opacity" data-slide-section="3"><em></em></div>
@@ -38,4 +38,12 @@
             </div>
         </div>
     </div>
+
+    <div id="wrap">
+        <div id="popup">
+            <h1>break me</h1>
+        </div>
+    </div>
+
+    <div class="reverse">Reverse</div>
 </div>

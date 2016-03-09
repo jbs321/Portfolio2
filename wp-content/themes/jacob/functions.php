@@ -15,6 +15,28 @@ if (!function_exists('custom_navigation_menus')) {
     add_action('init', 'custom_navigation_menus');
 }
 
+
+add_action('init', 'create_post_type');
+function create_post_type()
+{
+    register_post_type('acme_product',
+        array(
+            'labels' => array(
+                'name' => __('Products'),
+                'singular_name' => __('Product'),
+
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'public' => true,
+            'supports' => array('title', 'editor', 'thumbnail', 'comments'),
+            'capability_type' => 'post',
+            'rewrite' => array("slug" => "events"),
+        )
+    );
+}
+
+
 // Register Custom Post Type
 function custom_post_type()
 {
@@ -74,7 +96,7 @@ function prefix_admin_add_foobar()
         'post_category' => array(8, 39)
     );
 
-    if (mail("jbs321@gmail.com", "{$_REQUEST['name']} - New Contact - Portfolio",$_REQUEST['email'] .' /n '. $_REQUEST['msg']))
+    if (mail("jbs321@gmail.com", "{$_REQUEST['name']} - New Contact - Portfolio", $_REQUEST['email'] . ' /n ' . $_REQUEST['msg']))
         print "Email successfully sent";
     else
         print "An error occured";

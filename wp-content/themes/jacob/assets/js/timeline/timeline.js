@@ -1,6 +1,6 @@
 jQuery(document).ready(function($){
 	var timelines = $('.cd-horizontal-timeline'),
-		eventsMinDistance = 100;
+		eventsMinDistance = 90;
 
 	(timelines.length > 0) && initTimeline(timelines);
 
@@ -40,6 +40,7 @@ jQuery(document).ready(function($){
 				event.preventDefault();
 				timelineComponents['timelineEvents'].removeClass('selected');
 				$(this).addClass('selected');
+				console.log('sadas');
 				updateOlderEvents($(this));
 				updateFilling($(this), timelineComponents['fillingLine'], timelineTotWidth);
 				updateVisibleContent($(this), timelineComponents['eventsContent']);
