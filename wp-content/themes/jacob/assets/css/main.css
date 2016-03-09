@@ -2388,8 +2388,9 @@ span, h1, h2 {
   bottom: 0;
   background-color: #333;
   overflow: hidden;
+  z-index: 999;
 }
-/* line 176, ../scss/pages/_skills.scss */
+/* line 177, ../scss/pages/_skills.scss */
 .skills #popup {
   position: absolute;
   width: 300px;
@@ -2403,12 +2404,12 @@ span, h1, h2 {
   perspective: 800px;
   perspective-origin: 50% 50px;
 }
-/* line 189, ../scss/pages/_skills.scss */
+/* line 190, ../scss/pages/_skills.scss */
 .skills .piece {
   background: rgba(95, 144, 222, 0.5);
   float: left;
 }
-/* line 194, ../scss/pages/_skills.scss */
+/* line 195, ../scss/pages/_skills.scss */
 .skills #popup h1 {
   position: absolute;
   text-align: center;
@@ -2419,7 +2420,7 @@ span, h1, h2 {
   font-family: 'Noto Sans', sans-serif;
   color: #ccc;
 }
-/* line 204, ../scss/pages/_skills.scss */
+/* line 205, ../scss/pages/_skills.scss */
 .skills .reverse {
   position: absolute;
   top: 20px;

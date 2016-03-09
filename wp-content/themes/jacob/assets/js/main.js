@@ -18,9 +18,6 @@ $(function () {
     }
 });
 
-
-HTML  CSS  JS  Result
-Edit on
 var pieces = 70,
     speed = 1,
     pieceW = 30,
@@ -71,6 +68,13 @@ $('.piece, h1').click(function(){
 });
 $('.reverse').click(function(){
     breakGlass('reverse');
+});
+
+$('#wrap *').click(function (e) {
+    setTimeout(function () {
+        $('#wrap').hide();
+    }, 2000);
+
 });
 
 breakGlass(true);
