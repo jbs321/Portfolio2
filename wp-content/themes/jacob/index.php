@@ -13,11 +13,11 @@
 <div class="view_container">
     <div class="wrapper" id="fullpage">
         <?php
-        get_template_part('main', 'main.php');
-        get_template_part('about-me', 'about-me.php');
-        get_template_part('skills', 'skills.php');
-        get_template_part('what-i-do', 'what-i-do.php');
-        get_template_part('timeline', 'timeline.php');
+//        get_template_part('main', 'main.php');
+//        get_template_part('about-me', 'about-me.php');
+//        get_template_part('skills', 'skills.php');
+//        get_template_part('what-i-do', 'what-i-do.php');
+//        get_template_part('timeline', 'timeline.php');
         get_template_part('map', 'map.php');
         ?>
     </div>

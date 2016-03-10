@@ -1,47 +1,63 @@
-.timeline {
+.section.timeline {
+  .home-overlay {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: repeat scroll 0 0 rgba(0, 0, 0, 0.45);
+    background: url("../images/header-bg.jpg");
+    background-size: cover;
+  }
+
+  h1 {
+    color: #fff;
+    padding: 5% 0 0 0;
+    font-size: 12vw;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    @include breakpoint(xs) {
+      font-size: 7vw;
+    }
+
+    @include breakpoint(sm) {
+      font-size: 8vw;
+    }
+    @include breakpoint(md) {
+      padding: 5% 0;
+      font-size: 5vw;
+    }
+  }
+}
+
   $color-1: #383838; // Mine Shaft
   $color-2: #7b9d6f; // Highland
   $color-3: #ffffff; // White
   $color-4: #f8f8f8; // Alabaster
 
-  @import '../components/timeline/mixins'; // custom mixins
-  @import '../components/timeline/layout'; // responsive grid and media queries
-  @import '../components/timeline/keyframes';
-
-  background-color: $color-4;
 
   a {
     color: $color-2;
     text-decoration: none;
   }
 
-  .row-wrapper {
-    width: 100%;
-    height: 100%;
-    display: table;
+  .education {
+    color: $color-4;
 
-    .row {
-      display: table-cell;
-      vertical-align: middle;
-
-      h1{
-        margin: auto;
-      }
-    }
-  }
-
-  .education{
-    .box{
+    .box {
       margin: 20px 0;
+      padding: 0;
 
-      .range{
+      .range {
         border-bottom: 1px solid #b9b9b9;
         padding: 10px 0;
         font-weight: 700;
         font-size: 2em;
       }
-      .description{
-        .bold{
+      .description {
+        .bold {
           padding: 10px 0;
           font-weight: 600;
           font-size: 1.5em;
@@ -51,10 +67,16 @@
   }
 
   .cd-horizontal-timeline {
+    color: $color-4;
     margin: 2em auto;
     opacity: 0;
     border-left: 1px solid #b9b9b9;
     @include transition(opacity .2s);
+
+    .title {
+      margin: 0 0 30px 0;
+      padding-left: 40px;
+    }
 
     &::before {
       /* never visible - this is used in jQuery to check the current MQ */
@@ -93,12 +115,12 @@
 
       &::before {
         left: 0;
-        @include background-image(linear-gradient(to right, $color-4, rgba($color-4, 0)));
+        //@include background-image(linear-gradient(to right, $color-4, rgba($color-4, 0)));
       }
 
       &::after {
         right: 0;
-        @include background-image(linear-gradient(to left, $color-4, rgba($color-4, 0)));
+        //@include background-image(linear-gradient(to left, $color-4, rgba($color-4, 0)));
       }
     }
 
@@ -134,13 +156,14 @@
     }
 
     .events a {
-      position: absolute;
+      color: #f8f8f8;
       bottom: 0;
       z-index: 2;
-      text-align: center;
+      position: absolute;
       font-size: 1.3rem;
+      text-align: center;
       padding-bottom: 15px;
-      color: $color-1;
+      text-decoration: none;
       /* fix bug on Safari - text flickering while timeline translates */
       @include transform(translateZ(0));
 
@@ -214,7 +237,7 @@
       height: 16px;
       content: '';
       position: absolute;
-      background: url(../images/cd-arrow.svg) no-repeat 0 0;
+      background: url('../images/cd-arrow.svg') no-repeat 0 0;
       @include center;
     }
 
@@ -312,4 +335,3 @@
       line-height: 1.6;
     }
   }
-}

@@ -1,7 +1,18 @@
 <div class="section container-fluid skills">
-    <div class="row-wrapper">
+    <div class="home-overlay">
+        <div class="video-container">
+            <video id="my-video" class="video" autoplay muted loop>
+                <source src="<?php echo get_template_directory_uri() ?>/assets/videos/footage-desk-working.webm"
+                        type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    <h1 class="">WHAT I’M BEST AT</h1>
+
+    <div class="col-xs-10 col-md-offset-1">
         <div class="row">
-            <h1 class="section-header">WHAT I’M BEST AT</h1>
+
 
             <div class="col-xs-12 col-md-offset-1 col-md-5">
                 <span class="battery-title">PHP/FRAMEOWRKS/CMS</span><span class="battery-percentage">95%</span>
@@ -38,12 +49,4 @@
             </div>
         </div>
     </div>
-
-    <div id="wrap">
-        <div id="popup">
-            <h1>break me</h1>
-        </div>
-    </div>
-
-    <div class="reverse">Reverse</div>
 </div>

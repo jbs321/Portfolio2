@@ -1,10 +1,11 @@
 <div class="section container-fluid about-me" data-section="2">
     <div class="home-overlay"></div>
-    <div class="row-wrapper">
-        <div class="row">
 
+    <h1 class="col-xs-10 col-xs-offset-1">Personal Details</h1>
+
+    <div class="">
+        <div class="">
             <div class="col-xs-10 col-xs-offset-1 meta animated" data-animate-type="zoomIn">
-                <h1 class="section-header">Personal Details</h1>
                 <h2 class="section-sub-header">I introduce the most creative and original ideas for my customers!</h2>
 
                 <div class="about-me-text">

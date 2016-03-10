@@ -18,127 +18,87 @@ foreach (get_posts(['post_type' => 'timeline']) as $post):
     ];
 endforeach;
 
-
-    usort($timelineEvents, function($a, $b) {
-        return strtotime(str_replace('/', '-', $a['sDate'])) - strtotime(str_replace('/', '-', $b['sDate']));
-    });
-
-//var_dump($timelineEvents);
-//die();
+usort($timelineEvents, function ($a, $b) {
+    return strtotime(str_replace('/', '-', $a['sDate'])) - strtotime(str_replace('/', '-', $b['sDate']));
+});
 ?>
 
-
 <div class="section container-fluid timeline" id="timeline" data-section="5">
-    <div class="row-wrapper">
-        <div class="row">
-            <h1 class="section-header">MY ENTIRE CAREER</h1>
 
-            <section class="col-xs-12 col-md-4 education " >
-                <h2>Education</h2>
+    <div class="home-overlay"></div>
 
-                <div class="col-xs-12 box animated" data-animate-type="slideInLeft">
-                    <div class="range">2004 - 2005</div>
-                    <div class="description">
-                        <div class="bold">Univercity Name</div>
-                        <span class="text">sfdas asd asd asd asd sadasf asfas</span>
-                    </div>
+    <h1 class="col-xs-10 col-xs-offset-1">MY ENTIRE CAREER</h1>
+
+    <div class="row-wrapper col-xs-10 col-xs-offset-1">
+        <section class="col-xs-12 col-md-4 education ">
+            <h2>Education</h2>
+
+            <div class="col-xs-12 box animated" data-animate-type="slideInLeft">
+                <div class="range">2004 - 2005</div>
+                <div class="description">
+                    <div class="bold">Univercity Name</div>
+                    <span class="text">sfdas asd asd asd asd sadasf asfas</span>
                 </div>
+            </div>
 
-                <div class="col-xs-12 box delay-0-5 animated" data-animate-type="slideInLeft">
-                    <div class="range">2004 - 2005</div>
-                    <div class="description">
-                        <div class="bold">Univercity Name</div>
-                        <span class="text">sfdas asd asd asd asd sadasf asfas</span>
-                    </div>
+            <div class="col-xs-12 box delay-0-5 animated" data-animate-type="slideInLeft">
+                <div class="range">2004 - 2005</div>
+                <div class="description">
+                    <div class="bold">Univercity Name</div>
+                    <span class="text">sfdas asd asd asd asd sadasf asfas</span>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section class="cd-horizontal-timeline col-xs-12 col-md-8 animated" data-animate-type="slideInRight">
-                <h2 class="title">Work experience</h2>
-                <div class="timeline">
-                    <div class="events-wrapper">
-                        <div class="events">
-                            <ol>
-<!--                                <li><a href="#0" data-date="16/01/2014" class="selected">16 Jan</a></li>-->
-<!--                                <li><a href="#0" data-date="28/02/2014">28 Feb</a></li>-->
-<!--                                <li><a href="#0" data-date="20/04/2014">20 Mar</a></li>-->
-<!--                                <li><a href="#0" data-date="20/05/2014">20 May</a></li>-->
-
-
+        <section class="cd-horizontal-timeline col-xs-12 col-md-7 animated" data-animate-type="slideInRight">
+            <h2 class="title">Work experience</h2>
+            <div class="timeline">
+                <div class="events-wrapper">
+                    <div class="events">
+                        <ol>
                             <?php
-                                    $first = 0;
-                                    foreach ($timelineEvents as $timelineEvent): ?>
-                                        <li>
-                                            <a href="#0" data-date="<?=explode('/', $timelineEvent['sDate'])[0] . "/" . explode('/', $timelineEvent['sDate'])[1]  . "/" . explode('/', $timelineEvent['sDate'])[2] ?>" <?php if($first == 0): ?> class="selected" <?php endif; ?>>
-                                                <?=explode('/', $timelineEvent['sDate'])[2]?>
-                                            </a>
-                                        </li>
+                            $first = 0;
+                            foreach ($timelineEvents as $timelineEvent): ?>
+                                <li>
+                                    <a href="#0"
+                                       data-date="<?= explode('/', $timelineEvent['sDate'])[0] . "/" . explode('/', $timelineEvent['sDate'])[1] . "/" . explode('/', $timelineEvent['sDate'])[2] ?>" <?php if ($first == 0): ?> class="selected" <?php endif; ?>>
+                                        <?= explode('/', $timelineEvent['sDate'])[2] ?>
+                                    </a>
+                                </li>
                                 <?php
-                                    $first++;
-                                    endforeach;
-                                ?>
-                            </ol>
+                                $first++;
+                            endforeach;
+                            ?>
+                        </ol>
 
-                            <span class="filling-line" aria-hidden="true"></span>
-                        </div> <!-- .events -->
-                    </div> <!-- .events-wrapper -->
+                        <span class="filling-line" aria-hidden="true"></span>
+                    </div> <!-- .events -->
+                </div> <!-- .events-wrapper -->
 
-                    <ul class="cd-timeline-navigation">
-                        <li><a href="#0" class="prev inactive">Prev</a></li>
-                        <li><a href="#0" class="next">Next</a></li>
-                    </ul> <!-- .cd-timeline-navigation -->
-                </div> <!-- .timeline -->
+                <ul class="cd-timeline-navigation">
+                    <li><a href="#0" class="prev inactive">Prev</a></li>
+                    <li><a href="#0" class="next">Next</a></li>
+                </ul> <!-- .cd-timeline-navigation -->
+            </div> <!-- .timeline -->
 
-                <div class="events-content">
-                    <ol>
-                                    <?php $first = 0;
-                                    foreach ($timelineEvents as $timelineEvent): ?>
+            <div class="events-content">
+                <ol>
+                    <?php $first = 0;
+                    foreach ($timelineEvents as $timelineEvent): ?>
 
-                                        <li <?php if($first == 0): ?> class="selected"
-                        <?php endif; ?> data-date="<?=explode('/', $timelineEvent['sDate'])[0] . "/" . explode('/', $timelineEvent['sDate'])[1] . "/" . explode('/', $timelineEvent['sDate'])[2]?>">
-                                            <h2>  <?=$timelineEvent['title'] ?></h2>
-                                            <em><?=date_format(date_create($timelineEvent['sDate']),"F jS, Y");?></em>
-                                            <p>
-                                                <?=$timelineEvent['content'] ?>
-                                            </p>
-                                        </li>
-                                        <?php $first++;?>
-                                    <?php endforeach; ?>
-
-<!--                        <li class="selected" data-date="16/01/2014">-->
-<!--                            <h2>Horizontal Timeline</h2>-->
-<!--                            <em>January 16th, 2014</em>-->
-<!--                            <p>-->
-<!--                                test text-->
-<!--                            </p>-->
-<!--                        </li>-->
-<!---->
-<!--                        <li data-date="28/02/2014">-->
-<!--                            <h2>Event title here</h2>-->
-<!--                            <em>February 28th, 2014</em>-->
-<!--                            <p>-->
-<!--                                test text-->
-<!--                            </p>-->
-<!--                        </li>-->
-<!---->
-<!--                        <li data-date="20/04/2014">-->
-<!--                            <h2>Event title here</h2>-->
-<!--                            <em>March 20th, 2014</em>-->
-<!--                            <p>-->
-<!--                                test text-->
-<!--                            </p>-->
-<!--                        </li>-->
-<!---->
-<!--                        <li data-date="20/05/2014">-->
-<!--                            <h2>Event title here</h2>-->
-<!--                            <em>May 20th, 2014</em>-->
-<!--                            <p>-->
-<!--                                test text-->
-<!--                            </p>-->
-<!--                        </li>-->
-                    </ol>
-                </div> <!-- .events-content -->
-            </section>
-        </div>
+                        <li <?php if ($first == 0): ?> class="selected"
+                        <?php endif; ?>
+                            data-date="<?= explode('/', $timelineEvent['sDate'])[0] . "/" . explode('/', $timelineEvent['sDate'])[1] . "/" . explode('/', $timelineEvent['sDate'])[2] ?>">
+                            <h2>  <?= $timelineEvent['title'] ?></h2>
+                            <em><?= date_format(date_create($timelineEvent['sDate']), "F jS, Y"); ?></em>
+                            <p>
+                                <?= $timelineEvent['content'] ?>
+                            </p>
+                        </li>
+                        <?php $first++; ?>
+                    <?php endforeach; ?>
+                </ol>
+            </div> <!-- .events-content -->
+        </section>
     </div>
 </div>
