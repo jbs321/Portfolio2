@@ -268,11 +268,12 @@
   }
 
   .cd-horizontal-timeline .events-content {
-    position: relative;
     width: 100%;
     height: 300px;
     margin: 2em 0;
     overflow: hidden;
+    position: relative;
+    font-size: 2vh;
     @include transition(height .4s);
 
     li {
@@ -328,7 +329,7 @@
     p {
       //font-size: 1.4rem;
       color: shade($color-4, 40%);
-      font-size: 2.5vh;
+      //font-size: 2.5vh;
     }
 
     em, p {

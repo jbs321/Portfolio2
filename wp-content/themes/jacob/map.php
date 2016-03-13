@@ -1,4 +1,4 @@
-<div class="section container-fluid map">
+<div class="section container-fluid map" data-section="6">
     <div class="home-overlay"></div>
 
     <iframe frameborder="0"
@@ -9,8 +9,8 @@
 
     <div class="row-wrapper col-xs-10 col-xs-offset-1">
 
-        <div class="contact col-xs-12">
-            <div class="col-lg-4 col-lg-offset-1 text-center">
+        <div class="contact col-xs-12 " >
+            <div class="col-lg-4 col-lg-offset-1 text-center animated" data-animate-type="slideInLeft">
 
                 <h4><strong>Jacob Balabnov Lanir</strong></h4>
 
@@ -33,7 +33,7 @@
             </div>
 
 
-            <div class="for-container col-lg-5">
+            <div class="for-container col-lg-5 animated"  data-animate-type="slideInUp">
                 <form method="POST" action="http://dev-jacob-leaderboard.ott-dev.tech/admin/update"
                       accept-charset="UTF-8"><input name="_token" type="hidden"
                                                     value="CMC9OkzrNNsoipcxMddOOWqjLeVfEJObsRYnLFc1">

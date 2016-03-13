@@ -1591,7 +1591,7 @@ span, h1, h2 {
 }
 /* line 47, ../scss/pages/_about-me.scss */
 .about-me .meta .about-me-text {
-  font-size: 1.7em;
+  font-size: 1.5vw;
   margin-bottom: 30px;
 }
 /* line 51, ../scss/pages/_about-me.scss */
@@ -2021,18 +2021,19 @@ a {
 
 /* line 270, ../scss/pages/_timeline.scss */
 .cd-horizontal-timeline .events-content {
-  position: relative;
   width: 100%;
   height: 300px;
   margin: 2em 0;
   overflow: hidden;
+  position: relative;
+  font-size: 2vh;
   -webkit-transition: height 0.4s;
   -moz-transition: height 0.4s;
   -ms-transition: height 0.4s;
   -o-transition: height 0.4s;
   transition: height 0.4s;
 }
-/* line 278, ../scss/pages/_timeline.scss */
+/* line 279, ../scss/pages/_timeline.scss */
 .cd-horizontal-timeline .events-content li {
   top: 0;
   left: 0;
@@ -2055,7 +2056,7 @@ a {
   -webkit-animation-timing-function: ease-in-out;
   animation-timing-function: ease-in-out;
 }
-/* line 292, ../scss/pages/_timeline.scss */
+/* line 293, ../scss/pages/_timeline.scss */
 .cd-horizontal-timeline .events-content li.selected {
   /* visible event content */
   z-index: 2;
@@ -2067,45 +2068,44 @@ a {
   -o-transform: translateX(0);
   transform: translateX(0);
 }
-/* line 300, ../scss/pages/_timeline.scss */
+/* line 301, ../scss/pages/_timeline.scss */
 .cd-horizontal-timeline .events-content li.enter-right, .cd-horizontal-timeline .events-content li.leave-right {
   -moz-animation-name: cd-enter-right;
   -webkit-animation-name: cd-enter-right;
   animation-name: cd-enter-right;
 }
-/* line 304, ../scss/pages/_timeline.scss */
+/* line 305, ../scss/pages/_timeline.scss */
 .cd-horizontal-timeline .events-content li.enter-left, .cd-horizontal-timeline .events-content li.leave-left {
   -moz-animation-name: cd-enter-left;
   -webkit-animation-name: cd-enter-left;
   animation-name: cd-enter-left;
 }
-/* line 308, ../scss/pages/_timeline.scss */
+/* line 309, ../scss/pages/_timeline.scss */
 .cd-horizontal-timeline .events-content li.leave-right, .cd-horizontal-timeline .events-content li.leave-left {
   -moz-animation-direction: reverse;
   -webkit-animation-direction: reverse;
   animation-direction: reverse;
 }
-/* line 313, ../scss/pages/_timeline.scss */
+/* line 314, ../scss/pages/_timeline.scss */
 .cd-horizontal-timeline .events-content li > * {
   margin: 0 auto;
   max-width: 800px;
 }
-/* line 318, ../scss/pages/_timeline.scss */
+/* line 319, ../scss/pages/_timeline.scss */
 .cd-horizontal-timeline .events-content em {
   margin: 10px auto;
   display: block;
   font-style: italic;
 }
-/* line 323, ../scss/pages/_timeline.scss */
+/* line 324, ../scss/pages/_timeline.scss */
 .cd-horizontal-timeline .events-content em::before {
   content: '- ';
 }
-/* line 328, ../scss/pages/_timeline.scss */
+/* line 329, ../scss/pages/_timeline.scss */
 .cd-horizontal-timeline .events-content p {
   color: #959595;
-  font-size: 2.5vh;
 }
-/* line 334, ../scss/pages/_timeline.scss */
+/* line 335, ../scss/pages/_timeline.scss */
 .cd-horizontal-timeline .events-content em, .cd-horizontal-timeline .events-content p {
   line-height: 1.6;
 }
@@ -2674,7 +2674,7 @@ a {
   height: 100%;
   z-index: 10;
   position: absolute;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.8);
 }
 /* line 45, ../scss/pages/_map.scss */
 .map .buttons {
@@ -2734,11 +2734,23 @@ a {
 .map .contact * {
   color: #fff;
 }
-/* line 105, ../scss/pages/_map.scss */
+/* line 104, ../scss/pages/_map.scss */
+.map .contact .text-center {
+  font-size: 1.4vw;
+}
+/* line 107, ../scss/pages/_map.scss */
+.map .contact .text-center h4 {
+  font-size: 2vw;
+}
+/* line 113, ../scss/pages/_map.scss */
+.map .contact .text-center ul.list-inline li a {
+  font-size: 1vw;
+}
+/* line 121, ../scss/pages/_map.scss */
 .map .contact form input, .map .contact form textarea, .map .contact form :not(button) {
   color: #000;
 }
-/* line 111, ../scss/pages/_map.scss */
+/* line 127, ../scss/pages/_map.scss */
 .map .footer {
   width: 100%;
   height: 30px;
@@ -2748,7 +2760,7 @@ a {
   position: absolute;
   background: rgba(0, 0, 0, 0.3);
 }
-/* line 120, ../scss/pages/_map.scss */
+/* line 136, ../scss/pages/_map.scss */
 .map .footer div {
   color: #000;
   height: 100%;
