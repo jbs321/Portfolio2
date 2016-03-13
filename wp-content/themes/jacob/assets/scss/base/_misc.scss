@@ -122,6 +122,10 @@ body {
   #fp-nav.right{
     top: 100px;
 
+    span{
+      background: #fff;
+    }
+
     @include breakpoint(xs){
       display: none;
     }

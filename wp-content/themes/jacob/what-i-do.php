@@ -40,4 +40,51 @@
                  src="<?php echo get_template_directory_uri() ?>/assets/images/services-img.png">
         </div>
     </div>
+<!---->
+<!--    <div class="col-xs-1">-->
+<!--        <div class="col-xs-12">-->
+<!--            <ul class="tags">-->
+<!--                <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw purple"></span>HTML5</li></a>-->
+<!--                <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw green"></span>CSS3</li></a>-->
+<!--                <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw blue"></span>SCSS</li></a>-->
+<!--                <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw yellow"></span>Compass</li></a>-->
+<!--                <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw dark-blue"></span>Bootstrap</li></a>-->
+<!--                <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw light-purple"></span>ANGULARJS</li></a>-->
+<!--                <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw pink"></span>MVC</li></a>-->
+<!--                <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw cyan"></span>Responsive</li></a>-->
+<!--                <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw purple"></span>JQUERY</li></a>-->
+<!--                <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw yellow"></span>CDN</li></a>-->
+<!--                <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw blue"></span>AJAX</li></a>-->
+<!--                <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw dark-blue"></span>JSON</li></a>-->
+<!--                <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw purple"></span>LARAVEL</li></a>-->
+<!--                <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw green"></span>CODEIGNITER</li></a>-->
+<!--                <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw blue"></span>PHPCAKE</li></a>-->
+<!--                <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw yellow"></span>Composer</li></a>-->
+<!--                <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw dark-blue"></span>PSR</li></a>-->
+<!--                <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw light-purple"></span>CURL</li></a>-->
+<!--                <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw pink"></span>REST</li></a>-->
+<!--                <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw cyan"></span>OAuth2</li></a>-->
+<!--                <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw purple"></span>API</li></a>-->
+<!--                <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw yellow"></span>APACHE</li></a>-->
+<!--                <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw blue"></span>MYSQL</li></a>-->
+<!--                <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw dark-blue"></span>InnoDB</li></a>-->
+<!--                <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw green"></span>SQL</li></a>-->
+<!--                <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw blue"></span>PHPStorm</li></a>-->
+<!--                <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw yellow"></span>REDIS</li></a>-->
+<!--                <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw dark-blue"></span>NODEJS</li></a>-->
+<!---->
+<!--                <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw purple"></span>LINUX</li></a>-->
+<!--                <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw yellow"></span>Ubuntu14.04</li></a>-->
+<!--                <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw blue"></span>VPS</li></a>-->
+<!--                <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw dark-blue"></span>DigitalOcean</li></a>-->
+<!--                <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw green"></span>AWS</li></a>-->
+<!---->
+<!--                <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw light-purple"></span>CentOS</li></a>-->
+<!--                <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw pink"></span>SUDO</li></a>-->
+<!--                <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw cyan"></span>BASH</li></a>-->
+<!--                <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw purple"></span>GIT</li></a>-->
+<!--                <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw yellow"></span>GITHUB</li></a>-->
+<!--            </ul>-->
+<!--        </div>-->
+<!--    </div>-->
 </div>

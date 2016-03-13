@@ -139,78 +139,136 @@ body .marg-15 {
 body #fp-nav.right {
   top: 100px;
 }
+/* line 125, ../scss/base/_misc.scss */
+body #fp-nav.right span {
+  background: #fff;
+}
 @media (max-width: 767px) {
   /* line 122, ../scss/base/_misc.scss */
   body #fp-nav.right {
     display: none;
   }
 }
-/* line 131, ../scss/base/_misc.scss */
+/* line 135, ../scss/base/_misc.scss */
 body .fp-slidesNav span {
   background-color: #fff !important;
 }
-/* line 136, ../scss/base/_misc.scss */
+/* line 140, ../scss/base/_misc.scss */
 body .fp-controlArrow {
   display: none;
 }
 @media (min-width: 768px) {
-  /* line 136, ../scss/base/_misc.scss */
+  /* line 140, ../scss/base/_misc.scss */
   body .fp-controlArrow {
     display: block;
   }
 }
 
-/* line 144, ../scss/base/_misc.scss */
+/* line 148, ../scss/base/_misc.scss */
 .delay-0-1 {
   animation-delay: .1s;
 }
 
-/* line 147, ../scss/base/_misc.scss */
+/* line 151, ../scss/base/_misc.scss */
 .delay-0-2 {
   animation-delay: .2s;
 }
 
-/* line 150, ../scss/base/_misc.scss */
+/* line 154, ../scss/base/_misc.scss */
 .delay-0-3 {
   animation-delay: .3s;
 }
 
-/* line 153, ../scss/base/_misc.scss */
+/* line 157, ../scss/base/_misc.scss */
 .delay-0-4 {
   animation-delay: .4s;
 }
 
-/* line 156, ../scss/base/_misc.scss */
+/* line 160, ../scss/base/_misc.scss */
 .delay-0-5 {
   animation-delay: .5s;
 }
 
-/* line 160, ../scss/base/_misc.scss */
+/* line 164, ../scss/base/_misc.scss */
 .delay-1 {
   animation-delay: 1s;
 }
 
-/* line 164, ../scss/base/_misc.scss */
+/* line 168, ../scss/base/_misc.scss */
 .delay-1-5 {
   animation-delay: 1.5s;
 }
 
-/* line 168, ../scss/base/_misc.scss */
+/* line 172, ../scss/base/_misc.scss */
 .delay-2 {
   animation-delay: 2s;
 }
 
-/* line 172, ../scss/base/_misc.scss */
+/* line 176, ../scss/base/_misc.scss */
 .delay-2-5 {
   animation-delay: 2.5s;
 }
 
-/* line 176, ../scss/base/_misc.scss */
+/* line 180, ../scss/base/_misc.scss */
 .delay-3 {
   animation-delay: 3s;
 }
 
 /* Coolors Exported Palette - coolors.co/ff7b00-14e842-ff6a4c-4995ff-7a7a7a */
+/* line 8, ../scss/base/_palette.scss */
+.purple {
+  color: #913B53;
+  font-size: 13px;
+}
+
+/* line 12, ../scss/base/_palette.scss */
+.blue {
+  color: #39ADD1;
+  font-size: 13px;
+}
+
+/* line 16, ../scss/base/_palette.scss */
+.yellow {
+  color: #E0AB18;
+  font-size: 13px;
+}
+
+/* line 20, ../scss/base/_palette.scss */
+.dark-blue {
+  color: #2570A8;
+  font-size: 13px;
+}
+
+/* line 24, ../scss/base/_palette.scss */
+.light-purple {
+  color: #9D8AC7;
+  font-size: 13px;
+}
+
+/* line 28, ../scss/base/_palette.scss */
+.pink {
+  color: #E15258;
+  font-size: 13px;
+}
+
+/* line 32, ../scss/base/_palette.scss */
+.orange {
+  color: #F9845B;
+  font-size: 13px;
+}
+
+/* line 36, ../scss/base/_palette.scss */
+.green {
+  color: #51B46D;
+  font-size: 13px;
+}
+
+/* line 40, ../scss/base/_palette.scss */
+.cyan {
+  color: #53BBB4;
+  font-size: 13px;
+}
+
 /* line 1, ../scss/base/_typography.scss */
 span, h1, h2 {
   font-family: 'Raleway', sans-serif;
@@ -2122,7 +2180,7 @@ a {
 /* line 10, ../scss/pages/_skills.scss */
 .skills h1 {
   color: #fff;
-  padding: 5% 0 0 0;
+  padding: 5% 0 2% 0;
   position: relative;
   font-size: 12vw;
   text-align: center;
@@ -2144,23 +2202,22 @@ a {
 @media (min-width: 992px) {
   /* line 10, ../scss/pages/_skills.scss */
   .skills h1 {
-    padding: 5% 0;
     font-size: 5vw;
   }
 }
-/* line 33, ../scss/pages/_skills.scss */
+/* line 31, ../scss/pages/_skills.scss */
 .skills .row-wrapper {
   width: 100%;
   height: 100%;
   display: table;
 }
-/* line 38, ../scss/pages/_skills.scss */
+/* line 36, ../scss/pages/_skills.scss */
 .skills .row-wrapper .row {
   display: table-cell;
   padding-top: 30px;
   vertical-align: middle;
 }
-/* line 46, ../scss/pages/_skills.scss */
+/* line 44, ../scss/pages/_skills.scss */
 .skills .home-overlay {
   top: 0;
   left: 0;
@@ -2169,7 +2226,7 @@ a {
   position: absolute;
   background: repeat scroll 0 0 rgba(0, 0, 0, 0.45);
 }
-/* line 54, ../scss/pages/_skills.scss */
+/* line 52, ../scss/pages/_skills.scss */
 .skills .home-overlay i {
   top: 10px;
   left: 10px;
@@ -2181,7 +2238,7 @@ a {
   font-size: 40px;
   background-color: #F54F36;
 }
-/* line 66, ../scss/pages/_skills.scss */
+/* line 64, ../scss/pages/_skills.scss */
 .skills .home-overlay .video-container {
   top: 0px;
   left: 0px;
@@ -2196,12 +2253,12 @@ a {
   background-position: 50% 50%;
 }
 @media (min-width: 1200px) {
-  /* line 66, ../scss/pages/_skills.scss */
+  /* line 64, ../scss/pages/_skills.scss */
   .skills .home-overlay .video-container {
     display: block;
   }
 }
-/* line 83, ../scss/pages/_skills.scss */
+/* line 81, ../scss/pages/_skills.scss */
 .skills .home-overlay .video-container video {
   top: 50%;
   left: 50%;
@@ -2213,26 +2270,28 @@ a {
   transform: translate(-50%, -50%);
   visibility: visible;
 }
-/* line 97, ../scss/pages/_skills.scss */
+/* line 95, ../scss/pages/_skills.scss */
 .skills .battery-title {
   font-size: 4vw;
 }
 @media (min-width: 992px) {
-  /* line 97, ../scss/pages/_skills.scss */
+  /* line 95, ../scss/pages/_skills.scss */
   .skills .battery-title {
     font-size: 1.5em;
   }
 }
-/* line 105, ../scss/pages/_skills.scss */
+/* line 103, ../scss/pages/_skills.scss */
 .skills .battery-percentage {
-  left: 78%;
+  top: 35%;
+  right: 0;
   display: inline-block;
   z-index: 999;
   position: absolute;
-  font-size: 1.5em;
+  font-size: 2em;
+  font-family: 'Comfortaa', cursive;
 }
 @media (max-width: 767px) {
-  /* line 105, ../scss/pages/_skills.scss */
+  /* line 103, ../scss/pages/_skills.scss */
   .skills .battery-percentage {
     left: 86%;
     font-size: 4vw;
@@ -2467,6 +2526,39 @@ a {
   margin-top: 2px;
   background: url("../images/diagram-tail.gif") 100% 100%;
 }
+/* line 180, ../scss/pages/_skills.scss */
+.skills .tags {
+  margin-top: 5%;
+}
+/* line 185, ../scss/pages/_skills.scss */
+.skills .tags > a > li:hover {
+  color: #fff;
+  background-color: #262626;
+}
+/* line 192, ../scss/pages/_skills.scss */
+.skills .tags li {
+  color: #646769;
+  margin: 3px 1px 3px 1px;
+  display: inline-block;
+  padding: 5px 6px;
+  font-size: 14px;
+  box-shadow: 0px 0px 7px black;
+  list-style: none;
+  line-height: 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  background-color: #F0F2F4;
+}
+/* line 206, ../scss/pages/_skills.scss */
+.skills .tags .colors {
+  list-style: none;
+}
+/* line 209, ../scss/pages/_skills.scss */
+.skills .tags .colors li {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+}
 
 /* line 1, ../scss/pages/_whatido.scss */
 .what-i-do {
@@ -2622,6 +2714,35 @@ a {
 /* line 138, ../scss/pages/_whatido.scss */
 .what-i-do .row-wrapper ul li input[type=checkbox]:checked ~ i:after {
   transform: translate(-2px, 0) rotate(-45deg);
+}
+/* line 151, ../scss/pages/_whatido.scss */
+.what-i-do .tags > a > li:hover {
+  color: #fff;
+  background-color: #262626;
+}
+/* line 158, ../scss/pages/_whatido.scss */
+.what-i-do .tags li {
+  color: #646769;
+  margin: 3px 1px 3px 1px;
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 14px;
+  box-shadow: 0px 0px 7px black;
+  list-style: none;
+  line-height: 27px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  background-color: #F0F2F4;
+}
+/* line 172, ../scss/pages/_whatido.scss */
+.what-i-do .tags .colors {
+  list-style: none;
+}
+/* line 175, ../scss/pages/_whatido.scss */
+.what-i-do .tags .colors li {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
 }
 
 /* line 1, ../scss/pages/_map.scss */
