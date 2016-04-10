@@ -48,4 +48,7 @@
 
     <!-- fonts -->
     <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>
+
+    <!-- progress bar -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/progressbar.js/1.0.0/progressbar.js"></script>
 </head>

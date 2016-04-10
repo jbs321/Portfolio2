@@ -37,49 +37,87 @@ endforeach;
             <?php endforeach; ?>
 
         </div>
-    </div>
-    <div class="col-xs-12 col-md-9 col-md-offset-1">
-        <ul class="tags">
-            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw purple"></span>HTML5</li></a>
-            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw green"></span>CSS3</li></a>
-            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw blue"></span>SCSS</li></a>
-            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw yellow"></span>Compass</li></a>
-            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw dark-blue"></span>Bootstrap</li></a>
-            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw light-purple"></span>ANGULARJS</li></a>
-            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw pink"></span>MVC</li></a>
-            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw cyan"></span>Responsive</li></a>
-            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw purple"></span>JQUERY</li></a>
-            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw yellow"></span>CDN</li></a>
-            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw blue"></span>AJAX</li></a>
-            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw dark-blue"></span>JSON</li></a>
-            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw purple"></span>LARAVEL</li></a>
-            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw green"></span>CODEIGNITER</li></a>
-            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw blue"></span>PHPCAKE</li></a>
-            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw yellow"></span>Composer</li></a>
-            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw dark-blue"></span>PSR</li></a>
-            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw light-purple"></span>CURL</li></a>
-            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw pink"></span>REST</li></a>
-            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw cyan"></span>OAuth2</li></a>
-            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw purple"></span>API</li></a>
-            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw yellow"></span>APACHE</li></a>
-            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw blue"></span>MYSQL</li></a>
-            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw dark-blue"></span>InnoDB</li></a>
-            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw green"></span>SQL</li></a>
-            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw blue"></span>PHPStorm</li></a>
-            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw yellow"></span>REDIS</li></a>
-            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw dark-blue"></span>NODEJS</li></a>
-
-            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw purple"></span>LINUX</li></a>
-            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw yellow"></span>Ubuntu14.04</li></a>
-            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw blue"></span>VPS</li></a>
-            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw dark-blue"></span>DigitalOcean</li></a>
-            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw green"></span>AWS</li></a>
-
-            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw light-purple"></span>CentOS</li></a>
-            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw pink"></span>SUDO</li></a>
-            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw cyan"></span>BASH</li></a>
-            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw purple"></span>GIT</li></a>
-            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw yellow"></span>GITHUB</li></a>
-        </ul>
-    </div>
+</div>
+<!--<div class="col-xs-12 col-md-9 col-md-offset-1">-->
+<!--    <!--        <ul class="tags">-->-->
+<!--    <!--            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw purple"></span>HTML5</li></a>-->-->
+<!--    <!--            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw green"></span>CSS3</li></a>-->-->
+<!--    <!--            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw blue"></span>SCSS</li></a>-->-->
+<!--    <!--            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw yellow"></span>Compass</li></a>-->-->
+<!--    <!--            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw dark-blue"></span>Bootstrap</li></a>-->-->
+<!--    <!--            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw light-purple"></span>ANGULARJS</li></a>-->-->
+<!--    <!--            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw pink"></span>MVC</li></a>-->-->
+<!--    <!--            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw cyan"></span>Responsive</li></a>-->-->
+<!--    <!--            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw purple"></span>JQUERY</li></a>-->-->
+<!--    <!--            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw yellow"></span>CDN</li></a>-->-->
+<!--    <!--            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw blue"></span>AJAX</li></a>-->-->
+<!--    <!--            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw dark-blue"></span>JSON</li></a>-->-->
+<!--    <!--            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw purple"></span>LARAVEL</li></a>-->-->
+<!--    <!--            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw green"></span>CODEIGNITER</li></a>-->-->
+<!--    <!--            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw blue"></span>PHPCAKE</li></a>-->-->
+<!--    <!--            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw yellow"></span>Composer</li></a>-->-->
+<!--    <!--            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw dark-blue"></span>PSR</li></a>-->-->
+<!--    <!--            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw light-purple"></span>CURL</li></a>-->-->
+<!--    <!--            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw pink"></span>REST</li></a>-->-->
+<!--    <!--            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw cyan"></span>OAuth2</li></a>-->-->
+<!--    <!--            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw purple"></span>API</li></a>-->-->
+<!--    <!--            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw yellow"></span>APACHE</li></a>-->-->
+<!--    <!--            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw blue"></span>MYSQL</li></a>-->-->
+<!--    <!--            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw dark-blue"></span>InnoDB</li></a>-->-->
+<!--    <!--            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw green"></span>SQL</li></a>-->-->
+<!--    <!--            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw blue"></span>PHPStorm</li></a>-->-->
+<!--    <!--            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw yellow"></span>REDIS</li></a>-->-->
+<!--    <!--            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw dark-blue"></span>NODEJS</li></a>-->-->
+<!--    <!---->-->
+<!--    <!--            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw purple"></span>LINUX</li></a>-->-->
+<!--    <!--            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw yellow"></span>Ubuntu14.04</li></a>-->-->
+<!--    <!--            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw blue"></span>VPS</li></a>-->-->
+<!--    <!--            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw dark-blue"></span>DigitalOcean</li></a>-->-->
+<!--    <!--            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw green"></span>AWS</li></a>-->-->
+<!--    <!---->-->
+<!--    <!--            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw light-purple"></span>CentOS</li></a>-->-->
+<!--    <!--            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw pink"></span>SUDO</li></a>-->-->
+<!--    <!--            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw cyan"></span>BASH</li></a>-->-->
+<!--    <!--            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw purple"></span>GIT</li></a>-->-->
+<!--    <!--            <a class="grow" href="#"><li class="tag"><span class="fa fa-circle fa-fw yellow"></span>GITHUB</li></a>-->-->
+<!--    <!--        </ul>-->-->
+<!--    <div class="col-xs-4"><div class="progress" id="progress"></div></div>-->
+<!--    <div class="col-xs-4 col-xs-offset-4"><div class="progress" id="progress"></div></div>-->
+<!---->
+<!--    <style>-->
+<!--        .progress {-->
+<!--            height: 300px;-->
+<!--        }-->
+<!---->
+<!--        .progress > svg {-->
+<!--            height: 100%;-->
+<!--            display: block;-->
+<!--        }-->
+<!--    </style>-->
+<!--    <script>-->
+<!--        window.onload = function onLoad() {-->
+<!--            var circle = new ProgressBar.Circle('#progress', {-->
+<!--                color: '#1ABC9C',-->
+<!--                duration: 3000,-->
+<!--                easing: 'easeInOut',-->
+<!--                strokeWidth: 2.1,-->
+<!--                text: {-->
+<!--                    // Initial value for text.-->
+<!--                    // Default: null-->
+<!--                    value: 'Text',-->
+<!---->
+<!--                    // Class name for text element.-->
+<!--                    // Default: 'progressbar-text'-->
+<!--                    className: 'progressbar__label',-->
+<!--                },-->
+<!--                step: function(state, circle, attachment) {-->
+<!--//                        circle.path.setAttribute('stroke', state.color);-->
+<!--                    console.log(state, circle, attachment);-->
+<!--                }-->
+<!--            });-->
+<!---->
+<!--            circle.animate(1);-->
+<!--        };-->
+<!--    </script>-->
+<!--</div>-->
 </div>

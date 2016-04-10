@@ -1,9 +1,9 @@
 <div class="section container-fluid map" data-section="6">
     <div class="home-overlay"></div>
 
-    <iframe frameborder="0"
-            scrolling="no"
-            src="https://maps.google.com/maps?hl=en&q=ב.ס.ר&ie=UTF8&t=roadmap&z=14&iwloc=B&output=embed"></iframe>
+<!--    <iframe frameborder="0"-->
+<!--            scrolling="no"-->
+<!--            src="https://maps.google.com/maps?hl=en&q=ב.ס.ר&ie=UTF8&t=roadmap&z=14&iwloc=B&output=embed"></iframe>-->
 
     <h1 class="col-xs-10 col-xs-offset-1">GET IN TOUCH WITH ME</h1>
 
@@ -14,7 +14,7 @@
 
                 <h4><strong>Jacob Balabnov Lanir</strong></h4>
 
-                <p>Israel<br>Tel-Aviv</p>
+                <p>Israel, Tel-Aviv</p>
 
                 <ul class="list-unstyled">
                     <li><i class="fa fa-phone fa-fw"></i> (972) 0523651994</li>
@@ -33,28 +33,96 @@
             </div>
 
 
-            <div class="for-container col-lg-5 animated"  data-animate-type="slideInUp">
-                <form method="POST" action="http://dev-jacob-leaderboard.ott-dev.tech/admin/update"
-                      accept-charset="UTF-8"><input name="_token" type="hidden"
-                                                    value="CMC9OkzrNNsoipcxMddOOWqjLeVfEJObsRYnLFc1">
+<!--            <div class="for-container col-lg-5 animated"  data-animate-type="slideInUp">-->
+<!--                <form method="POST" action="http://dev-jacob-leaderboard.ott-dev.tech/admin/update"-->
+<!--                      accept-charset="UTF-8"><input name="_token" type="hidden"-->
+<!--                                                    value="CMC9OkzrNNsoipcxMddOOWqjLeVfEJObsRYnLFc1">-->
+<!---->
+<!--                    <input type="hidden" name="_token" value="CMC9OkzrNNsoipcxMddOOWqjLeVfEJObsRYnLFc1">-->
+<!--                    <input type="hidden" id="isAllUsers" name="isAllUsers" value="0">-->
+<!---->
+<!--                    <fieldset class="form-group">-->
+<!--                        <input class="form-control" name="name" type="text" id="name" placeholder="Name" required>-->
+<!--                    </fieldset>-->
+<!--                    <fieldset class="form-group">-->
+<!--                        <input class="form-control" name="email" type="email" placeholder="Email" required>-->
+<!--                    </fieldset>-->
+<!--                    <fieldset class="form-group">-->
+<!--                            <textarea class="form-control" rows="8" id="comment" placeholder="Send Me A Message"-->
+<!--                                      required></textarea>-->
+<!--                    </fieldset>-->
+<!---->
+<!--                    <button class="btn btn-primary" type="submit" alt="SEND"><i class="fa fa-paper-plane"></i>-->
+<!--                    </button>-->
+<!--                </form>-->
+            <form class="mapper col-lg-5">
+                <div class="field name-box">
+                    <input type="text" id="name" placeholder="Who Are You?"/>
+                    <label for="name">Name</label>
+                    <span class="ss-icon">check</span>
+                </div>
 
-                    <input type="hidden" name="_token" value="CMC9OkzrNNsoipcxMddOOWqjLeVfEJObsRYnLFc1">
-                    <input type="hidden" id="isAllUsers" name="isAllUsers" value="0">
+                <div class="field email-box">
+                    <input type="text" id="email" placeholder="name@email.com"/>
+                    <label for="email">Email</label>
+                    <span class="ss-icon">check</span>
+                </div>
 
-                    <fieldset class="form-group">
-                        <input class="form-control" name="name" type="text" id="name" placeholder="Name" required>
-                    </fieldset>
-                    <fieldset class="form-group">
-                        <input class="form-control" name="email" type="email" placeholder="Email" required>
-                    </fieldset>
-                    <fieldset class="form-group">
-                            <textarea class="form-control" rows="5" id="comment" placeholder="Send Me A Message"
-                                      required></textarea>
-                    </fieldset>
+                <div class="field msg-box">
+                    <textarea id="msg" rows="4" placeholder="Your message goes here..."/></textarea>
+                    <label for="msg">Msg</label>
+                    <span class="ss-icon">check</span>
+                </div>
 
-                    <button class="btn btn-primary" type="submit" alt="SEND"><i class="fa fa-paper-plane"></i>
-                    </button>
-                </form>
+                <input class="button" type="submit" value="Send" />
+            </form>
+
+            <script>
+                // Input Lock
+                $('textarea').blur(function () {
+                    $('#hire textarea').each(function () {
+                        $this = $(this);
+                        if ( this.value != '' ) {
+                            $this.addClass('focused');
+                            $('textarea + label + span').css({'opacity': 1});
+                        }
+                        else {
+                            $this.removeClass('focused');
+                            $('textarea + label + span').css({'opacity': 0});
+                        }
+                    });
+                });
+
+                $('#hire .field:first-child input').blur(function () {
+                    $('#hire .field:first-child input').each(function () {
+                        $this = $(this);
+                        if ( this.value != '' ) {
+                            $this.addClass('focused');
+                            $('.field:first-child input + label + span').css({'opacity': 1});
+                        }
+                        else {
+                            $this.removeClass('focused');
+                            $('.field:first-child input + label + span').css({'opacity': 0});
+                        }
+                    });
+                });
+
+                $('#hire .field:nth-child(2) input').blur(function () {
+                    $('#hire .field:nth-child(2) input').each(function () {
+                        $this = $(this);
+                        if ( this.value != '' ) {
+                            $this.addClass('focused');
+                            $('.field:nth-child(2) input + label + span').css({'opacity': 1});
+                        }
+                        else {
+                            $this.removeClass('focused');
+                            $('.field:nth-child(2) input + label + span').css({'opacity': 0});
+                        }
+                    });
+                });
+            </script>
+
+
             </div>
         </div>
     </div>
