@@ -20,7 +20,7 @@
     font-weight: bold;
     text-transform: uppercase;
 
-    @include breakpoint(xs){
+    @include breakpoint(xs) {
       font-size: 7vw;
     }
 
@@ -31,7 +31,6 @@
       font-size: 5vw;
     }
   }
-
 
   .meta {
     color: #fff;
@@ -48,10 +47,35 @@
       font-size: 1.5vw;
       margin-bottom: 30px;
 
-      a{
-        color: #1ABC9C;
-        text-transform: uppercase;
-        text-decoration: none;
+    .desc-wrapper {
+      margin-bottom: 50px;
+
+      .desc-icon{
+        i {
+          margin: 5px;
+          margin: 5px;
+          font-size: 2.5em;
+        }
+      }
+      .desc-container {
+        .desc-header {
+          vertical-align: middle;
+
+
+
+          h3 {
+            font-size: 19px;
+            text-align: left;
+          }
+        }
+      }
+    }
+
+      .description{
+        width: 100%;
+        color: #59C0AB;
+        font-size: 17px;
+        text-align: left;
       }
     }
   }
@@ -68,77 +92,8 @@
     }
   }
 
-  .me-section {
-    .service-box {
-      //margin-top: 50px;
-
-      &:hover .icon {
-        border-color: #1abc9c;
-        @include box-shadow(0 0 20px rgba(26, 188, 156, 0.6));
-      }
-
-      .icon {
-        float: none;
-        width: 82px;
-        color: #1abc9c;
-        height: 82px;
-        margin: 0 auto 20px;
-        border: 2px solid transparent;
-        display: block;
-        position: relative;
-        font-size: 36px;
-        line-height: 82px;
-        @include transition(.5s);
-        @include border-radius(100%);
-
-        &:before {
-          top: 0;
-          left: 0;
-          width: 100%;
-          right: 0;
-          height: 100%;
-          bottom: 0;
-          border: 2px solid #1abc9c;
-          content: '';
-          position: absolute;
-          @include border-radius(100%);
-        }
-
-        .fa {
-          display: inline;
-          width: auto;
-          height: auto;
-          line-height: normal;
-          vertical-align: baseline;
-
-          &:before {
-            left: 20px;
-            speak: none;
-            display: inline-block;
-            position: relative;
-            text-decoration: inherit;
-          }
-        }
-      }
-    }
-    .title {
-      color: #fff !important;
-      text-align: center;
-    }
-    .service-box_txt {
-      color: #fff;
-    }
-  }
-
   @include breakpoint(md) {
     font-size: 16px;
   }
-
-  //.me-container{
-  //  width: 100%;
-  //  position: relative;
-  //  min-height: 200px;
-  //  margin-top: 40px;
-  //}
 }
 

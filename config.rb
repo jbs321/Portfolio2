@@ -2,9 +2,10 @@ require 'compass/import-once/activate'
 # Require any additional compass plugins here.
 
 # Set this to the root of your project when deployed:
-http_path = "/"
+# http_path = "/"
 css_dir = "/wp-content/themes/jacob/assets/css/"
 sass_dir = "/wp-content/themes/jacob/assets/scss/"
+output_style = :compressed
 images_dir = "images"
 javascripts_dir = "javascripts"
 

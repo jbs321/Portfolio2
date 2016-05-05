@@ -1,0 +1,65 @@
+<div class="section container-fluid contact-me" data-section="6">
+    <div class="col-xs-12 contact-me-header">
+        <div>Contact Me</div>
+    </div>
+    <div class="col-md-8 map-container animated" data-animate-type="slideInLeft" id="map">
+        <script>
+            function initMap() {
+                var location = {lat: 49.210407, lng: -123.148131};
+                var mapDiv = document.getElementById('map');
+                var map = new google.maps.Map(mapDiv, {
+                    center: location,
+                    zoom: 10
+                });
+
+                var marker = new google.maps.Marker({
+                    map: map,
+                    title: 'Home Sweet Home!',
+                    position: location,
+                    draggable: true,
+                    animation: google.maps.Animation.DROP
+                });
+            }
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
+    </div>
+    <div class="col-md-4 right animated" data-animate-type="slideInRight">
+        <div class="container">
+            <div class="row connect">
+
+                <p>Connect</p>
+
+                <div id='social'>
+                    <a class='social'>
+                        <i class='fa fa-facebook'></i>
+                    </a>
+                    <a class='social'>
+                        <span class='fa fa-twitter'></span>
+                    </a>
+                    <a class='social'>
+                        <span class='fa fa-linkedin'></span>
+                    </a>
+                    <a class='social'>
+                        <span class='fa fa-gplus'></span>
+                    </a>
+                    <a class='social'>
+                        <span class='fa fa-instagrem'></span>
+                    </a>
+                </div>
+
+                <form>
+                    <p>Get in Contact</p>
+                    <input placeholder="Email" type="email">
+                    <input placeholder="Phone" type="text">
+                    <input placeholder="Subject" type="text">
+                    <textarea placeholder="Message" rows="4"></textarea>
+                    <input placeholder="Send" type="submit">
+                </form>
+
+                <div>Other Way</div>
+                <div><i class="fa fa-envelope" style="margin-right: 5px; font-size: 1em"></i>jbs321.work@gmail.com</div>
+                <div><i class="fa fa-phone" style="margin-right: 5px; font-size:1em;"></i>  +1 (778) 882 - 0853</div>
+            </div>
+        </div>
+    </div>
+</div>

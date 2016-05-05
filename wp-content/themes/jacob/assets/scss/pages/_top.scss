@@ -9,10 +9,6 @@
 
   @import "../components/go-down";
 
-
-
-
-
   h1, h2 {
     color: #fff;
     margin: auto;
@@ -22,19 +18,27 @@
   }
 
   h1 {
-    font-size: 12vw;
-    @include breakpoint(sm) {font-size: 8vw;}
-    @include breakpoint(md) {font-size: 7vw;}
+    font-size: 8vw;
+    @include breakpoint(sm) {
+      font-size: 8vw;
+    }
+    @include breakpoint(md) {
+      font-size: 7vw;
+    }
   }
 
-  h2 {font-size: 3vw; margin-bottom: 20px;}
+  h2 {
+    color: #1ABC9C;
+    font-size: 4vw;
+    margin-bottom: 20px;
+  }
 
-  .row-wrapper{
+  .row-wrapper {
     width: 100%;
     height: 100%;
     display: table;
 
-    .row{
+    .row {
       display: table-cell;
       padding-top: 30px;
       vertical-align: middle;
@@ -42,7 +46,9 @@
       .top-image {
         height: 200px;
         margin-bottom: 50px;
-        @include breakpoint(md) { height: 300px;}
+        @include breakpoint(md) {
+          height: 300px;
+        }
 
         img {
           height: 100%;
@@ -52,9 +58,15 @@
           margin: auto;
           position: relative;
           border-radius: 50%;
-          @include breakpoint(xs) { max-width: 70%;}
-          @include breakpoint(sm) {max-width: 60%;}
-          @include breakpoint(md) {max-width: 30%;}
+          @include breakpoint(xs) {
+            max-width: 70%;
+          }
+          @include breakpoint(sm) {
+            max-width: 60%;
+          }
+          @include breakpoint(md) {
+            max-width: 30%;
+          }
         }
       }
     }

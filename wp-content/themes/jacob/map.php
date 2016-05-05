@@ -31,30 +31,6 @@
                     <li><a href="#"><i class="fa fa-github fa-fw fa-3x"></i></a></li>
                 </ul>
             </div>
-
-
-<!--            <div class="for-container col-lg-5 animated"  data-animate-type="slideInUp">-->
-<!--                <form method="POST" action="http://dev-jacob-leaderboard.ott-dev.tech/admin/update"-->
-<!--                      accept-charset="UTF-8"><input name="_token" type="hidden"-->
-<!--                                                    value="CMC9OkzrNNsoipcxMddOOWqjLeVfEJObsRYnLFc1">-->
-<!---->
-<!--                    <input type="hidden" name="_token" value="CMC9OkzrNNsoipcxMddOOWqjLeVfEJObsRYnLFc1">-->
-<!--                    <input type="hidden" id="isAllUsers" name="isAllUsers" value="0">-->
-<!---->
-<!--                    <fieldset class="form-group">-->
-<!--                        <input class="form-control" name="name" type="text" id="name" placeholder="Name" required>-->
-<!--                    </fieldset>-->
-<!--                    <fieldset class="form-group">-->
-<!--                        <input class="form-control" name="email" type="email" placeholder="Email" required>-->
-<!--                    </fieldset>-->
-<!--                    <fieldset class="form-group">-->
-<!--                            <textarea class="form-control" rows="8" id="comment" placeholder="Send Me A Message"-->
-<!--                                      required></textarea>-->
-<!--                    </fieldset>-->
-<!---->
-<!--                    <button class="btn btn-primary" type="submit" alt="SEND"><i class="fa fa-paper-plane"></i>-->
-<!--                    </button>-->
-<!--                </form>-->
             <form class="mapper col-lg-5">
                 <div class="field name-box">
                     <input type="text" id="name" placeholder="Who Are You?"/>
@@ -121,8 +97,6 @@
                     });
                 });
             </script>
-
-
             </div>
         </div>
     </div>

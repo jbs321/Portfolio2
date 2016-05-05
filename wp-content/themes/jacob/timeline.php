@@ -23,7 +23,7 @@ usort($timelineEvents, function ($a, $b) {
 });
 ?>
 
-<div class="section container-fluid timeline" id="timeline" data-section="5">
+<div class="section timeline" id="timeline" data-section="5">
 
     <div class="home-overlay"></div>
 

@@ -1,0 +1,81 @@
+.contact-me {
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: #394141;
+
+  .contact-me-header {
+    height: 10%;
+    background: #394141;
+
+    div {
+      top: calc(50% - 10px);
+      color: #fff;
+      position: relative;
+      text-align: center;
+      vertical-align: middle;
+    }
+  }
+
+  .map-container {
+    height: 90%;
+  }
+
+  .right {
+    color: #fff;
+    height: 90%;
+    padding-top: 20px;
+    background-color: #454F4F;
+
+    .container {
+      height: 100%;
+
+      @mixin box-shadow($horizontal: 1px, $vertical: 1px, $blur: 2px, $color: rgba(0,0,0,0.5)) {
+        -webkit-box-shadow: $horizontal $vertical $blur $color;
+        -moz-box-shadow: $horizontal $vertical $blur $color;
+        box-shadow: $horizontal $vertical $blur $color;
+      }
+
+      form {
+        border-top: solid thin #8e9699;
+        border-bottom: solid thin #8e9699;
+        margin: 20px 0;
+        padding: 20px 0;
+        input,
+        textarea {
+          background: #394141;
+          padding: 8px;
+          margin-bottom: 8px;
+          width: 100%;
+          color: white;
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+          &[type='submit'] {
+            text-transform: uppercase;
+            background: #7BC087;
+            width: 50%;
+            color: white;
+            margin-top: 5px;
+            &:hover {
+              background: darken(#7BC087, 10%);
+              @include box-shadow;
+            }
+          }
+          &[type='textarea'] {
+            min-height: 75px;
+            vertical-align: text-top;
+          }
+        }
+
+        *, *:before, *:after {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          border: 0;
+        }
+      }
+      //endofform
+
+    }
+  }
+}
