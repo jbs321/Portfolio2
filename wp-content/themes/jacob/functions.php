@@ -142,7 +142,7 @@ function send_email($from, $phone, $subject, $message) {
     $mail->Body = "$phone,<br> $from - $message";
 
     if (!$mail->send()) {
-        return false;
+        return $mail->ErrorInfo;
         //for debug
         //echo "Mailer Error: " . $mail->ErrorInfo;
     } else {
