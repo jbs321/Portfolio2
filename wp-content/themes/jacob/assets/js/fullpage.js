@@ -5,7 +5,7 @@ $(document).ready(function () {
         lockAnchors: false,
         navigation: true,
         navigationPosition: 'right',
-        navigationTooltips: ['Main', 'About Me', 'Skills', 'Timeline', 'Map', 'Contact Me'],
+        navigationTooltips: ['Main', 'About Me', 'Skills', 'How I It', 'Timeine', 'Contact Me'],
         showActiveTooltip: true,
         slidesNavigation: true,
         slidesNavPosition: 'bottom',
