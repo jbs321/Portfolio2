@@ -66,10 +66,7 @@
 
 <script>
     $(function() {
-
-
         $('form#make-contact').submit( function (e) {
-
             e.preventDefault();
 
             $.ajax({
@@ -87,6 +84,5 @@
                 }
             });
         });
-
     });
 </script>
