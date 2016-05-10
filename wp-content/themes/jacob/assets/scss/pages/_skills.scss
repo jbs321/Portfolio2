@@ -33,7 +33,6 @@
     display: table;
 
     .row {
-
       display: table-cell;
       padding-top: 30px;
       vertical-align: middle;
@@ -101,7 +100,6 @@
   }
 
   .battery-percentage {
-    top: 35%;
     right: 0;
     display: inline-block;
     z-index: 999;
@@ -112,6 +110,9 @@
     @include breakpoint(xs) {
       left: 86%;
       font-size: 4vw;
+    }
+    @include breakpoint(md) {
+      top: 35%;
     }
   }
 

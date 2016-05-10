@@ -81,6 +81,7 @@ function custom_post_type()
 
     register_post_type('timeline', $args);
 }
+
 add_action('init', 'custom_post_type', 0);
 add_action('admin_post_add_foobar', 'prefix_admin_add_foobar');
 
@@ -104,3 +105,36 @@ function prefix_admin_add_foobar()
 // Insert the post into the database
     wp_insert_post($my_post);
 }
+
+function notify_me()
+{
+//do something
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
+    $subject = $_POST['subject'];
+    $message = $_POST['message'];
+
+    $mail = new PHPMailer(); // create a new object
+    $mail->IsSMTP(); // enable SMTP
+    $mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
+    $mail->SMTPAuth = true; // authentication enabled
+    $mail->SMTPSecure = 'tls';
+    $mail->Host = "smtp.gmail.com";
+    $mail->Port = 587;
+    $mail->IsHTML(true);
+    $mail->Username = "jbs321@gmail.com";
+    $mail->Password = "passgmail2";
+    $mail->SetFrom("jbs321@gmail.com");
+    $mail->Subject = "$phone - $subject";
+    $mail->Body = "$message";
+    $mail->AddAddress("email@gmail.com");
+
+    if(!$mail->Send()) {
+        echo "Mailer Error: " . $mail->ErrorInfo;
+    } else {
+        echo "Message has been sent";
+    }
+}
+
+add_action('wp_ajax_notify_me', 'notify_me');
+add_action('wp_ajax_nopriv_notify_me', 'notify_me');

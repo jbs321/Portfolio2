@@ -47,12 +47,12 @@
                     </a>
                 </div>
 
-                <form>
+                <form id="make-contact">
                     <p>Get in Contact</p>
-                    <input placeholder="Email" type="email">
-                    <input placeholder="Phone" type="text">
-                    <input placeholder="Subject" type="text">
-                    <textarea placeholder="Message" rows="4"></textarea>
+                    <input placeholder="Email" name="email" id="email" type="email">
+                    <input placeholder="Phone" name="phone" id="phone" type="text">
+                    <input placeholder="Subject" name="subject" id="subject" type="text">
+                    <textarea placeholder="Message" name="message" id="message" rows="4"></textarea>
                     <input placeholder="Send" type="submit">
                 </form>
 
@@ -63,3 +63,30 @@
         </div>
     </div>
 </div>
+
+<script>
+    $(function() {
+
+
+        $('form#make-contact').submit( function (e) {
+
+            e.preventDefault();
+
+            $.ajax({
+                type:"POST",
+                url: "wp-admin/admin-ajax.php",
+                data: {
+                    action : 'notify_me',
+                    email: $('#make-contact #email').val(),
+                    phone: $('#make-contact #phone').val(),
+                    subject: $('#make-contact #subject').val(),
+                    message: $('#make-contact #message').val()
+                },
+                success: function( data ) {
+                    console.log(data);
+                }
+            });
+        });
+
+    });
+</script>

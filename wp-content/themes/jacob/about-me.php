@@ -44,10 +44,9 @@
                 </div>
                 <div class="desc-container col-xs-10">
                     <div class="desc-header">
-                        I build custom APIs, Frameworks,
+                        SEO services so my websites are always number 1.
                     </div>
-                    <div class="description">I have built hundreds of websites on many topics ranging from real estate
-                        websites, funeral homes, auction websites
+                    <div class="description">I implement tools which allow me to monitor the website activity and to enhance it.
                     </div>
                 </div>
             </div>

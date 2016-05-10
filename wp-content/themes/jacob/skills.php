@@ -29,7 +29,6 @@ endforeach;
                 <div class="<?= $e; ?>">
                     <span class="battery-title"><?= $skill['skill_name'] ?></span><span
                         class="battery-percentage"><?= $skill['percent']; ?>%</span>
-
                     <div class="battery-wrapper" data-battery="false" data-battery-percente="<?= $skill['percent']; ?>"
                          data-slide="true"
                          data-slide-dir="opacity" data-slide-section="3">
@@ -41,5 +40,5 @@ endforeach;
             <?php endforeach; ?>
 
         </div>
-    </div>
+</div>
 </div>
