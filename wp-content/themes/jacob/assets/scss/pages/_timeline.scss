@@ -10,9 +10,27 @@
     background-size: cover;
   }
 
+
+  ol.list-items {
+
+    h2{
+      font-size: 2em;
+      text-align: left;
+    }
+
+    @include breakpoint(xs) {
+      padding: 0!important;
+    }
+
+    @include breakpoint(sm) {
+      padding: 0!important;
+    }
+  }
+
   h1 {
     color: #fff;
-    padding: 5% 0 0 0;
+    //padding: 5% 0 0 0;
+    padding: 0;
     font-size: 12vw;
     text-align: center;
     font-weight: bold;
@@ -72,6 +90,10 @@
     opacity: 0;
     border-left: 1px solid #b9b9b9;
     @include transition(opacity .2s);
+    @include breakpoint(xs){
+      border-left: none;
+    }
+
 
     .title {
       margin: 0 0 30px 0;
@@ -137,6 +159,10 @@
 
       ol {
         list-style: none;
+
+        @include breakpoint(sm) {
+          padding: 0!important;
+        }
       }
     }
 
@@ -333,6 +359,6 @@
     }
 
     em, p {
-      line-height: 1.6;
+      //line-height: 1.6;
     }
   }

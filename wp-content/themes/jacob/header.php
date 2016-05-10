@@ -28,6 +28,15 @@
     <!--main style-->
     <link href="<?php echo get_template_directory_uri() ?>/assets/css/main.css" rel="stylesheet">
 
+    <!-- ohSnap -->
+    <script src="<?php echo get_template_directory_uri() ?>/assets/js/ohsnap/ohsnap.js" ></script>
+
+    <!-- progress bar -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js" ></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.css" rel="stylesheet">
+
+
+
     <!--fonts-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 

@@ -27,9 +27,9 @@ usort($timelineEvents, function ($a, $b) {
 
     <div class="home-overlay"></div>
 
-    <h1 class="col-xs-10 col-xs-offset-1">MY ENTIRE CAREER</h1>
+    <h1 class="col-md-10 col-md-offset-1">MY ENTIRE CAREER</h1>
 
-    <div class="row-wrapper col-xs-10 col-xs-offset-1">
+    <div class="row-wrapper col-md-10 col-md-offset-1">
         <section class="col-xs-12 col-md-4 education ">
             <h2>Education</h2>
 
@@ -82,7 +82,7 @@ usort($timelineEvents, function ($a, $b) {
             </div> <!-- .timeline -->
 
             <div class="events-content">
-                <ol>
+                <ol class="list-items">
                     <?php $first = 0;
                     foreach ($timelineEvents as $timelineEvent): ?>
 

@@ -21,7 +21,7 @@ endforeach;
     </div>
     <h1 class=""><?= get_theme_mod('skills_page_title', 'Skills Page Title'); ?></h1>
 
-    <div class="col-xs-12">
+    <div class="col-md-10 col-md-offset-1">
         <div class="row">
 
             <?php foreach ($skills as $idx => $skill): ?>

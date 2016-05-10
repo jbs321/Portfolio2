@@ -5,15 +5,13 @@
 @import "base/typography";
 @import "base/fonts";
 @import "base/effects";
-
 @import "helpers/variables";
 @import "helpers/mixins";
 @import "helpers/keyframes";
 @import "helpers/slides";
-
-@import "components/menu" ;
+@import "components/menu";
 @import "components/go-up";
-
+@import "components/ohsnap";
 @import "pages/top";
 @import "pages/about-me";
 @import "pages/contact-me";
@@ -21,3 +19,4 @@
 @import "pages/skills";
 @import "pages/whatido";
 @import "pages/map";
+

@@ -16,6 +16,17 @@
     }
   }
 
+  .social {
+    margin: 5px;
+    font-size: 2em;
+    text-decoration:none;
+    
+    &:hover {
+      color: #fff;
+      text-decoration:none;
+    }
+  }
+
   .map-container {
     height: 90%;
   }

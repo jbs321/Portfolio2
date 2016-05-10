@@ -30,29 +30,24 @@
                 <p>Connect</p>
 
                 <div id='social'>
-                    <a class='social'>
+                    <a class='social' href="https://www.facebook.com/jack.balabanov">
                         <i class='fa fa-facebook'></i>
                     </a>
-                    <a class='social'>
-                        <span class='fa fa-twitter'></span>
-                    </a>
-                    <a class='social'>
+                    <a class='social' href="https://www.linkedin.com/nhome/?trk=hb_signin">
                         <span class='fa fa-linkedin'></span>
                     </a>
-                    <a class='social'>
-                        <span class='fa fa-gplus'></span>
+                    <a class='social' href="https://github.com/jbs321">
+                        <span class='fa fa-github'></span>
                     </a>
-                    <a class='social'>
-                        <span class='fa fa-instagrem'></span>
-                    </a>
+
                 </div>
 
                 <form id="make-contact">
                     <p>Get in Contact</p>
-                    <input placeholder="Email" name="email" id="email" type="email">
-                    <input placeholder="Phone" name="phone" id="phone" type="text">
-                    <input placeholder="Subject" name="subject" id="subject" type="text">
-                    <textarea placeholder="Message" name="message" id="message" rows="4"></textarea>
+                    <input placeholder="Email" required name="email" id="email" type="email">
+                    <input placeholder="Phone" required name="phone" id="phone" type="text">
+                    <input placeholder="Subject" required name="subject" id="subject" type="text">
+                    <textarea placeholder="Message" required name="message" id="message" rows="4"></textarea>
                     <input placeholder="Send" type="submit">
                 </form>
 
@@ -68,7 +63,7 @@
     $(function() {
         $('form#make-contact').submit( function (e) {
             e.preventDefault();
-
+            NProgress.start();
             $.ajax({
                 type:"POST",
                 url: "wp-admin/admin-ajax.php",
@@ -80,9 +75,12 @@
                     message: $('#make-contact #message').val()
                 },
                 success: function( data ) {
-                    console.log(data);
+                    console.log('dasds');
+                    NProgress.done();
+                    ohSnap('Thank You!', {'color':'red', 'container-id':'perspective'});
                 }
             });
         });
     });
+
 </script>

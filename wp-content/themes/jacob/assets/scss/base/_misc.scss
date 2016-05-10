@@ -11,6 +11,10 @@ body {
     position: relative;
   }
 
+  #nprogress .bar {
+    background: red!important;
+  }
+
   .home-overlay {
     top: 0;
     left: 0;
