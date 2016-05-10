@@ -115,11 +115,10 @@ function notify_me()
     $subject = $_POST['subject'];
     $message = $_POST['message'];
 
-    return true;
-    //notify me
-//    if(send_email($from, $phone, $subject, $message)){
-////        send_email($from, $phone, $subject, $message);
-//    }
+//    notify me
+    if(send_email($from, $phone, $subject, $message)){
+//        send_email($from, $phone, $subject, $message);
+    }
 }
 
 add_action('wp_ajax_notify_me', 'notify_me');
