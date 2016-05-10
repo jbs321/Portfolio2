@@ -41,7 +41,7 @@
             </ul>
         </div>
         <div class="col-xs-12 col-md-4 animated" data-animate-type="slideInRight">
-            <img src="<?php echo get_template_directory_uri() ?>/assets/images/services-img.png">
+            <img class="img-responsive" src="<?php echo get_template_directory_uri() ?>/assets/images/services-img.png">
         </div>
     </div>
 </div>

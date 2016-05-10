@@ -7,7 +7,7 @@
     height: 100%;
     z-index: 10;
     position: absolute;
-    background: rgba(0, 0, 0, 0.7) ;
+    background: rgba(0, 0, 0, 0.7);
   }
 
   h1 {
@@ -28,6 +28,13 @@
     @include breakpoint(md) {
       padding: 5% 0;
       font-size: 5vw;
+    }
+  }
+
+  h2 {
+    @include breakpoint(xs) {
+      font-size: 1.5em;
+      text-align: left;
     }
   }
 
@@ -146,10 +153,10 @@
   }
 
   .tags {
-    &>a{
-      &>li{
-        &:hover{
-          color:#fff;
+    & > a {
+      & > li {
+        &:hover {
+          color: #fff;
           background-color: #262626;
         }
       }
@@ -170,11 +177,11 @@
     }
 
     .colors {
-      list-style:none;
+      list-style: none;
 
-      li{
+      li {
         display: inline-block;
-        width:15px;
+        width: 15px;
         height: 15px;
       }
     }

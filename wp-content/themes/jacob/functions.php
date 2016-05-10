@@ -1,4 +1,6 @@
 <?php
+use PHPMailer\PHPMailer\PHPMailer;
+require 'vendor/autoload.php';
 
 require_once('appearence_customize.php');
 
@@ -108,33 +110,42 @@ function prefix_admin_add_foobar()
 
 function notify_me()
 {
-//do something
-    $email = $_POST['email'];
+    $from = $_POST['email'];
     $phone = $_POST['phone'];
     $subject = $_POST['subject'];
     $message = $_POST['message'];
 
-    $mail = new PHPMailer(); // create a new object
-    $mail->IsSMTP(); // enable SMTP
-    $mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
-    $mail->SMTPAuth = true; // authentication enabled
-    $mail->SMTPSecure = 'tls';
-    $mail->Host = "smtp.gmail.com";
-    $mail->Port = 587;
-    $mail->IsHTML(true);
-    $mail->Username = "jbs321@gmail.com";
-    $mail->Password = "passgmail2";
-    $mail->SetFrom("jbs321@gmail.com");
-    $mail->Subject = "$phone - $subject";
-    $mail->Body = "$message";
-    $mail->AddAddress("email@gmail.com");
-
-    if(!$mail->Send()) {
-        echo "Mailer Error: " . $mail->ErrorInfo;
-    } else {
-        echo "Message has been sent";
+    //notify me
+    if(send_email($from, $phone, $subject, $message)){
+//        send_email($from, $phone, $subject, $message);
     }
 }
 
 add_action('wp_ajax_notify_me', 'notify_me');
 add_action('wp_ajax_nopriv_notify_me', 'notify_me');
+
+
+//TODO::add global parameters to function
+function send_email($from, $phone, $subject, $message) {
+    $mail = new PHPMailer;
+    $mail->isSMTP();
+    $mail->SMTPDebug = 2;
+    $mail->Host = 'smtp.gmail.com';
+    $mail->Port = 587;
+    $mail->SMTPSecure = 'tls';
+    $mail->SMTPAuth = true;
+    $mail->Username = GOOGLE_USERNAME;
+    $mail->Password = GOOGLE_PASSWORD;
+    $mail->setFrom(GOOGLE_USERNAME, 'Portfolio');
+    $mail->addAddress('jbs321.work@gmail.com', 'Jacob Balabanov');
+    $mail->Subject = $subject;
+    $mail->Body = "$phone,<br> $from - $message";
+
+    if (!$mail->send()) {
+        return false;
+        //for debug
+        //echo "Mailer Error: " . $mail->ErrorInfo;
+    } else {
+        return true;
+    }
+}

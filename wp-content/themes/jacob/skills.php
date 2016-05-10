@@ -10,7 +10,7 @@ foreach (get_posts(['post_type' => 'skill', 'numberposts' => -1]) as $post):
 endforeach;
 ?>
 
-<div class="section container-fluid skills">
+<div class="section noPad container-fluid skills">
     <div class="home-overlay">
         <div class="video-container">
             <video id="my-video" class="video" autoplay muted loop>
@@ -21,7 +21,7 @@ endforeach;
     </div>
     <h1 class=""><?= get_theme_mod('skills_page_title', 'Skills Page Title'); ?></h1>
 
-    <div class="col-xs-10 col-md-offset-1">
+    <div class="col-xs-12">
         <div class="row">
 
             <?php foreach ($skills as $idx => $skill): ?>

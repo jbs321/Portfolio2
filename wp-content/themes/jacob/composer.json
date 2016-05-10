@@ -1,0 +1,7 @@
+{
+  "require": {
+    "phpmailer/phpmailer": "6.0.x-dev",
+    "google/apiclient": "1.0.*@beta",
+    "league/oauth2-google": "^1.0"
+  }
+}

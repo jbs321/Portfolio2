@@ -32,6 +32,12 @@
     }
   }
 
+  .about-me-sub-header {
+    @include breakpoint(xs) {
+      font-size: 0.8em;
+    }
+  }
+
   .meta {
     color: #fff;
     z-index: 5;
@@ -47,35 +53,46 @@
       font-size: 1.5vw;
       margin-bottom: 30px;
 
-    .desc-wrapper {
-      margin-bottom: 50px;
-
-      .desc-icon{
-        i {
-          margin: 5px;
-          margin: 5px;
-          font-size: 2.5em;
-        }
+      @include breakpoint(xs) {
+        font-size: 4.5vw;
       }
-      .desc-container {
-        .desc-header {
-          vertical-align: middle;
 
+      .desc-wrapper {
+        margin-bottom: 50px;
 
+        .desc-icon {
+          i {
+            margin: 5px;
+            margin: 5px;
+            font-size: 2.5em;
+          }
+        }
+        .desc-container {
+          .desc-header {
+            vertical-align: middle;
 
-          h3 {
-            font-size: 19px;
-            text-align: left;
+            @include breakpoint(xs) {
+              text-align: left;
+            }
+
+            h3 {
+              font-size: 19px;
+              text-align: left;
+            }
           }
         }
       }
-    }
 
-      .description{
+      .description {
         width: 100%;
         color: #59C0AB;
         font-size: 17px;
         text-align: left;
+
+        @include breakpoint(xs) {
+          font-size: 13px;
+          text-align: left;
+        }
       }
     }
   }

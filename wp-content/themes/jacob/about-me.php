@@ -3,11 +3,14 @@
 
     <h1 class="col-xs-10 col-xs-offset-1"><?= get_theme_mod('about_me_page_title'); ?></h1>
 
-    <div class="col-xs-10 col-xs-offset-1 meta animated" data-animate-type="zoomIn">
+    <div class="col-xs-10 col-xs-offset-1 meta about-me-sub-header" >
         <h2 class="section-sub-header"><?= get_theme_mod('about_me_page_sub_title'); ?></h2>
+    </div>
 
-        <div class="about-me-text col-md-12">
-            <div class="desc-wrapper container">
+    <div class="meta">
+
+        <div class="about-me-text col-md-12 noPad">
+            <div class="desc-wrapper noPad container animated" data-animate-type="zoomIn">
 
                 <div class="desc-icon col-xs-2">
                     <i class="fa fa-globe"></i>
@@ -24,7 +27,7 @@
                 </div>
             </div>
 
-            <div class="desc-wrapper container">
+            <div class="desc-wrapper noPad container animated delay-0-8" data-animate-type="zoomIn">
                 <div class="desc-icon col-xs-2">
                     <i class="fa fa-database"></i>
                 </div>
@@ -38,7 +41,7 @@
                 </div>
             </div>
 
-            <div class="desc-wrapper container">
+            <div class="desc-wrapper noPad container animated delay-1" data-animate-type="zoomIn">
                 <div class="desc-icon col-xs-2">
                     <i class="fa fa-puzzle-piece"></i>
                 </div>
@@ -46,7 +49,8 @@
                     <div class="desc-header">
                         SEO services so my websites are always number 1.
                     </div>
-                    <div class="description">I implement tools which allow me to monitor the website activity and to enhance it.
+                    <div class="description">I implement tools which allow me to monitor the website activity and to
+                        enhance it.
                     </div>
                 </div>
             </div>

@@ -55,6 +55,9 @@ define('SECURE_AUTH_SALT', '</}-/L=&Br;o/^P]#chr|K.c>ifvbFhf2.H,qxgxknCWQRe3=n^+
 define('LOGGED_IN_SALT',   '!SWXiV)Z|%=*}<9$#}oq+T:sL-D~VELzMP+G=gj6;|p dsw}v`pl:(+)RiMUWRD3');
 define('NONCE_SALT',       'mpe G!O3F-hLZk>d#V5{1jqMjeB-_[i`@/)j+0u||44d5@*>]3^8ektvE_D]cJlw');
 
+define('GOOGLE_USERNAME',       'jacob.balabanov@gmail.com');
+define('GOOGLE_PASSWORD',       'Passgmail1');
+
 /**#@-*/
 
 /**
