@@ -34,18 +34,18 @@ usort($timelineEvents, function ($a, $b) {
             <h2>Education</h2>
 
             <div class="col-xs-12 box animated" data-animate-type="slideInLeft">
-                <div class="range">2004 - 2005</div>
+                <div class="range">2006 - 2009</div>
                 <div class="description">
-                    <div class="bold">Univercity Name</div>
-                    <span class="text">sfdas asd asd asd asd sadasf asfas</span>
+                    <div class="bold">Ort Ramat Yosef High School</div>
+                    <span class="text">Finished Computer Science Program</span>
                 </div>
             </div>
 
             <div class="col-xs-12 box delay-0-5 animated" data-animate-type="slideInLeft">
-                <div class="range">2004 - 2005</div>
+                <div class="range">2015 - now</div>
                 <div class="description">
-                    <div class="bold">Univercity Name</div>
-                    <span class="text">sfdas asd asd asd asd sadasf asfas</span>
+                    <div class="bold">Open University of Israel</div>
+                    <span class="text">Started BS.c. in the OU of Israel</span>
                 </div>
             </div>
         </section>

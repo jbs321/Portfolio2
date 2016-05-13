@@ -13,7 +13,7 @@
             </div>
         </div>
     </div>
-    <img class="construction" src="<?php echo get_template_directory_uri() ?>/assets/images/construction.png" alt="">
+<!--    <img class="construction" src="--><?php //echo get_template_directory_uri() ?><!--/assets/images/construction.png" alt="">-->
     <div class="go-down animated infinite bounce">
         <a href="#" data-navto="2"><span></span></a>
     </div>

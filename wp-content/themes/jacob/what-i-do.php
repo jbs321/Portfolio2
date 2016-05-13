@@ -12,31 +12,23 @@
                     <i></i>
                     <h2>What I bring to the Team</h2>
                     <p>
-                        ccordion element. Media queries are used to make the element responsive
-                        to different screen sizes.
+                        I'm a team player, Leader, It's easy to talk with me and I can lead projects with good past experience.
                     </p>
                 </li>
                 <li>
                     <input type="checkbox" checked>
                     <i></i>
 
-                    <h2>How it Works</h2>
-
-                    <p>Using the sibling and checked selectors, we can determine the styling of sibling elements based
-                        on the checked state of the checkbox input element. One use, as demonstrated here, is an
-                        entirely CSS and HTML accordion element. Media queries are used to make the element responsive
-                        to different screen sizes.</p>
+                    <h2>Code Design</h2>
+                    <p>My code has to be organized, No extra lines, comments, I love working with design patterns (MVC, OOP), I love creating beautiful API's</p>
                 </li>
+
                 <li>
                     <input type="checkbox" checked>
                     <i></i>
 
                     <h2>Points of Interest</h2>
-
-                    <p>By making the open state default for when :checked isn't detected, we can make this system
-                        accessable for browsers that don't recognize :checked. The fallback is simply an open accordion.
-                        The accordion can be manipulated with Javascript (if needed) by changing the "checked" property
-                        of the input element.</p>
+                    <p>In my profession new technologies are created every day, so I always have to keep up, So learning about new technologies is a big interest for my.</p>
                 </li>
             </ul>
         </div>

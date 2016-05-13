@@ -47,7 +47,7 @@
                 </div>
                 <div class="desc-container col-xs-10">
                     <div class="desc-header">
-                        SEO services so my websites are always number 1.
+                        SEO services so my websites are always number ONE.
                     </div>
                     <div class="description">I implement tools which allow me to monitor the website activity and to
                         enhance it.

@@ -139,7 +139,7 @@ function send_email($from, $phone, $subject, $message) {
     $mail->setFrom(GOOGLE_USERNAME, 'Portfolio');
     $mail->addAddress('jbs321.work@gmail.com', 'Jacob Balabanov');
     $mail->Subject = $subject;
-    $mail->Body = "$phone,<br> $from - $message";
+    $mail->Body = "$phone,$from - \xA $message";
 
     if (!$mail->send()) {
         return $mail->ErrorInfo;
