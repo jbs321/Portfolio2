@@ -5,7 +5,7 @@
 
     <div class="container animated" >
         <figure class="animated delay-0-3" data-animate-type="slideInLeft">
-            <img width="400" height="300" src="<?php echo get_template_directory_uri() ?>/assets/images/top5-1.png" alt="Thumb"/>
+            <img width="400" height="300" src="<?=get_template_directory_uri() ?>/assets/images/top5-1.png" alt="Thumb"/>
             <figcaption>
                 <div>Traffic Point
                     <p><a href="http://top5casinosites.co.uk/" target="_blank"><i class="fa fa-external-link"></i></a></p></div>
@@ -13,7 +13,7 @@
         </figure>
 
         <figure class="animated delay-0-7" data-animate-type="slideInRight">
-            <img width="400" height="300" src="<?php echo get_template_directory_uri() ?>/assets/images/wahad-humus.png"
+            <img width="400" height="300" src="<?=get_template_directory_uri() ?>/assets/images/wahad-humus.png"
                  alt="Thumb"/>
             <figcaption>
                 <div>Wahad Hummus
@@ -22,7 +22,7 @@
         </figure>
 
         <figure class="animated delay-1-3" data-animate-type="slideInLeft">
-            <img width="400" height="300" src="<?php echo get_template_directory_uri() ?>/assets/images/guidemeaway.png"
+            <img width="400" height="300" src="<?=get_template_directory_uri() ?>/assets/images/guidemeaway.png"
                  alt="Thumb"/>
             <figcaption>
                 <div>GuideMeAway
@@ -31,7 +31,7 @@
         </figure>
 
         <figure class="animated delay-1-3" data-animate-type="slideInRight">
-            <img width="400" height="300" src="<?php echo get_template_directory_uri() ?>/assets/images/onetwotrade.png"
+            <img width="400" height="300" src="<?=get_template_directory_uri() ?>/assets/images/onetwotrade.png"
                  alt="Thumb"/>
             <figcaption>
                 <div>OneTwoTrade
