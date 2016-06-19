@@ -14,6 +14,7 @@
     <meta name="description" content="Portfolio template"/>
     <meta name="keywords" content="Jacob Balabanov Lanir"/>
     <meta name="author" content="JacobBalabanovLanir"/>
+    <link rel="icon" href="<?php echo get_template_directory_uri() ?>/assets/images/favicon.jpg">
 
     <title>Responsive Personal Resume / Portfolio of Jacob Balabanov Lanir</title>
 

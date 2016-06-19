@@ -47,11 +47,22 @@
                 </div>
                 <div class="desc-container col-xs-10">
                     <div class="desc-header">
-                        SEO services so my websites are always number ONE.
+                        SEO services for websites.
                     </div>
-                    <div class="description">I implement tools which allow me to monitor the website activity and to
-                        enhance it.
+                    <div class="description">I connect between clients and website owners using a variety of tools.</div>
+                </div>
+            </div>
+
+
+            <div class="desc-wrapper noPad container animated delay-1" data-animate-type="zoomIn">
+                <div class="desc-icon col-xs-2">
+                    <i class="fa fa-wordpress"></i>
+                </div>
+                <div class="desc-container col-xs-10">
+                    <div class="desc-header">
+                        Wordpress
                     </div>
+                    <div class="description">I specialize in Wordpress websites.</div>
                 </div>
             </div>
         </div>
