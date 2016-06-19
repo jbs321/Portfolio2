@@ -1,9 +1,9 @@
-<div class="section container-fluid contact-me" data-section="6">
+<div class="section container-fluid contact-me" data-section="7">
     <div class="col-xs-12 contact-me-header">
-        <div>Contact Me</div>
-    </div>
-    <div class="col-md-8 map-container animated" data-animate-type="slideInLeft" id="map">
-        <script>
+            <div>Contact Me</div>
+            </div>
+            <div class="col-md-8 map-container animated" data-animate-type="slideInLeft" id="map">
+                <script>
             function initMap() {
                 var location = {lat: 49.210407, lng: -123.148131};
                 var mapDiv = document.getElementById('map');

@@ -17,6 +17,7 @@
         get_template_part('about-me', 'about-me.php');
         get_template_part('skills', 'skills.php');
         get_template_part('what-i-do', 'what-i-do.php');
+        get_template_part('myworks', 'myworks.php');
         get_template_part('timeline', 'timeline.php');
         get_template_part('contact-me', 'contact-me.php');
         ?>

@@ -5,7 +5,7 @@ $(document).ready(function () {
         lockAnchors: false,
         navigation: true,
         navigationPosition: 'right',
-        navigationTooltips: ['Main', 'About Me', 'Skills', 'How I Do It', 'Timeine', 'Contact Me'],
+        navigationTooltips: ['Main', 'About Me', 'Skills', 'How I Do It', 'My Work', 'Timeine', 'Contact Me'],
         showActiveTooltip: true,
         slidesNavigation: true,
         slidesNavPosition: 'bottom',
@@ -50,6 +50,8 @@ $(document).ready(function () {
 
         //events
         onLeave: function (index, nextIndex, direction) {
+
+            console.log(index, nextIndex, direction);
 
             //go down
             if (index > nextIndex) {

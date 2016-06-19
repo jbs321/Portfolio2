@@ -54,7 +54,7 @@
             </div>
 
 
-            <div class="desc-wrapper noPad container animated delay-1" data-animate-type="zoomIn">
+            <div class="desc-wrapper noPad container animated delay-1-5" data-animate-type="zoomIn">
                 <div class="desc-icon col-xs-2">
                     <i class="fa fa-wordpress"></i>
                 </div>

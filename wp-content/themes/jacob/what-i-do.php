@@ -10,25 +10,25 @@
                 <li>
                     <input type="checkbox" checked>
                     <i></i>
-                    <h2>What I bring to the Team</h2>
+                    <h2>Customer Service</h2>
                     <p>
-                        I'm a team player, Leader, It's easy to talk with me and I can lead projects with good past experience.
+                        I make sure that at the end of the day, The client is satisfied with my services.
                     </p>
                 </li>
                 <li>
                     <input type="checkbox" checked>
                     <i></i>
 
-                    <h2>Code Design</h2>
-                    <p>My code has to be organized, No extra lines, comments, I love working with design patterns (MVC, OOP), I love creating beautiful API's</p>
+                    <h2>Best Solutions</h2>
+                    <p>Before I start working with the client I like to sit and talk with him about whats the best solution for his needs. This way the client knows his options, and might save time and money.</p>
                 </li>
 
                 <li>
                     <input type="checkbox" checked>
                     <i></i>
 
-                    <h2>Points of Interest</h2>
-                    <p>In my profession new technologies are created every day, so I always have to keep up, So learning about new technologies is a big interest for my.</p>
+                    <h2>Good Prices</h2>
+                    <p>I always offer reasonable and fair prices or offers, Because I know that one satisfied customer will bring more customers.</p>
                 </li>
             </ul>
         </div>

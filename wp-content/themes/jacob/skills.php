@@ -14,7 +14,7 @@ endforeach;
     <div class="home-overlay">
         <div class="video-container">
             <video id="my-video" class="video" autoplay muted loop>
-                <source src="<?php echo get_template_directory_uri() ?>/assets/videos/footage-desk-working.webm"
+                <source src="<?=get_template_directory_uri() ?>/assets/videos/footage-desk-working.webm"
                         type="video/mp4">
             </video>
         </div>

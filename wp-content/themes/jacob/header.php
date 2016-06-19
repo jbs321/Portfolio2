@@ -14,7 +14,7 @@
     <meta name="description" content="Portfolio template"/>
     <meta name="keywords" content="Jacob Balabanov Lanir"/>
     <meta name="author" content="JacobBalabanovLanir"/>
-    <link rel="icon" href="<?php echo get_template_directory_uri() ?>/assets/images/favicon.jpg">
+    <link rel="shortcut icon" href="<?=get_template_directory_uri() ?>/assets/images/favicon.jpg">
 
     <title>Responsive Personal Resume / Portfolio of Jacob Balabanov Lanir</title>
 
@@ -27,16 +27,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.js"></script>
 
     <!--main style-->
-    <link href="<?php echo get_template_directory_uri() ?>/assets/css/main.css" rel="stylesheet">
+    <link href="<?=get_template_directory_uri() ?>/assets/css/main.css" rel="stylesheet">
 
     <!-- ohSnap -->
-    <script src="<?php echo get_template_directory_uri() ?>/assets/js/ohsnap/ohsnap.js" ></script>
+    <script src="<?=get_template_directory_uri() ?>/assets/js/ohsnap/ohsnap.js" ></script>
 
     <!-- progress bar -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js" ></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.css" rel="stylesheet">
-
-
 
     <!--fonts-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
