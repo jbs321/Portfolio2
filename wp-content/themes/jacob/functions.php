@@ -137,7 +137,7 @@ function send_email($from, $phone, $subject, $message) {
     $mail->Username = GOOGLE_USERNAME;
     $mail->Password = GOOGLE_PASSWORD;
     $mail->setFrom(GOOGLE_USERNAME, 'Portfolio');
-    $mail->addAddress('jbs321.work@gmail.com', 'Jacob Balabanov');
+    $mail->addAddress('jacob@balabanov.ca', 'Jacob Balabanov');
     $mail->Subject = $subject;
     $mail->Body = "$phone,$from - \xA $message";
 
