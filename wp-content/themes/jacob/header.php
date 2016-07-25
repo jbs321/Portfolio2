@@ -18,6 +18,9 @@
 
     <title>Responsive Personal Resume / Portfolio of Jacob Balabanov Lanir</title>
 
+    <!-- Google auth -->
+    <meta name="google-site-verification" content="Sv9A5p_Rhmeg9d7lsieQ0P97E-lK0S0LHIL7g2GKKIg" />
+
     <!--Jquery-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
