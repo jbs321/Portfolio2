@@ -52,7 +52,7 @@
                 </form>
 
                 <div>Other Way</div>
-                <div><i class="fa fa-envelope" style="margin-right: 5px; font-size: 1em"></i>jbs321.work@gmail.com</div>
+                <div><i class="fa fa-envelope" style="margin-right: 5px; font-size: 1em"></i>jacob@balabanov.ca</div>
                 <div><i class="fa fa-phone" style="margin-right: 5px; font-size:1em;"></i>  +1 (778) 882 - 0853</div>
             </div>
         </div>

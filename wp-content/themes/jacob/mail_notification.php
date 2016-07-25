@@ -1,8 +1,8 @@
 <?php
 require '../../plugins/gmail-smtp/PHPMailer/PHPMailerAutoload.php';
 
-$email = 'jacob.balabanov@gmail.com';
-$password = 'Passgmail1';
+$email = 'jacob@balabanov.ca';
+$password = 'passgmail1';
 
 if(isset($_POST['send']))
 {
@@ -23,7 +23,7 @@ if(isset($_POST['send']))
     $mail->Password = $password;
 
 // Email Sending Details
-    $mail->addAddress('jbs321.work@gmail.com');
+    $mail->addAddress('jacob@balabanov.ca');
     $mail->Subject = $subject;
     $mail->msgHTML($phone . ", " . $message);
 
