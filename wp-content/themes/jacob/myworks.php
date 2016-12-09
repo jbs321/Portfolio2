@@ -3,40 +3,33 @@
 
     <h1 class="animated" data-animate-type="slideInLeft">My Work</h1>
 
-    <div class="container animated" >
-        <figure class="animated delay-0-3" data-animate-type="slideInLeft">
-            <img width="400" height="300" src="<?=get_template_directory_uri() ?>/assets/images/top5-1.PNG" alt="Thumb"/>
-            <figcaption>
-                <div>Traffic Point
-                    <p><a href="http://top5casinosites.co.uk/" target="_blank"><i class="fa fa-external-link"></i></a></p></div>
-            </figcaption>
-        </figure>
 
-        <figure class="animated delay-0-7" data-animate-type="slideInRight">
-            <img width="400" height="300" src="<?=get_template_directory_uri() ?>/assets/images/wahad-humus.PNG"
-                 alt="Thumb"/>
-            <figcaption>
-                <div>Wahad Hummus
-                    <p><a href="http://wahad-hummus.ca/" target="_blank"><i class="fa fa-external-link"></i></a></p></div>
-            </figcaption>
-        </figure>
+    <div class="container animated">
+        <?php
+        $products = get_posts(['post_type' => 'product']);
+        $idx = 0;
 
-        <figure class="animated delay-1-3" data-animate-type="slideInLeft">
-            <img width="400" height="300" src="<?=get_template_directory_uri() ?>/assets/images/guidemeaway.PNG"
-                 alt="Thumb"/>
-            <figcaption>
-                <div>GuideMeAway
-                    <p><a href="http://prd.guidemeaway.com/" target="_blank"><i class="fa fa-external-link"></i></a></p></div>
-            </figcaption>
-        </figure>
+        foreach ($products as $product):
+            $title = $product->post_title;
+            $custom_fields = get_post_custom($product->ID);
+            $screenShotLink = $custom_fields['wpcf-screenshot'][0];
+            $websiteLink = $custom_fields['wpcf-site_link'][0];
 
-        <figure class="animated delay-1-3" data-animate-type="slideInRight">
-            <img width="400" height="300" src="<?=get_template_directory_uri() ?>/assets/images/onetwotrade.PNG"
-                 alt="Thumb"/>
-            <figcaption>
-                <div>OneTwoTrade
-                    <p><a href="https://www.onetwotrade.com/" target="_blank"><i class="fa fa-external-link"></i></a></p></div>
-            </figcaption>
-        </figure>
+            if(!isset($screenShotLink)) {
+                continue;
+            }
+            ?>
+
+            <figure class="animated <?="delay-0-{$idx}";?>"  <?=($idx%2) == 0 ? 'data-animate-type="slideInLeft"' : 'data-animate-type="slideInRight"';?>>
+                <img width="400" height="300" src="<?=$screenShotLink;?>" alt="Thumb"/>
+                <figcaption>
+                    <div><?=$title;?><p><a href="<?=$websiteLink;?>" target="_blank"><i class="fa fa-external-link"></i></a></p></div>
+                </figcaption>
+            </figure>
+
+            <?php
+            $idx++;
+        endforeach;
+        ?>
     </div>
 </div>

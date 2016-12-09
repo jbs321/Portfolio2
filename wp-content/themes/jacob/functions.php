@@ -20,25 +20,26 @@ if (!function_exists('custom_navigation_menus')) {
 }
 
 
-add_action('init', 'create_post_type');
-function create_post_type()
-{
-    register_post_type('acme_product',
-        array(
-            'labels' => array(
-                'name' => __('Products'),
-                'singular_name' => __('Product'),
+//add_action('init', 'create_post_type');
+//function create_post_type()
+//{
+//    register_post_type('acme_product',
+//        array(
+//            'labels' => array(
+//                'name' => __('Products'),
+//                'singular_name' => __('Product'),
+//
+//            ),
+//            'public' => true,
+//            'has_archive' => true,
+//            'public' => true,
+//            'supports' => array('title', 'editor', 'thumbnail', 'comments'),
+//            'capability_type' => 'post',
+//            'rewrite' => array("slug" => "events"),
+//        )
+//    );
+//}
 
-            ),
-            'public' => true,
-            'has_archive' => true,
-            'public' => true,
-            'supports' => array('title', 'editor', 'thumbnail', 'comments'),
-            'capability_type' => 'post',
-            'rewrite' => array("slug" => "events"),
-        )
-    );
-}
 
 
 // Register Custom Post Type
@@ -108,44 +109,4 @@ function prefix_admin_add_foobar()
     wp_insert_post($my_post);
 }
 
-function notify_me()
-{
-    $from = $_POST['email'];
-    $phone = $_POST['phone'];
-    $subject = $_POST['subject'];
-    $message = $_POST['message'];
 
-//    notify me
-    if(send_email($from, $phone, $subject, $message)){
-//        send_email($from, $phone, $subject, $message);
-    }
-}
-
-add_action('wp_ajax_notify_me', 'notify_me');
-add_action('wp_ajax_nopriv_notify_me', 'notify_me');
-
-
-//TODO::add global parameters to function
-function send_email($from, $phone, $subject, $message) {
-    $mail = new PHPMailer;
-    $mail->isSMTP();
-    $mail->SMTPDebug = 2;
-    $mail->Host = 'smtp.gmail.com';
-    $mail->Port = 587;
-    $mail->SMTPSecure = 'tls';
-    $mail->SMTPAuth = true;
-    $mail->Username = GOOGLE_USERNAME;
-    $mail->Password = GOOGLE_PASSWORD;
-    $mail->setFrom(GOOGLE_USERNAME, 'Portfolio');
-    $mail->addAddress('jacob@balabanov.ca', 'Jacob Balabanov');
-    $mail->Subject = $subject;
-    $mail->Body = "$phone,$from - \xA $message";
-
-    if (!$mail->send()) {
-        return $mail->ErrorInfo;
-        //for debug
-        //echo "Mailer Error: " . $mail->ErrorInfo;
-    } else {
-        return true;
-    }
-}
