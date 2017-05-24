@@ -74,12 +74,15 @@ ul.ddl-form { /* If .ddl-form class is added directly to <ul> element */
 	display: block;
 	float: left;
 	margin: 0 0px 0 0;
-	padding: 1px 0;
+	padding: 1px 4px 1px 0px;
 	width: 168px;
 	vertical-align: top;
 	font-weight: bold;
 	font-size: 13px;
+	text-align:right;
 }
+.ddl-form .cred-popup-box label, .ddl-form .cred-popup-box legend{text-align: left;}
+
 
 .ddl-form input,
 .ddl-form textarea, .ddl-form select {
@@ -94,7 +97,7 @@ ul.ddl-form { /* If .ddl-form class is added directly to <ul> element */
 .ddl-form .checkbox,
 .ddl-form .fields-group,
 .ddl-form .desc,
-.ddl-form .select2-container {
+.ddl-form .toolset_select2-container {
 	display: block;
 	float: right;
 	clear: right;
@@ -124,7 +127,7 @@ ul.ddl-form { /* If .ddl-form class is added directly to <ul> element */
 .ddl-form .checkbox.ddl-form-indent,
 .ddl-form .fields-group.ddl-form-indent,
 .ddl-form .desc.ddl-form-indent,
-.ddl-form .select2-container.ddl-form-indent {
+.ddl-form .toolset_select2-container.ddl-form-indent {
 	width: 534px;
 }
 
@@ -188,8 +191,14 @@ ul.ddl-form { /* If .ddl-form class is added directly to <ul> element */
 .ddl-form .fields-group .radio,
 .ddl-form .fields-group .checkbox,
 .ddl-form .fields-group .desc,
-.ddl-form .fields-group .select2-container {
+.ddl-form .fields-group .toolset_select2-container {
 	float: none;
+}
+
+.ddl-form .radio, /* radios and checkboxes should be wrapped in .radio or .checkbox element */
+.ddl-form .checkbox,.ddl-form .fields-group .radio,
+.ddl-form .fields-group .checkbox{
+    float:left;
 }
 
 /* Alternative vertical layout. .ddl-form-item-fullwidth should be added to: .ddl-form-item, <li> or <p> tag */
@@ -200,7 +209,7 @@ ul.ddl-form { /* If .ddl-form class is added directly to <ul> element */
 .ddl-form .ddl-form-item-fullwidth textarea,
 .ddl-form .ddl-form-item-fullwidth select,
 .ddl-form .ddl-form-item-fullwidth .desc,
-.ddl-form .ddl-form-item-fullwidth .ddl-form .select2-container,
+.ddl-form .ddl-form-item-fullwidth .ddl-form .toolset_select2-container,
 .ddl-form .ddl-form-item-fullwidth .fields-group {
 	display: block;
 	width: 100%;
@@ -237,11 +246,11 @@ ul.ddl-form { /* If .ddl-form class is added directly to <ul> element */
 /* Validation */
 .ddl-form .invalid,
 .ddl-form .invalid:focus,
-.ddl-form .invalid .select2-choices {
+.ddl-form .invalid .toolset_select2-choices {
 	border-color: #e9322d;
 	box-shadow: 0 0 6px #f8b9b7 inset;
 }
-.ddl-form .invalid.select2-container {
+.ddl-form .invalid.toolset_select2-container {
 	border: none;
 	box-shadow: none;
 }
@@ -354,7 +363,7 @@ input#searchbar-input{float:none;}
 .cm-s-default { z-index: 0; }
 
 /* SHOW MORE POSTS */
-li.select2-results-dept-0.select2-result.show-more-posts-options{font-weight:bold;color:#f05a28;}
+li.toolset_select2-results-dept-0.toolset_select2-result.show-more-posts-options{font-weight:bold;color:#f05a28;}
 i.load-posts-spinner{color:black;}
 i.load-posts-spinner:hover{color:white;}
 /* ////// LANGUAGE SWITCHER///////// */
@@ -373,13 +382,7 @@ i.load-posts-spinner:hover{color:white;}
 /* OVERRIDES */
 fieldset.ddl-dialog-fieldset{margin:0px 0px 0px;padding:10px 0px 0px;}
 fieldset.ddl-dialog-fieldset span{padding-right:6px;}
-
-body.post-type-cred-form #poststuff #post-body.columns-2{margin-right:0px;}
-body.post-type-cred-form #postbox-container-1{display:none;}
 i.ddl-wpml-flag{float:left;width:20px;height:20px;padding-right:4px;}
-
-body.post-type-cred-user-form #poststuff #post-body.columns-2{margin-right:0px;}
-body.post-type-cred-user-form #postbox-container-1{display:none;}
 
 /* //////// MARKUP CONTROLS IN CELL DIALOG START/////////*/
 .css-styling-controls{padding-top:12px;border-top:1px solid #ededed;margin-top:20px;}
@@ -476,5 +479,33 @@ a.ddl-duplicate-anchor{cursor:pointer;}
 .ddl-setting-for-layouts-container-in-iframe .css-styling-controls{padding-top:0px;margin-top:0px;}
 .ddl-setting-for-layouts-container-in-iframe span.desc{padding-bottom:6px;padding-top:0px;width:555px!important;}
 input.css-id-control{width:555px!important;}
+.toolset-shortcode-gui-dialog-container{min-height:92px!important;max-height:370px!important;}
 /*///////// OVERRIDES /////////////////*/
 .ui-dialog-buttonpane{padding: 8px;}
+
+.ddl-youtube-video-cell span.px_box {
+    display: block;
+    margin-top: 4px;
+    float: right;
+    clear: right;
+    width: auto;
+    text-align: left;
+}
+.ddl-youtube-video-cell .ddl-layout-video-input{
+    display: block;
+    float: left !important;
+    clear: right;
+    width: 515px !important;
+    color: #474747;
+}
+
+.ddl-youtube-video-cell .desc {
+    margin: 5px 0 0 0;
+    color: #999;
+    width: 545px !important;
+    font-size: 10px;
+    text-align: left;
+}
+.ddl-youtube-video-cell label{
+    width: 211px !important;
+}

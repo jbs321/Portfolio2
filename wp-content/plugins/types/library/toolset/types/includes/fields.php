@@ -240,7 +240,14 @@ function wpcf_admin_fields_save_group( $group, $post_type = TYPES_CUSTOM_FIELD_G
         'post_content' => empty( $group['description'] )? '': $group['description'],
     );
 
+    if( empty( $post['post_title'] ) ) {
+        wpcf_admin_message( __( 'Please set name', 'wpcf' ), 'error' );
+        return false;
+    }
+
     $update = false;
+    $slug_pre_save = false;
+
     if ( isset( $group['id'] ) && !empty($group['id']) ) {
         $update = true;
         $post_to_update = get_post( $group['id'] );
@@ -248,6 +255,7 @@ function wpcf_admin_fields_save_group( $group, $post_type = TYPES_CUSTOM_FIELD_G
             return false;
         }
         $post['ID'] = $post_to_update->ID;
+        $slug_pre_save = $post_to_update->post_name;
         $post['post_status'] = $post_to_update->post_status;
     }
 
@@ -276,10 +284,21 @@ function wpcf_admin_fields_save_group( $group, $post_type = TYPES_CUSTOM_FIELD_G
 
     // WPML register strings
     if ( function_exists( 'icl_register_string' ) ) {
-        wpcf_translate_register_string( 'plugin Types',
-                'group ' . $group_id . ' name', $group['name'] );
-        wpcf_translate_register_string( 'plugin Types',
-                'group ' . $group_id . ' description', $group['description'] );
+
+	    try {
+		    // Legacy function gives us only the underlying post type of the field group.
+		    $group_factory = Types_Field_Utils::get_group_factory_by_post_type( $post_type );
+		    $field_group = $group_factory->load_field_group( sanitize_title( $group['name'] ) );
+
+		    // Skip registering if the group does not exist.
+		    if( null != $field_group ) {
+			    $group_wpml = new Types_Wpml_Field_Group( $field_group );
+			    $group_wpml->register( $slug_pre_save );
+		    }
+
+	    } catch( InvalidArgumentException $e ) {
+		    // Something is seriously wrong - there's no field group factory for given post type, bail.
+	    }
     }
 
     // admin message
@@ -422,6 +441,113 @@ function wpcf_admin_fields_save_field( $field, $post_type = TYPES_CUSTOM_FIELD_G
         && ! empty ( $fields[$field['slug']]['data']['conditional_display'] ) ) {
         $save_data['data']['conditional_display'] = $fields[$field['slug']]['data']['conditional_display'];
     }
+
+    // on changing a field slug
+    if( isset($field['slug-pre-save'] ) && $field['slug'] != $field['slug-pre-save'] ) {
+
+        // takeover conditions on renamed slug
+        if( isset( $fields[$field['slug-pre-save']]['data']['conditional_display'] )
+            && ! empty ( $fields[$field['slug-pre-save']]['data']['conditional_display'] ) ) {
+            $save_data['data']['conditional_display'] = $fields[$field['slug-pre-save']]['data']['conditional_display'];
+        }
+
+        // field is assigned ONLY to current group
+        $belongs_to_groups = wpcf_admin_fields_get_groups_by_field( $field['slug-pre-save'], $post_type );
+        if( isset( $_GET['group_id'] )
+            && isset( $fields[$field['slug-pre-save']] )
+            && count( $belongs_to_groups ) == 1
+            && isset( $belongs_to_groups[$_GET['group_id']] )
+        ) {
+            global $wpdb;
+
+            // as it's the only group with this field we can update the slug for all items
+            $wpdb->update(
+                $wpdb->postmeta,
+                array( 'meta_key' => 'wpcf-'.$field['slug'] ),
+                array( 'meta_key' => 'wpcf-'.$field['slug-pre-save'] ),
+                array( '%s'),
+                array( '%s')
+            );
+
+            // change slug in field conditions
+            foreach( $fields as $key => &$single_field ) {
+                if( isset( $single_field['data']['conditional_display']['conditions'] ) ) {
+                    foreach( $single_field['data']['conditional_display']['conditions'] as &$single_condition ) {
+                        if( $single_condition['field'] == $field['slug-pre-save'] )
+                            $single_condition['field'] = $field['slug'];
+                    }
+                }
+            }
+
+            // get all group conditions which contain the old slug
+            $groups_conditions = $wpdb->get_results( "
+                SELECT post_id, meta_value
+                FROM   $wpdb->postmeta
+                WHERE  meta_key = '_wpcf_conditional_display'
+                AND    meta_value LIKE '%" . $field['slug-pre-save'] . "%'
+	        " );
+
+            if( $groups_conditions ) {
+                foreach( $groups_conditions as $group_condition ) {
+                    $meta_value = unserialize( $group_condition->meta_value );
+
+                    // proper proof for slug
+                    if( isset( $meta_value['conditions'] ) ) {
+                        foreach( $meta_value['conditions'] as &$single_condition ) {
+                            if( $single_condition['field'] == $field['slug-pre-save'] ) {
+                                // update conditions slug
+                                $single_condition['field'] = $field['slug'];
+                                update_post_meta( $group_condition->post_id, '_wpcf_conditional_display', $meta_value );
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+
+            // delete field
+            wpcf_admin_fields_delete_field( $field['slug-pre-save'], $post_type, $option_name );
+            unset( $fields[$field['slug-pre-save']] );
+
+        // update items by post type
+        } elseif( isset( $_GET['group_id'] ) ) {
+
+            switch( $post_type ) {
+                case 'wp-types-group':
+                    $group = Types_Field_Group_Post_Factory::load( $_GET['group_id'] );
+                    break;
+                case 'wp-types-term-group':
+                    $group = Types_Field_Group_Term_Factory::load( $_GET['group_id'] );
+                    break;
+                case 'wp-types-user-group':
+                    $group = Types_Field_Group_User_Factory::load( $_GET['group_id'] );
+                    break;
+            }
+	        
+	        if( null != $group ) {
+
+		        $assigned_types = $group->get_assigned_to_types();
+
+		        if ( ! empty( $assigned_types ) ) {
+			        $items = $group->get_assigned_to_items();
+
+			        if ( is_array( $items ) && ! empty( $items ) ) {
+				        global $wpdb;
+				        foreach ( $items as $item ) {
+					        $wpdb->update(
+						        $wpdb->postmeta,
+						        array( 'meta_key' => 'wpcf-' . $field['slug'] ),
+						        array( 'meta_key' => 'wpcf-' . $field['slug-pre-save'], 'post_id' => $item->ID ),
+						        array( '%s', '%d' ),
+						        array( '%s' )
+					        );
+				        }
+			        }
+		        }
+	        }
+        }
+    }
+
 
     $fields[$field['slug']] = $save_data;
     update_option( $option_name, $fields );

@@ -48,6 +48,7 @@ class WPCF_Types_Marketing
         if ( defined('WPV_VERSION') ) {
             return $content;
         }
+
         /**
          * Allow to turn off views advert.
          *
@@ -61,6 +62,10 @@ class WPCF_Types_Marketing
         if ( !apply_filters('show_views_advertising', true )) {
             return;
         }
+
+	    // documentation urls
+	    Types_Helper_Url::load_documentation_urls();
+	    
         $content .= '<div class="types-marketing types-marketing-views">';
         $content .= sprintf(
             '<h4><span class="icon-toolset-logo ont-color-orange"></span>%s</h4>',
@@ -73,27 +78,11 @@ class WPCF_Types_Marketing
         $content .= sprintf(
             '<p class="buttons"><a href="%s" class="button" target="_blank">%s</a> <a href="%s" class="more" target="_blank">%s</a></p>',
             esc_attr(
-                add_query_arg(
-                    array(
-                        'utm_source' => 'typesplugin',
-                        'utm_medium' => 'insert-fields',
-                        'utm_campaign' => 'postedit',
-                        'utm_term' => 'meet-toolset',
-                    ),
-                    'http://wp-types.com/'
-                )
+	            Types_Helper_Url::get_url( 'wp-types', true, 'meet-toolset', Types_Helper_Url::UTM_MEDIUM_POSTEDIT )
             ),
             __('Meet Toolset', 'wpcf'),
             esc_attr(
-                add_query_arg(
-                    array(
-                        'utm_source' => 'typesplugin',
-                        'utm_medium' => 'insert-fields',
-                        'utm_campaign' => 'postedit',
-                        'utm_term' => 'creating-content-templates',
-                    ),
-                    'http://wp-types.com/documentation/user-guides/view-templates/'
-                )
+	            Types_Helper_Url::get_url( 'content-templates', true, 'creating-content-templates', Types_Helper_Url::UTM_MEDIUM_POSTEDIT )
             ),
             __('Creating Templates for Content', 'wpcf')
         );

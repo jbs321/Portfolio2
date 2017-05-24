@@ -100,10 +100,12 @@ class Enlimbo_Forms_Wpcf
                             $this );
                     do_action( 'wpcf_form_autohandle_redirection_' . $id, $form,
                             $this );
-                    if ( !isset( $form['#form']['redirection'] ) ) {
-                        header( 'Location: ' . $_SERVER['REQUEST_URI'] );
-                    } else if ( $form['#form']['redirection'] != false ) {
-                        header( 'Location: ' . $form['#form']['redirection'] );
+                    if( ! headers_sent() ) {
+                        if ( !isset( $form['#form']['redirection'] ) ) {
+                            header( 'Location: ' . $_SERVER['REQUEST_URI'] );
+                        } else if ( $form['#form']['redirection'] != false ) {
+                            header( 'Location: ' . $form['#form']['redirection'] );
+                        }
                     }
                 }
             }
@@ -213,11 +215,9 @@ class Enlimbo_Forms_Wpcf
         $this->_errors = true;
     }
 
-    /**
-     * Renders form.
-     * 
-     * @return type 
-     */
+	/**
+	 * Renders form.
+	 */
     public function renderForm()
     {
         // loop over elements and render them
@@ -764,7 +764,9 @@ class Enlimbo_Forms_Wpcf
         }
 
         $before = '';
-        $after = '<br >';
+        $after = isset($element['#options-after'])
+            ? $element['#options-after']
+            : '<br >';
         $list = false;
 
         if (
@@ -1114,7 +1116,7 @@ class Enlimbo_Forms_Wpcf
             if ( $element['#type'] == 'file' ) {
                 return $_FILES[$name]['tmp_name'];
             }
-            return isset( $_REQUEST[$name] ) ? $_REQUEST[$name] : in_array( $element['#type'],
+            return isset( $_REQUEST[$name] ) ? sanitize_text_field( $_REQUEST[$name] ) : in_array( $element['#type'],
                             array('textfield', 'textarea') ) ? '' : 0;
         }
 

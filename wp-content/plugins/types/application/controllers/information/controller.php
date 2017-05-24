@@ -1,35 +1,64 @@
 <?php
 
-
+/**
+ * Types_Information_Controller
+ *
+ * @since 2.0
+ */
 class Types_Information_Controller {
 
 	protected $information;
 	protected $twig;
 
+	private function requirements_met() {
+		if(
+			! current_user_can( 'manage_options' )
+			|| ! apply_filters( 'types_information_table', true )
+			|| $this->embedded_plugin_running()
+			|| ! Types_Helper_Condition::get_post_type()
+		) {
+			return false;
+		}
+
+		return true;
+	}
+
+	/**
+	 * We don't want to show "archive" for media/pages and "template" for media
+	 *
+	 * @param $columns
+	 * @param $post_type
+	 *
+	 * @return mixed
+	 */
+	public function filter_columns( $columns, $post_type ) {
+		if( $post_type != 'attachment' && $post_type != 'page' ) {
+			return $columns;
+		}
+
+		if( array_key_exists( 'archive', $columns ) ) {
+			unset( $columns['archive'] );
+		}
+
+		if( $post_type == 'attachment' && array_key_exists( 'template', $columns ) ) {
+			unset( $columns['template'] );
+		}
+
+		return $columns;
+	}
+
 	public function prepare() {
-		if( ! apply_filters( 'types_information_table', true ) )
+		if( ! $this->requirements_met() )
 			return false;
 
-		// no infos if any embedded plugin runs
-		if( $this->embedded_plugin_running() )
-			return false;
+		// filter columns for specific post types
+		add_filter( 'types_information_table_columns', array( $this, 'filter_columns' ), 10, 2 );
 
 		// twig
 		$this->twig = new Types_Helper_Twig();
 
 		// script / style
 		add_action( 'admin_enqueue_scripts', array( $this, 'on_admin_enqueue_scripts' ) );
-
-		// special case: layouts active, but not compatible
-		// the only case where we don't show the table
-		if( defined( 'WPDDL_DEVELOPMENT' ) || defined( 'WPDDL_PRODUCTION' ) )  {
-			$compatible = new Types_Helper_Condition_Layouts_Compatible();
-			if( !$compatible->valid() ) {
-				$data_files = array( TYPES_DATA . '/information/layouts-not-compatible.php' );
-				$this->show_data_as_container_in_meta_box( $data_files );
-				return;
-			}
-		}
 
 		/* data files */
 		$data_files = array(
@@ -87,7 +116,7 @@ class Types_Information_Controller {
 			'/information/table.twig',
 			array(
 				'labels' => array(
-					'or' => __( 'Or...', 'types' )
+					'or' => __( 'Or...', 'wpcf' )
 				),
 				'thead' => $thead_views,
 				'table' => $this->information
@@ -115,7 +144,7 @@ class Types_Information_Controller {
 		// outer box
 		$output_meta_box = new Types_Helper_Output_Meta_Box();
 		$output_meta_box->set_id( $this->information->get_id() );
-		$output_meta_box->set_title( __( 'Front-end Display', 'types' ) );
+		$output_meta_box->set_title( __( 'Front-end Display', 'wpcf' ) );
 		// $output_meta_box->set_css_class( 'types-table-in-meta-box' );
 
 		$this->information->set_output_container( $output_meta_box );
@@ -152,8 +181,13 @@ class Types_Information_Controller {
 		$views = array();
 
 		$post_type = Types_Helper_Condition::get_post_type();
-		if( $post_type->name == 'post' ||  $post_type->name == 'page' )
-			unset( $thead_data['archive'] );
+
+		$allowed_columns = apply_filters( 'types_information_table_columns', array_fill_keys( array( 'template', 'archive', 'views', 'forms' ), '' ), $post_type->name );
+
+		foreach( $thead_data as $key => $column ) {
+			if( ! array_key_exists( $key, $allowed_columns ) )
+				unset( $thead_data[$key] );
+		}
 
 		foreach( $thead_data as $data ) {
 			$views[] = $this->twig->render(
@@ -175,7 +209,7 @@ class Types_Information_Controller {
 		// we want to display dashboard in a meta-box
 		$output_meta_box = new Types_Helper_Output_Meta_Box();
 		$output_meta_box->set_id( $this->information->get_id() );
-		$output_meta_box->set_title( __( 'Front-end Display', 'types' ) );
+		$output_meta_box->set_title( __( 'Front-end Display', 'wpcf' ) );
 		$output_meta_box->set_css_class( 'types-table-in-meta-box' );
 
 		$this->information->set_output_container( $output_meta_box );
@@ -204,8 +238,7 @@ class Types_Information_Controller {
 			if( is_object( $WP_Views ) && method_exists( $WP_Views, 'is_embedded' ))
 				return $WP_Views->is_embedded();
 		}
-
-
+		
 		return false;
 	}
 }

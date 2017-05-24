@@ -1,4 +1,4 @@
-=== Toolset Types ===
+=== Toolset Types - Custom Post Types, Custom Fields and Taxonomies ===
 Contributors: AmirHelzer, brucepearson, christianglingener, jadpm, zaantar
 Donate link: http://wp-types.com
 Tags: CMS, custom field, custom fields, custom post type, custom post types, field, fields post, post type, post types, taxonomies, taxonomy, toolset
@@ -6,32 +6,38 @@ Text Domain: wpcf
 Domain Path: /embedded/locale
 License: GPLv2
 Requires at least: 3.7
-Tested up to: 4.5
-Stable tag: 2.0.1
+Tested up to: 4.7.3
+Stable tag: 2.2.9
 
 The complete and reliable plugin for managing custom post types, custom taxonomies and custom fields.
 
 == Description ==
 
-Types let's you customize the WordPress admin by adding content types, custom fields and taxonomies. You will be able to craft the WordPress admin and turn it into your very own content management system.
+**Toolset Types let’s you add custom post types, custom fields and custom taxonomies to the WordPress admin. A convenient dashboard lets you control everything from one place.**
 
-[vimeo https://vimeo.com/152983601]
+[vimeo https://vimeo.com/176428571]
 
-= POWERFUL PHP API, SIMPLE GUI FOR NON-CODERS =
-If you're an experienced PHP developer, you'll appreciate Types comprehensive [PHP API](http://wp-types.com/documentation/functions/) and [documentation](http://wp-types.com/documentation/user-guides/).
+= COMPLETE DOCUMENTATION, POWERFUL API, SIMPLE GUI FOR NON-CODERS =
+If you're an experienced PHP developer, you'll appreciate Types comprehensive [fields API](https://wp-types.com/documentation/customizing-sites-using-php/functions/).
 
-The full [Toolset](http://wp-types.com) package lets you build complete WordPress sites from within the admin dashboard.
+You will find detailed guides on [adding custom post types, fields and taxonomy to the front-end](https://wp-types.com/documentation/customizing-sites-using-php/), including:
 
-= CUSTOM FIELDS FOR CONTENT AND USERS =
-Types lets you add custom fields for both posts (meaning, WordPress posts, pages and custom content types), as well as users. You can add any field types to different user profiles.
+* [Creating templates for single custom posts](https://wp-types.com/documentation/customizing-sites-using-php/creating-templates-single-custom-posts/)
+* [Creating templates for custom post type archives](https://wp-types.com/documentation/customizing-sites-using-php/creating-templates-custom-post-type-archives/)
+* [Creating custom user profiles](https://wp-types.com/documentation/customizing-sites-using-php/creating-custom-user-profiles/)
+* [Create taxonomy term archives](https://wp-types.com/documentation/customizing-sites-using-php/creating-taxonomy-term-archives/)
+
+and [more](https://wp-types.com/documentation/customizing-sites-using-php/).
+
+**Too much technical stuff to learn?** The full [Toolset](http://wp-types.com) package lets you build complete WordPress sites from within the admin dashboard.
+
+= CUSTOM FIELDS FOR CONTENT, TAXONOMY TERMS AND USERS =
+Types lets you add custom fields for posts (meaning, WordPress posts, pages and custom content types), taxonomy terms and users. You can add any field types to different user profiles.
 
 = ACCESS CONTROL FOR FIELDS =
 Using [Access](https://wp-types.com/home/toolset-components/#access), you will be able to control what fields different users can edit and view. This way, you can make some field groups read-only for certain users, and fully-editable for other users.
 
 For example, when you build a membership site, the site admin will be able to change membership levels for everyone and users will see their membership fields as read-only.
-
-= DESIGN CUSTOM FIELDS WITH EASE =
-Types fields come with a built-in CSS editor, letting you design how fields appear in the WordPress admin. You can design both full-edit and read-only field display modes.
 
 = RELIABLE SUPPORT =
 To get support for Types, please join our [technical support forum](http://wp-types.com/forums/). You will receive support directly from our developers, helping you deliver great sites on time and correctly.
@@ -51,7 +57,7 @@ Types includes support for a wide list of custom fields.
 * **Image** (Types includes a robust image-resize and caching engine)
 * **Date** (includes a JS date-picker)
 * **Email**
-* **Numeric**
+* **Number**
 * **Phone**
 * **Skype**
 * **URL**
@@ -98,7 +104,7 @@ By default, WordPress will either display your blog posts or a specific page on 
 To display custom post types on the home-page, you have two options:
 
 1. If you're comfortable with PHP and WordPress API, edit the site's template files (probably index.php) and load the custom post types there. Different themes do this differently, so we can't really say what single approach works best. You should look at [get_posts](http://codex.wordpress.org/Template_Tags/get_posts), which is part of the WordPress Template Tags system.
-2. If you want to build sites right away, without becoming an expert in WordPress API and try our [Views Toolset](http://wp-types.com/). You'll be able to load whatever content you need from the database and display it anywhere and in whatever way you choose.
+2. If you want to build sites right away, without becoming an expert in WordPress API and try our [Toolset Views](http://wp-types.com/). You'll be able to load whatever content you need from the database and display it anywhere and in whatever way you choose.
 
 We're sorry, but we don't know of any third option which is both free and requires no coding.
 
@@ -139,17 +145,143 @@ Additionally, Types is the only plugin that lets you define parent/child relatio
 
 == Screenshots ==
 
-1. Post Types list
-2. Custom Taxonomies list
-3. Edit Post Type
-4. Edit Taxonomy
-5. Editing post field group
-6. Editing user field group
-7. Inserting custom fields to content
-8. Custom fields on the post editing page
-9. Bulk editing child content using Field Tables
+1. Toolset Dashboard
+2. Post Types list
+3. Custom Taxonomies list
+4. Edit Post Type
+5. Edit Taxonomy
+6. Editing post field group
+7. Editing user field group
+8. Inserting custom fields to content
+9. Custom fields on the post editing page
+10. Bulk editing child content using Field Tables
 
 == Changelog ==
+
+= 2.2.9 =
+* Added the feature to display posts and pages in Toolset dashboard by default.
+* Added the ability to set the purpose of a View or a WordPress Archive, when creating from the Toolset Dashboard.
+* Added support for user language setting.
+* Renamed "Thumbnail" to "Featured Image" in custom post type edit screen options.
+* Removed non-Types taxonomies from the related section in post type edit screen.
+* Removed "Layouts not compatible with theme" message.
+* Fixed an issue with checkbox user field with option to save 0 to the database
+* Fixed an issue that WordPress Archives created inside Layouts were listed in Views section of Types Information table
+* Fixed a compatibility issue with WPML plugin which was causing duplicate keys in the icl_strings table, when renaming post field groups or post types.
+* Fixed a compatibility issue with UseAnyFont plugin.
+
+= 2.2.8 =
+
+* Fixed an issue where Types saves invalid values in user fields.
+* Added 'custom_css' and 'customize_changeset' to list of excluded post types.
+* Fixed fatal errors with Styling editor and PHP 7.1.
+* Fixed a glitch in Firefox ”a new blank tab was opened when clicking on ‘Skip Feedback’”
+
+= 2.2.7 =
+
+* Fixed a JavaScript error when using a flat taxonomy in the relationship post table.
+* Fixed an issue where no value was stored for checkboxes when option to save 0 was selected.
+* Fixed a validation issue for file, audio, video and embed fields affecting Types. Allowing URLs with non-latin characters, but only for URLs that point to attachments from the Media Library (validated by WordPress media upload mechanism).
+* Removed the "Types Migration" page which was broken and not maintained.
+* Fixed an incompatibility issue with Divi caused by double enqueuing of the jQuery UI Validation plugin.
+* When inserting the types shortcode for an image field, we will always use placeholders for the title and alt text.
+* Fixed an issue in the relationship post table where it wasn't possible to repeatedly set and remove a child post's featured image.
+* Improved how the Types meta fields are registered in the Fields and Views dialog.
+
+= 2.2.6 =
+
+* Updated Installer to 1.7.15.
+* Fix several issues with the Styling editor.
+* Fixed a compatibility with Layouts, child themes of Layouts-integrated themes haven't been recognized as such.
+* Fixed a compatibility with WPML, where a rare ID collision caused problems on the parent post selection dropdown.
+
+= 2.2.5 =
+
+* Use a different validation rule for file fields that also allows domains without TLD.
+* Fix a CRED issue with added validation rules.
+* Handle several issues related to using "0" as a default field value and saving it to the database.
+* Fix an edge-case bug when loading field groups on the Edit Post page.
+
+= 2.2.4 =
+
+* Added missing mandatory URL validation to file fields.
+* Added support for all custom post types in Toolset Dashboard.
+* Added support for "id" attribute for $parent-post selection in types_render_shortcode() function and [types] shortcode.
+* Added PHP template example files.
+* Implemented an alternative escaping mechanism for custom format setting of the date field.
+* Changed the way we store the context of a Types field for string translation (use field group name instead of ID).
+* Excluded Media from post relationships since the current GUI isn't able to support it properly.
+* Fixed compatibility issue with registering custom taxonomies in WordPress 4.7.
+* Fixed compatibility issue with direct access to $wp_filter in WordPress 4.7.
+* Fixed taxonomies export with legacy "object_type" setting that was causing syntax errors in the output XML.
+* Fixed manipulation with repetitive user field values making it more similar to post fields.
+* Fixed front-end notice when there is only one value in a repeating user Skype field.
+* Fixed issue with Types export and non-latin characters in a field group slug.
+* Fixed regression on the post parent selector caused by the select2 update.
+* Fixed name display instead of slug in term field group edit pages.
+
+= 2.2.3 =
+
+* Fixed several security issues.
+
+= 2.2.2 =
+
+* Toolset Dashboard now supports custom post types created by theme or other plugins
+* Updated select2 to version 4
+* Fixed issue using [types] shortcode in CRED notification
+* Fixed minor incompatibility with the latest version of Toolset Access.
+* Fixed issue with custom values for checkboxes fields not being respected.
+
+= 2.2.1 =
+
+* Fixed path for Toolset Installer
+
+= 2.2 =
+
+* Added feature to output title, description, caption and alt text using placeholders in image field.
+* Added types_import_from_zip_file API filter.
+* Added types_finished_saving_child_posts API action as a workaround for https://core.trac.wordpress.org/ticket/17817.
+* Fixed error when generic field definitions are queried by Types-specific arguments.
+* Fixed warnings when saving a child post with repetitive field in the parent's edit page.
+* Fixed issue where internal "Types Term Groups" post type was appearing in some places that it should not.
+* Fixed issue in RTL languages where save button was being overlapped by cancel button on field group conditions.
+* Fixed issue with post relationship query in WPML default language.
+* Fixed issue with term field checkboxes options which were not able to be edit
+* Fixed performance issue with frontend display table.
+* Fixed issue with same fields in multiple field groups and they are now being displayed only once in post/user/term edit pages.
+
+= 2.1 =
+
+* Added dashboard for Toolset.
+* Added setting to hide “Front-end Display” table.
+* Added types_filter_query_field_definitions API filter.
+* Added Import and Export support for term fields and field groups.
+* Added ability to add term fields values on Add Term page.
+* Added warning about possible conflicts between post type and taxonomy rewrite slugs.
+* Added feature in Edit Field Group where fields with errors will be expanded on submit to make the error visible to the user.
+* Added feature on term listing page to hide term field columns, if there are too many and user has not changed screen options .
+* Added feature on post type edit screen to also display complex fields in “Post Fields to be shown as columns in Post Type listing in WordPress Admin” section, even if they are not available in the listing.
+* Added ability to delete a taxonomy in edit page.
+* Added ability to delete a field group in edit page.
+* Added support for "id" in types_render_field() function.
+* Changed label "Numeric" to "Number".
+* Updated “Where to include this Field Group” section, which is no longer a meta box and is now placed under “Name and description”.
+* Updated “Front-end Display” table, which will no longer display "Template" for built-in post types.
+* Updated “Cancel” links in dialogs, which are now buttons to match WordPress style.
+* Updated [types] shortcode attributes and they are now using single quotes, instead of double quotes.
+* Updated screen header tags to h1, instead of h2.
+* Updated plugin license information.
+* Updated POT language file.
+* Fixed issue with child post types not created by Types that could not be edited in child-relationship table.
+* Fixed issue with name and singular name of post types and post field groups that were not being sanitised.
+* Fixed issue with Types admin screens access when user role has been degraded from Administrator role.
+* Fixed issue with post count display in "At a Glance" section, when it was above a thousand.
+* Fixed issue in Conditional Display that advanced logic did not work without simple logic.
+* Fixed issue in Conditional Display that simple logic was always being displayed, even if advanced logic was used.
+* Fixed issue in Conditional Display that slugs with hyphens were not usable in advanced logic.
+* Fixed issue with field control pages that were not displaying all groups.
+* Fixed issue with fields that changing a slug removed the field conditions.
+* Fixed issue with term fields showing field content instead of "Display text".
 
 = 2.0.1 =
 
@@ -208,18 +340,6 @@ Additionally, Types is the only plugin that lets you define parent/child relatio
 * Fix pagination in the Fields Table of a parent post type: it was returning the posts per page setting to its default state of 5.
 * Fix the Next pagination button missing on Fields Tables when the table is set to show N children each time and you have N+1 children assigned to that parent.
 * Fix custom taxonomy export/import when it is attached to a post type whose slug starts with a number.
-
-= 1.8.10 =
-
-* Release date: 2015-11-18
-* Changed Installer version to 1.7.2
-* Fixed usability issue with select2.
-
-= 1.8.9 =
-
-* Release date: 2015-11-10
-* Changed Installer version to 1.7
-* Changed Common version to 1.8
 
 = 1.8.11 =
 
